@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/blogIt');
 
 // mongoose Schema
-var schema = new mongoose.Schema({title: String, content: String});
+var schema = new mongoose.Schema({title: String, content: String, date: {type: Date, default: Date.now}});
 
 // mongoose Model
 var post = mongoose.model('post', schema);// ends post
