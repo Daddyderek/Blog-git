@@ -8,9 +8,9 @@ $(document).ready(function() {
 			type: 'POST',
 			data: $('form').serialize(),
 			success: function(result) {
-				$('form input').val("");
+				$('form').val("").remove();
 				$('#result').html('Your Post was successful');
-			}// ends success:
-		});// ends $.ajax
-	});// ends $(form).on
-});// ends $doc.ready
+			} // ends success:
+		}); // ends $.ajax
+	}); // ends $(form).on
+}); // ends $doc.ready

@@ -4,10 +4,10 @@ var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/blogIt');
 
 // mongoose Schema
-var post = mongoose.model('post', {
-	title: String,
-	content: String
-});// ends post
+var schema = new mongoose.Schema({title: String, content: String});
+
+// mongoose Model
+var post = mongoose.model('post', schema);// ends post
 
 
 // app.get("/home")
