@@ -12,7 +12,7 @@ var path = require('path');
 var app = express();
 
 // route to homePage
-var home = require("./routes/links");
+var home = require("./routes/home");
 
 // all environments
 app.set('port', process.env.PORT || 3000);
@@ -26,6 +26,8 @@ app.use(express.methodOverride());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+app.use(home);
 // development only
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());

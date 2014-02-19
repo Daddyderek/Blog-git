@@ -3,11 +3,12 @@ var app = module.exports = express();
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/blogIt');
 
-function homePage(req, res) {
-	res.send('success');
+function Resource(req, res) {
+
+	res.render('index');
 }// ends homePage
 
-/* ROUTE HANDLERS */
-app.get("/", function(req, res) {
-	homePage(req, res);
+ // ROUTE HANDLERS 
+app.get("/home", function(req, res) {
+	Resource(req, res);
 });
