@@ -10,6 +10,7 @@ var schema = new mongoose.Schema({title: String, content: String, date: {type: D
 var post = mongoose.model('post', schema);// ends post
 
 
+
 // // app.get("/home")
 function homePage(req, res) {
 	post.find().sort({date: -1}).limit(6).exec(function(err, blogPost) {
@@ -27,7 +28,6 @@ function homePage(req, res) {
 
 // app.get("/home/newPost")
 function newPost(req, res) {
-
 	res.render('newPost');
 }// ends newPost
 
@@ -85,6 +85,33 @@ function oldPosts(req, res) {
 
 
 
+// app.get("/home/profile")
+function myProfile(req, res) {
+	res.render('profile');
+}// ends myProfile
+
+
+
+// app.get("/home/contact")
+function contactMe(req, res) {
+	res.render('contact');
+} // ends contactME
+
+
+
+// end app.get("/home/projects")
+function myProjects(req, res) {
+	res.render('projects');
+}// ends myProjects
+
+
+
+// app.get("home/hacktheplanet")
+function myHackPlanet(req, res) {
+	res.render('hacktheplanet');
+}// ends myHackPlanet
+
+
 
 
 /*		ROUTE HANDLERS		*/
@@ -109,3 +136,19 @@ app.delete('/home/:id', function(req, res) {
 app.get("/home/oldPosts", function(req, res) {
 	oldPosts(req, res);
 });// ends app.get("/home/oldPosts")
+// Calls the profile
+app.get("/home/profile", function(req, res) {
+	myProfile(req, res);
+});// ends app.get("/home/profile")
+// Calls the contact
+app.get("/home/contact", function(req, res) {
+	contactMe(req, res);
+});// ends app.get("/home/contact")
+// calls projects
+app.get("/home/projects", function(req, res) {
+	myProjects(req, res);
+});// end app.get("/home/projects")
+// calls hack the planet!
+app.get("/home/hacktheplanet", function(req, res) {
+	myHackPlanet(req, res);
+});// ends app.get("home/hacktheplanet")

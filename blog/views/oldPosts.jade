@@ -1,13 +1,31 @@
 extends layout
 block content
 	include head
-	.row
-		.col-md-6.col-md-offset-3
-			h3 Old Posts
-			ul
-			- for post in posts
-				li
-					h2=post.title
-					h4=post.content
-					h6=post.date
-					button(class='delete', href='home/#{post.id}') Delete
+	.container
+		.row
+			.col-md-6.col-md-offset-3
+				h3 Old Posts
+				ul
+				- for post in posts
+					li
+						form(role='form')
+							.form-group
+								h2=post.title
+							.form-group
+								h4=post.content
+							.form-group
+								h6=post.date
+							.form-group
+								button(class='delete', href='/home/#{post.id}') Delete
+								button(data-toggle='modal', data-target='#myModal') Edit
+									#myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+										.modal-dialog
+											.modal-content
+												.modal-header
+													button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+													h4#myModalLabel.modal-title Modal Title
+													.modal-body
+														| ...
+													.modal-footer
+														button.btn.btn-default(type='button', data-dismiss='modal') Close
+														button.btn.btn-primary(type='button') Save changes

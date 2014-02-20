@@ -22,14 +22,7 @@ block content
           #sidebar.col-xs-6.col-sm-3.sidebar-offcanvas(role='navigation')
             .list-group
               a.list-group-item.active(href='#') Link
-              a.list-group-item(href='#') Link
-              a.list-group-item(href='#') Link
-              a.list-group-item(href='#') Link
-              a.list-group-item(href='#') Link
-              a.list-group-item(href='#') Link
-              a.list-group-item(href='#') Link
-              a.list-group-item(href='#') Link
-              a.list-group-item(href='#') Link
-              a.list-group-item(href='#') Link
+              - for post in posts
+                a.list-group-item(href='#') #{post.title}
       #footer
         p © DaddyDerek 2014
