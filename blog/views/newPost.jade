@@ -4,13 +4,12 @@ block content
     div#postBox.row
         .col-md-6.col-md-offset-3
             h3 New Blog Post
-            form(role='form')
-                form(id='blog', action='/home/newPost', method='post')
-                    .form-group
-                        label(id="titleID", for="title") Title :
-                        input(id='title', type='text', placeholder='Name Your Story', name='title')
-                    .form-group
-                        label(id='bodyID', for="body") Body :
-                        textarea(id='body', class='form control', type='text', placeholder='Tell Your Story', rows='17', cols='70', name='content')
-                    button(type='sumbit') Submit
-                #result
+            form(id='blogForm', action='/home/newPost', method='post', role='form')
+                .form-group
+                    label(id="titleID", for="title") Title :
+                    input(id='title', type='text', placeholder='Name Your Story', name='title')
+                .form-group
+                    label(id='bodyID', for="body") Body :
+                    textarea(id='body', class='form control', type='text', placeholder='Tell Your Story', rows='17', cols='70', name='content')
+                button(type='sumbit') Submit
+            #result
