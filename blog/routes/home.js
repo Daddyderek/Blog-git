@@ -13,7 +13,7 @@ var post = mongoose.model('post', schema);// ends post
 // // app.get("/home")
 function homePage(req, res) {
 
-	post.find().limit(6).exec(function(err, blogPost) {
+	post.find().sort({date: -1}).limit(6).exec(function(err, blogPost) {
 		if(err) {
 			console.log("error meow");
 		}
@@ -24,20 +24,7 @@ function homePage(req, res) {
 	});// ends post.find
 } // ends homePage
 
-// // app.get("/home")
-// function homePage(req, res) {
-// 	post.find(function(err, blogPost) {
-// 		if(err) {
-// 			console.log("error meow");
-// 		}
-// 		console.log(blogPost);
-// 		res.render('index', {
-// 		posts: blogPost
-// 	});// ends res.render
-// 	});// ends post.find
-// } // ends homePage
-       
-       
+
 
 // app.get("/home/newPost")
 function newPost(req, res) {
