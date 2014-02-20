@@ -12,7 +12,6 @@ var post = mongoose.model('post', schema);// ends post
 
 // // app.get("/home")
 function homePage(req, res) {
-
 	post.find().sort({date: -1}).limit(6).exec(function(err, blogPost) {
 		if(err) {
 			console.log("error meow");
@@ -31,6 +30,7 @@ function newPost(req, res) {
 
 	res.render('newPost');
 }// ends newPost
+
 
 
 // app.post('/home/newpost')
@@ -72,15 +72,18 @@ function deletePost(req, res) {
 
 // app.get("/home/oldPosts")
 function oldPosts(req, res) {
-	post.find(function(err, myOldPosts) {
+	post.find().sort({date: -1}).limit(6).exec(function(err, myOldPosts) {
 		if(err) {
-			console.log("error in oldPosts serverside");
+			console.log("error meow");
 		}
+		console.log(myOldPosts);
 		res.render('oldPosts', {
-			posts: myOldPosts
-		});
+		posts: myOldPosts
+	});// ends res.render
 	});// ends post.find
 }// ends oldPosts
+
+
 
 
 

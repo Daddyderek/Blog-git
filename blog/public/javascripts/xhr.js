@@ -5,7 +5,6 @@ $(document).ready(function() {
 	$('button.delete').on('click', function(e) {
 		var button = $(this);
 		e.preventDefault();
-		console.log("in delete");
 		$.ajax(button.attr('href'), {
 			method: 'DELETE',
 			success: function(result) {
