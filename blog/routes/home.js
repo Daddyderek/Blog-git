@@ -12,7 +12,15 @@ var post = mongoose.model('post', schema);// ends post
 
 // app.get("/home")
 function homePage(req, res) {
-	res.render('index');
+	post.find(function(err, blogPost) {
+		if(err) {
+			console.log("error meow");
+		}
+		console.log(blogPost);
+		res.render('index', {
+		posts: blogPost
+	});// ends res.render
+	});// ends post.find
 } // ends homePage
        
 
@@ -20,6 +28,7 @@ function homePage(req, res) {
 function newPost(req, res) {
 	var postTitle = req.body.title;
 	var postContent = req.body.content;
+	var postDate = req.body.date;
 	var myPost = new post({
 		title: postTitle,
 		content: postContent
@@ -44,12 +53,7 @@ function newPost(req, res) {
 app.get("/home", function(req, res) {
 	homePage(req, res);
 });
-// Calls the new post page
-app.get("/home/newPost", function(req, res) {
-	newPost(req, res);
-});
 // Calls the new post page to POST
 app.post("/home/newpost", function(req, res) {
 	newPost(req, res);
 });
-
