@@ -1,3 +1,15 @@
 extends layout
 block content
-	include head
+    include head
+    .row
+        .col-md-6.col-md-offset-3
+            h1 Login!
+            form(id='login', action='/login', method='post', role='form')
+                .form-group
+                    label(id="usernameTitle", for="username") User Name :
+                    input(id='username', type='text', placeholder='User Name', name='username')
+                .form-group
+                    label(id='passwordTitle', for="password") Password :
+                    input(id='password', type='password', placeholder='password', name='password')
+                button(type='sumbit') Login
+            #loginResult

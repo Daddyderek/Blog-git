@@ -9,6 +9,7 @@ var user = require('./routes/user');
 var http = require('http');
 var path = require('path');
 
+
 var app = express();
 
 // route to homePage
@@ -25,6 +26,10 @@ app.use(express.urlencoded());
 app.use(express.methodOverride());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
+
+// handling sessions
+app.use(express.cookieParser());
+app.use(express.session({secret: 'sexxx'}));
 
 
 app.use(home);

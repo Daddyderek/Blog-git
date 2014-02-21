@@ -17,11 +17,6 @@ $(document).ready(function() {
 
 
 
-
-
-
-
-
 	// create new blog post
 	$('form#blogForm').on('submit', function(event) {
 		event.preventDefault();
@@ -50,6 +45,7 @@ $(document).ready(function() {
 	}); // ends $('button.edit')
 
 
+
 	$("#modalSave").click(function(e) {
 		e.preventDefault();
 		$.ajax($('#modalEditForm').attr('action'), {
@@ -60,6 +56,8 @@ $(document).ready(function() {
 			} // ends success
 		}); // ends $.ajax
 	}); // ends $('#modalSave')
+
+
 
 	// toggle the blue side nav-bar
 	$('[data-toggle=offcanvas]').click(function() {

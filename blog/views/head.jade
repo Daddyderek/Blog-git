@@ -22,6 +22,9 @@ nav.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
             b.caret
           ul.dropdown-menu
             li
+              - if (loggedIn)
+                a(href="/home/newPost") New Post
+            li
               a(href='/home/oldPosts') Old Posts
             li
               a(href='/home/projects') Projects
@@ -29,4 +32,4 @@ nav.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
               a(href='/home/hacktheplanet') Hack The Planet!
             li.divider
             li
-              a(href="/home/newPost") New Post
+              a(href="/login") Login

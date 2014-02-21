@@ -15,50 +15,93 @@ var post = mongoose.model('post', schema);// ends post
 
 // app.get("/login")
 function myLogin(req, res) {
-	res.render('login');
+	var auth = null;
+	if (req.session.name) {
+		auth = true;
+	}
+	res.render('login', {
+		loggedIn: auth
+	});
 }// ends myLogin
 
 
 // app.get("/home")
 function homePage(req, res) {
-	post.find().sort({date: -1}).limit(6).exec(function(err, blogPost) {
-		if(err) {
-			console.log("error meow");
-		}
-		console.log(blogPost);
-		res.render('index', {
-		posts: blogPost
-	});// ends res.render
-	});// ends post.find
+	var auth = null;
+	if (req.session.name) {
+		auth = true;
+	}
+		post.find().sort({
+			date: -1
+		}).limit(6).exec(function(err, blogPost) {
+			if (err) {
+				console.log("error meow");
+			}
+			console.log(blogPost);
+			res.render('index', {
+				loggedIn: auth,
+				posts: blogPost
+			}); // ends res.render
+		}); // ends post.find
 } // ends homePage
 
 
 // app.get("/login/signup")
 function mySignUp(req, res) {
-	res.render('signup');
+	var auth = null;
+	if (req.session.name) {
+		auth = true;
+	}
+	res.render('signup', {
+		loggedIn: auth
+	});
 }// ends mySignUp
 
 // app.get("/home/profile")
 function myProfile(req, res) {
-	res.render('profile');
+	var auth = null;
+	if(req.session.name) {
+		auth = true;
+	}
+	res.render('profile', {
+		loggedIn: auth
+	});
 }// ends myProfile
 
 
 // app.get("/home/contact")
 function contactMe(req, res) {
-	res.render('contact');
+	var auth = null;
+	if(req.session.name) {
+		auth = true;
+	}
+	res.render('contact', {
+		loggedIn: auth
+	});
 } // ends contactME
 
 
 // end app.get("/home/projects")
 function myProjects(req, res) {
-	res.render('projects');
+	var auth = null;
+	if (req.session.name) {
+		auth = true;
+	}
+	res.render('projects', {
+		loggedIn: auth
+	});
 }// ends myProjects
 
 
 // app.get("/home/hacktheplanet")
 function myHackPlanet(req, res) {
-	res.render('hacktheplanet');
+	var auth = null;
+	if (req.session.name) {
+		auth = true;
+	}
+	res.render('hacktheplanet', {
+		loggedIn: auth
+	});
 }// ends myHackPlanet
 
 
@@ -71,11 +114,22 @@ function newPost(req, res) {
 }// ends newPost
 
 
+// app.get('/logout')
+function endSession(req, res) {
+	req.session.destroy();
+	res.send('<br />logged out!<br /><a href="/login">Check Session</a>');
+}// ends endSession
+
+
 
 /*###	POST CREATE	###*/
 
 // app.post('/home/newpost')
 function createPost(req, res) {
+	var auth = null;
+	if(req.session.name) {
+		auth = true;
+	}
 	var postTitle = req.body.title;
 	var postContent = req.body.content;
 	var postDate = req.body.date;
@@ -90,8 +144,29 @@ function createPost(req, res) {
 			res.send("Server Error");
 		}
 	});// ends myPost.save
-	res.render("newPost");
+	res.render("newPost", {
+		loggedIn: auth
+	});
 }// ends createPost
+
+
+// app.post("/login")
+function verify(req, res) {
+	var user = req.body.username;
+	var pw = req.body.password;
+	if(user === "daddy") {
+		if(pw === "sex") {
+			req.session.name = user;
+			res.send(req.session.name + '<br /><a href="/logout">Logout</a>');
+			return;
+		} else {
+			res.send("Wrong Password");
+		}
+	} else {
+		res.send("Wrong User Name");
+	}
+}// ends verify
+
 
 
 
@@ -99,23 +174,30 @@ function createPost(req, res) {
 
 // app.get("/home/oldPosts")
 function oldPosts(req, res) {
-	post.find().sort({date: -1}).limit(6).exec(function(err, myOldPosts) {
-		if(err) {
-			console.log("error meow");
-		}
-		console.log(myOldPosts);
-		res.render('oldPosts', {
-		posts: myOldPosts
-	});// ends res.render
-	});// ends post.find
-}// ends oldPosts
+	var auth = null;
+	if(req.session.name) {
+		auth = true;
+	}
+		post.find().sort({
+			date: -1
+		}).limit(6).exec(function(err, myOldPosts) {
+			if (err) {
+				console.log("error meow");
+			}
+			console.log(myOldPosts);
+			res.render('oldPosts', {
+				loggedIn: auth,
+				posts: myOldPosts
+			}); // ends res.render
+		}); // ends post.find
 
-
+} // ends oldPosts
 
 /*###	GET UPDATE	###*/
 
 // app.put("/home/oldPosts")
 function editMyPost(req, res) {
+	if(req.session.name) {
 	var numId = req.param('id');
 	var postTitle = req.body.title;
 	var postContent = req.body.content;
@@ -132,6 +214,9 @@ function editMyPost(req, res) {
 		console.log("Post Has Been Edited");
 		res.send("Editededed");
 	});// ends post.findOneAndUpdate
+} else {
+	res.send("You are not logged in");
+}
 }// ends editMyPost 
 
 
@@ -140,6 +225,7 @@ function editMyPost(req, res) {
 
 // app.delete("/home")
 function deletePost(req, res) {
+	if(req.session.name) {
 	var idNum = req.param('id');
 	post.findOneAndRemove({
 		_id: idNum
@@ -150,6 +236,9 @@ function deletePost(req, res) {
 		console.log("deleted");
 		res.send('success');
 	});
+	} else {
+	res.send("You are not logged in");
+}
 }// ends deletePost
 
 
@@ -195,7 +284,9 @@ app.get("/home/hacktheplanet", function(req, res) {
 	myHackPlanet(req, res);
 });// ends app.get("home/hacktheplanet")
 
-
+app.get("/logout", function(req, res) {
+	endSession(req, res);
+});
 
 /*####		GET NEW		####*/
 
@@ -204,11 +295,17 @@ app.get("/home/newPost", function(req, res) {
 	newPost(req, res);
 });
 
+
 /*####		POST CREATE		####*/
 
 // Calls the new post page so that it may POST
 app.post("/home/newpost", function(req, res) {
 	createPost(req, res);
+});
+
+// Verifies User Name and Password
+app.post("/login", function(req, res) {
+	verify(req, res);
 });
 
 /*####	GET EDIT	####*/
