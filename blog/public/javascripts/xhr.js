@@ -17,6 +17,11 @@ $(document).ready(function() {
 
 
 
+
+
+
+
+
 	// create new blog post
 	$('form#blogForm').on('submit', function(event) {
 		event.preventDefault();
@@ -34,16 +39,14 @@ $(document).ready(function() {
 
 	// Edit old blog posts
 	$('button.edit').on('click', function(e) {
-		console.log("I'm inside edit meow");
 		e.preventDefault();
-		console.log($(this));
-		console.log($(this).closest('form'));
-		console.log($(this).closest('form').find('#postTitle h2'));
-		var title = $(this).closest('form').find('#postTitle h2').html();
-		var body = $(this).closest("form").find('#postContent h4').html();
-			console.log(title);
+		var title = $(this).closest('li').find('#postTitle h2').html();
+		var body = $(this).closest("li").find('#postContent h4').html();
+		var id = $(this).data('id');
 			$('#titleEdit').val(title);
 			$('#bodyEdit').val(body);
+			console.log("I'm in XHR edited");
+		$("#modalEditForm").attr('action', '/home/' + id);
 	}); // ends $('button.edit')
 
 

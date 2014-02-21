@@ -116,10 +116,15 @@ function myHackPlanet(req, res) {
 // app.put("/home/oldPosts")
 function editMyPost(req, res) {
 	var numId = req.param('id');
-
+	var postTitle = req.body.title;
+	var postContent = req.body.content;
+ 
 	post.findOneAndUpdate({
 		_id: numId
-	},function(err) {
+	}, {title: postTitle,
+		content: postContent
+	},
+	function(err) {
 		if(err) {
 			console.log("error in edit meow");
 		}
@@ -179,6 +184,6 @@ app.get("/home/hacktheplanet", function(req, res) {
 });// ends app.get("home/hacktheplanet")
 
 // Calls the edit function
-app.put("/home/oldPosts", function(req, res) {
+app.put("/home/:id", function(req, res) {
 	editMyPost(req, res);
 });
