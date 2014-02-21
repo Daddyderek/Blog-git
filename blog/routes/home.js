@@ -10,8 +10,16 @@ var schema = new mongoose.Schema({title: String, content: String, date: {type: D
 var post = mongoose.model('post', schema);// ends post
 
 
+/*		GET SHOW	*/
 
-// // app.get("/home")
+
+// app.get("/login")
+function myLogin(req, res) {
+	res.render('login');
+}// ends myLogin
+
+
+// app.get("/home")
 function homePage(req, res) {
 	post.find().sort({date: -1}).limit(6).exec(function(err, blogPost) {
 		if(err) {
@@ -25,6 +33,37 @@ function homePage(req, res) {
 } // ends homePage
 
 
+// app.get("/login/signup")
+function mySignUp(req, res) {
+	res.render('signup');
+}// ends mySignUp
+
+// app.get("/home/profile")
+function myProfile(req, res) {
+	res.render('profile');
+}// ends myProfile
+
+
+// app.get("/home/contact")
+function contactMe(req, res) {
+	res.render('contact');
+} // ends contactME
+
+
+// end app.get("/home/projects")
+function myProjects(req, res) {
+	res.render('projects');
+}// ends myProjects
+
+
+// app.get("/home/hacktheplanet")
+function myHackPlanet(req, res) {
+	res.render('hacktheplanet');
+}// ends myHackPlanet
+
+
+
+/*###	GET NEW	###*/
 
 // app.get("/home/newPost")
 function newPost(req, res) {
@@ -32,6 +71,8 @@ function newPost(req, res) {
 }// ends newPost
 
 
+
+/*###	POST CREATE	###*/
 
 // app.post('/home/newpost')
 function createPost(req, res) {
@@ -54,21 +95,7 @@ function createPost(req, res) {
 
 
 
-// app.delete("/home")
-function deletePost(req, res) {
-	var idNum = req.param('id');
-	post.findOneAndRemove({
-		_id: idNum
-	}, function(err) {
-		if(err) {
-			console.log("WTF?");
-		}
-		console.log("deleted");
-		res.send('success');
-	});
-}// ends deletePost
-
-
+/*###	GET EDIT	###*/
 
 // app.get("/home/oldPosts")
 function oldPosts(req, res) {
@@ -85,33 +112,7 @@ function oldPosts(req, res) {
 
 
 
-// app.get("/home/profile")
-function myProfile(req, res) {
-	res.render('profile');
-}// ends myProfile
-
-
-
-// app.get("/home/contact")
-function contactMe(req, res) {
-	res.render('contact');
-} // ends contactME
-
-
-
-// end app.get("/home/projects")
-function myProjects(req, res) {
-	res.render('projects');
-}// ends myProjects
-
-
-
-// app.get("/home/hacktheplanet")
-function myHackPlanet(req, res) {
-	res.render('hacktheplanet');
-}// ends myHackPlanet
-
-
+/*###	GET UPDATE	###*/
 
 // app.put("/home/oldPosts")
 function editMyPost(req, res) {
@@ -135,32 +136,43 @@ function editMyPost(req, res) {
 
 
 
+/* ###	GET DELETE	###*/
 
-/*		ROUTE HANDLERS		*/
+// app.delete("/home")
+function deletePost(req, res) {
+	var idNum = req.param('id');
+	post.findOneAndRemove({
+		_id: idNum
+	}, function(err) {
+		if(err) {
+			console.log("WTF?");
+		}
+		console.log("deleted");
+		res.send('success');
+	});
+}// ends deletePost
+
+
+
+
+/*########	ROUTE HANDLERS	########*/
+
+
+/*####	GET SHOW	####*/
 
 // Calls the home page
 app.get("/home", function(req, res) {
 	homePage(req, res);
 });
 
-// Calls the new post page
-app.get("/home/newPost", function(req, res) {
-	newPost(req, res);
+// Calls the login page
+app.get("/login", function(req, res) {
+	myLogin(req, res);
 });
 
-// Calls the new post page so that it may POST
-app.post("/home/newpost", function(req, res) {
-	createPost(req, res);
-});
-
-// On the old posts page it deletes the current post
-app.delete('/home/:id', function(req, res) {
-	deletePost(req, res);
-});
-
-// Calls the old posts
-app.get("/home/oldPosts", function(req, res) {
-	oldPosts(req, res);
+// Calls the signup page
+app.get("/login/signup", function(req, res) {
+	mySignUp(req, res);
 });
 
 // Calls the profile
@@ -183,7 +195,39 @@ app.get("/home/hacktheplanet", function(req, res) {
 	myHackPlanet(req, res);
 });// ends app.get("home/hacktheplanet")
 
+
+
+/*####		GET NEW		####*/
+
+// Calls the new post page
+app.get("/home/newPost", function(req, res) {
+	newPost(req, res);
+});
+
+/*####		POST CREATE		####*/
+
+// Calls the new post page so that it may POST
+app.post("/home/newpost", function(req, res) {
+	createPost(req, res);
+});
+
+/*####	GET EDIT	####*/
+
+// Calls the old posts
+app.get("/home/oldPosts", function(req, res) {
+	oldPosts(req, res);
+});
+
+/*####	PUT UPDATE	####*/
+
 // Calls the edit function
 app.put("/home/:id", function(req, res) {
 	editMyPost(req, res);
+});
+
+/*####	GET DELETE	####*/
+
+// On the old posts page it deletes the current post
+app.delete('/home/:id', function(req, res) {
+	deletePost(req, res);
 });
