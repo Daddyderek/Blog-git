@@ -43,13 +43,23 @@ $(document).ready(function() {
 		var title = $(this).closest('li').find('#postTitle h2').html();
 		var body = $(this).closest("li").find('#postContent h4').html();
 		var id = $(this).data('id');
-			$('#titleEdit').val(title);
-			$('#bodyEdit').val(body);
-			console.log("I'm in XHR edited");
+		$('#titleEdit').val(title);
+		$('#bodyEdit').val(body);
+		console.log("I'm in XHR edited");
 		$("#modalEditForm").attr('action', '/home/' + id);
 	}); // ends $('button.edit')
 
 
+	$("#modalSave").click(function(e) {
+		e.preventDefault();
+		$.ajax($('#modalEditForm').attr('action'), {
+			method: 'PUT',
+			data: $("#modalEditForm").serialize(),
+			success: function(result) {
+				console.log(result);
+			} // ends success
+		}); // ends $.ajax
+	}); // ends $('#modalSave')
 
 	// toggle the blue side nav-bar
 	$('[data-toggle=offcanvas]').click(function() {
