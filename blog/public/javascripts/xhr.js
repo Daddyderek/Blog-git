@@ -10,7 +10,7 @@ $(document).ready(function() {
 			method: 'DELETE',
 			success: function(result) {
 				console.log("inside delete meow");
-				button.closest().remove();
+			button.closest('li').remove();
 			} // ends success
 		}); // ends $.ajax	
 	}); // ends #delete
@@ -34,19 +34,18 @@ $(document).ready(function() {
 
 	// Edit old blog posts
 	$('button.edit').on('click', function(e) {
-		var button = $(this);
+		console.log("I'm inside edit meow");
 		e.preventDefault();
-		console.log("I'm inside edit");
-		$.ajax(button.attr('href'), {
-			method: 'PUT',
-			success: function() {
-				
-			}
-		});// ends $.ajax
+		console.log($(this));
+		console.log($(this).closest('form'));
+		console.log($(this).closest('form').find('#postTitle h2'));
+		var title = $(this).closest('form').find('#postTitle h2').html();
+		var body = $(this).closest("form").find('#postContent h4').html();
+			console.log(title);
+			$('#titleEdit').val(title);
+			$('#bodyEdit').val(body);
 	}); // ends $('button.edit')
 
-
-	$('#myModal').modal('hide');
 
 
 	// toggle the blue side nav-bar

@@ -106,10 +106,27 @@ function myProjects(req, res) {
 
 
 
-// app.get("home/hacktheplanet")
+// app.get("/home/hacktheplanet")
 function myHackPlanet(req, res) {
 	res.render('hacktheplanet');
 }// ends myHackPlanet
+
+
+
+// app.put("/home/oldPosts")
+function editMyPost(req, res) {
+	var numId = req.param('id');
+
+	post.findOneAndUpdate({
+		_id: numId
+	},function(err) {
+		if(err) {
+			console.log("error in edit meow");
+		}
+		console.log("Post Has Been Edited");
+		res.send("Editededed");
+	});// ends post.findOneAndUpdate
+}// ends editMyPost 
 
 
 
@@ -120,35 +137,48 @@ function myHackPlanet(req, res) {
 app.get("/home", function(req, res) {
 	homePage(req, res);
 });
+
 // Calls the new post page
 app.get("/home/newPost", function(req, res) {
 	newPost(req, res);
 });
-// Calls the new post page to POST
+
+// Calls the new post page so that it may POST
 app.post("/home/newpost", function(req, res) {
 	createPost(req, res);
 });
-// On the home page it deletes the current post
+
+// On the old posts page it deletes the current post
 app.delete('/home/:id', function(req, res) {
 	deletePost(req, res);
 });
+
 // Calls the old posts
 app.get("/home/oldPosts", function(req, res) {
 	oldPosts(req, res);
-});// ends app.get("/home/oldPosts")
+});
+
 // Calls the profile
 app.get("/home/profile", function(req, res) {
 	myProfile(req, res);
-});// ends app.get("/home/profile")
+});
+
 // Calls the contact
 app.get("/home/contact", function(req, res) {
 	contactMe(req, res);
-});// ends app.get("/home/contact")
-// calls projects
+});
+
+// Calls projects
 app.get("/home/projects", function(req, res) {
 	myProjects(req, res);
-});// end app.get("/home/projects")
-// calls hack the planet!
+});
+
+// Calls hack the planet!
 app.get("/home/hacktheplanet", function(req, res) {
 	myHackPlanet(req, res);
 });// ends app.get("home/hacktheplanet")
+
+// Calls the edit function
+app.put("/home/oldPosts", function(req, res) {
+	editMyPost(req, res);
+});

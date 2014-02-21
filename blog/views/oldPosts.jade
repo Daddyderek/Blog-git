@@ -9,23 +9,29 @@ block content
 				- for post in posts
 					li
 						form(role='form')
-							.form-group
+							#postTitle.form-group
 								h2=post.title
-							.form-group
+							#postContent.form-group
 								h4=post.content
-							.form-group
+							#postDate.form-group
 								h6=post.date
 							.form-group
 								button(class='delete', href='/home/#{post.id}') Delete
-								button(data-toggle='modal', data-target='#myModal') Edit
-									#myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
-										.modal-dialog
-											.modal-content
-												.modal-header
-													button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
-													h4#myModalLabel.modal-title Modal Title
-													.modal-body
-														| ...
-													.modal-footer
-														button.btn.btn-default(type='button', data-dismiss='modal') Close
-														button.btn.btn-primary(type='button') Save changes
+								button(class='edit', data-toggle='modal', data-target='#myModal') Edit
+					#myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+						.modal-dialog
+							.modal-content
+								.modal-header
+									.form-group
+										button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+										h4#myModalLabel.modal-title
+											label(id="titleEditID", for="titleEdit") Title :
+											input(id="titleEdit", type="text", name="title")
+								.modal-body
+									.form-group
+										label(id='bodyEditID', for='bodyEdit') Body :
+										textarea(id='bodyEdit', class='form control', type='text', rows='17', cols='70', name='content')
+								.modal-footer
+									.form-group
+										button.btn.btn-default(type='button', data-dismiss='modal') Close
+										button.btn.btn-primary(type='button') Save changes
