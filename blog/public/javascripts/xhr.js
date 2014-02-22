@@ -2,6 +2,20 @@ $(document).ready(function() {
 
 	console.log("JavaScript is working!");
 
+	// displays failed password/username attempts
+	// $('button.login').on('click', function(e) {
+	// 	var button = $(this);
+	// 	e.preventDefault();
+	// 	$.ajax(button.attr('href'), {
+	// 		method: 'POST',
+	// 		data: $("#login").serialize(),
+	// 		success: function(result) {
+	// 			console.log("Inside login button meow");
+	// 			console.log(result.error);
+	// 		}
+	// 	});// ends $.ajax
+	// });// ends $('button login')
+
 	// delete blog post
 	$('button.delete').on('click', function(e) {
 		var button = $(this);

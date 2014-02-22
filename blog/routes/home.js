@@ -154,16 +154,16 @@ function createPost(req, res) {
 function verify(req, res) {
 	var user = req.body.username;
 	var pw = req.body.password;
-	if(user === "daddy") {
-		if(pw === "sex") {
+	console.log(user);
+	console.log(pw);
+	if(user === "kingtak") {
+		if(pw === "devleague") {
 			req.session.name = user;
-			res.send(req.session.name + '<br /><a href="/logout">Logout</a>');
+			res.redirect("/home");
 			return;
-		} else {
-			res.send("Wrong Password");
 		}
 	} else {
-		res.send("Wrong User Name");
+		res.send(200, {error: "Wrong User Name or Password"});
 	}
 }// ends verify
 

@@ -4,12 +4,11 @@ block content
     .row
         .col-md-6.col-md-offset-3
             h1 Login!
-            form(id='login', action='/login', method='post', role='form')
+            form.form-inline(id='login', action='/login', method='post', role='form')
                 .form-group
-                    label(id="usernameTitle", for="username") User Name :
-                    input(id='username', type='text', placeholder='User Name', name='username')
+                    label.sr-only(for='username') User Name 
+                    input#username.form-control(type='text', placeholder='Enter User Name', name='username')
                 .form-group
-                    label(id='passwordTitle', for="password") Password :
-                    input(id='password', type='password', placeholder='password', name='password')
-                button(type='sumbit') Login
-            #loginResult
+                    label.sr-only(for='password') Password
+                    input#password.form-control(type='password', placeholder='Password', name='password')
+                button.btn.btn-default(class='login', type='submit') Sign in
