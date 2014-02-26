@@ -3,13 +3,14 @@ $(document).ready(function() {
 	console.log("JavaScript is working!");
 
 	// dispays blog in a modal //
-	$('.viewPostModal').on('click', function(e) {
+	$('.viewBlogPosts').on('click', function(e) {
 		e.preventDefault();
-		var button = $(this);
-		console.log("I'm inside .viewPostModal meow");
-		$.get("/blogPost/" + button.data('id'), function(data) {
-			console.log(data);
-		});
+		var title = $(this).closest('.row2').find(".modalBlogPostTitle").html(),
+			body = $(this).closest('.row2').find(".modalBlogPostBody").html();
+		$('.modal-title').html(title);
+		$('.modal-body').html(body);
+		
+
 	});// ends $("#viewPostModal")
 
 	//displays failed password/username attempts //
