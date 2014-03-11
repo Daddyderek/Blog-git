@@ -13,20 +13,25 @@ block content
                 | This is what my future blog will look like.
             .row2
               - for post in posts
-                .col-6.col-sm-6.col-lg-4
+                .col-6.col-sm-6.col-lg-4.row1
                   h2.modalBlogPostTitle #{post.title}
-                  p.modalBlogPostBody #{post.content}
+                  p.modalBlogPostBody 
+                    - if (post.content.length > 100) 
+                      =post.content.substring(0,100)
+                      &hellip;
+                    - else 
+                      =post.content
                   p
-                    a.btn.btn-default(class='viewPostModal', data-toggle='modal', data-target='#readModal', data-id='#{post._id}', role='button') View details »
-                    #readModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='readModalLabel', aria-hidden='true')
-                      .modal-dialog
-                        .modal-content
-                          .modal-header
-                            button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
-                            h4.modal-title #{post.title}
-                            .modal-body #{post.content}
-                            .modal-footer
-                              button.btn.btn-default(type='button', data-dismiss='modal') Close
+                  a.btn.btn-default(class='viewPostModal', data-toggle='modal', data-target='#readModal', data-id='#{post._id}', role='button') View details »
+              #readModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='readModalLabel', aria-hidden='true')
+                .modal-dialog
+                  .modal-content
+                    .modal-header
+                      button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+                      h4#myPostModalTitle.modal-title 
+                      #myPostModalBody.modal-body 
+                      .modal-footer
+                        button.btn.btn-default(type='button', data-dismiss='modal') Close
           #sidebar.col-xs-6.col-sm-3.sidebar-offcanvas(role='navigation')
             .list-group
               a.list-group-item.active(href='/home/oldPosts') Older Posts

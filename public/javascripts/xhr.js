@@ -3,13 +3,14 @@ $(document).ready(function() {
 	console.log("JavaScript is working!");
 
 	// dispays blog in a modal //
-	$('.viewBlogPosts').on('click', function(e) {
+	$('.viewPostModal').on('click', function(e) {
 		e.preventDefault();
-		var title = $(this).closest('.row2').find(".modalBlogPostTitle").html(),
-			body = $(this).closest('.row2').find(".modalBlogPostBody").html();
-		$('.modal-title').html(title);
-		$('.modal-body').html(body);
-		
+		console.log("This is e "+e);
+		var title = $(this).closest('.row1').find(".modalBlogPostTitle").html(),
+			body = $(this).closest('.row1').find(".modalBlogPostBody").html();
+		$('#myPostModalTitle').html(title);
+		$('#myPostModalBody').html(body);
+
 
 	});// ends $("#viewPostModal")
 
