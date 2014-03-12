@@ -1,0 +1,9 @@
+/* line 1, ../../sass/style.scss */
+#footer {
+  display: block;
+  height: 20px;
+  background-color: green;
+  position: fixed;
+  bottom: 0;
+  padding-left: 40px;
+}

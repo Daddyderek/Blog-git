@@ -49,8 +49,20 @@ function homePage(req, res) {
 // This is just for XHR to view blogPost //
 // app.get("/blogPost/:id")
 function viewBlogPost(req, res) {
-	res.render('index', {id: _id});
-}// ends viewBlogPost
+
+	var idNum = req.param('id');
+
+	post.findOne({
+			_id: idNum
+		}, function(err, obj) {
+			if (err) {
+				console.log(err);
+			}
+			console.log("this is obj "+obj);
+			res.json(obj);
+	});
+
+} // ends viewBlogPost
 
 // app.get("/login/signup")
 function mySignUp(req, res) {

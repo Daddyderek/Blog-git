@@ -4,12 +4,28 @@ $(document).ready(function() {
 
 	// dispays blog in a modal //
 	$('.viewPostModal').on('click', function(e) {
-		e.preventDefault();
-		console.log("This is e "+e);
+
+		var button = $(e.currentTarget);
 		var title = $(this).closest('.row1').find(".modalBlogPostTitle").html(),
 			body = $(this).closest('.row1').find(".modalBlogPostBody").html();
-		$('#myPostModalTitle').html(title);
-		$('#myPostModalBody').html(body);
+			//console.log("This is button.data "+button.data("id"));
+		e.preventDefault();
+		$.ajax("/blogPost/"+button.data("id"), {
+			method: 'GET',
+			dataType: 'json',
+			success: function(data) {
+
+			$('#myPostModalTitle').html(title);
+			console.log("data is "+data);
+			$('#myPostModalBody').val(button.id).html(data.content);
+
+			}
+
+
+		});
+		// alert("hi jon!");
+		// $('#myPostModalTitle').html(title);
+		// $('#myPostModalBody').html(body);
 
 
 	});// ends $("#viewPostModal")

@@ -1,0 +1,7 @@
+/* line 1, ../sass/style.scss */
+#footer {
+  display: block;
+  height: 100px;
+  width: 100px;
+  background-color: green;
+}

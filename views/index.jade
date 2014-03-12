@@ -17,8 +17,7 @@ block content
                   h2.modalBlogPostTitle #{post.title}
                   p.modalBlogPostBody 
                     - if (post.content.length > 100) 
-                      =post.content.substring(0,100)
-                      &hellip;
+                      =post.content.substring(0, 100)
                     - else 
                       =post.content
                   p
@@ -29,13 +28,13 @@ block content
                     .modal-header
                       button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
                       h4#myPostModalTitle.modal-title 
-                      #myPostModalBody.modal-body 
+                      #myPostModalBody.modal-body
                       .modal-footer
                         button.btn.btn-default(type='button', data-dismiss='modal') Close
           #sidebar.col-xs-6.col-sm-3.sidebar-offcanvas(role='navigation')
             .list-group
               a.list-group-item.active(href='/home/oldPosts') Older Posts
               - for post in posts
-                a.list-group-item(href='#') #{post.title}
+                a.list-group-item(href='/home/oldPosts/#postTitle') #{post.title}
       #footer
         p © DaddyDerek 2014

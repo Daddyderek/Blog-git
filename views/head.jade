@@ -32,5 +32,7 @@ nav.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
               a(href='/home/hacktheplanet') Hack The Planet!
             li.divider
             li
-              - if (loggedIn)
+              - if (!loggedIn)
+                a(href="/login") Login
+              - else
                 a(href="/logout") Logout
