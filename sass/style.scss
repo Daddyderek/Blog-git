@@ -6,3 +6,11 @@
 	bottom: 0;
 	padding-left: 40px;
 }
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active {
+	color: #999;
+	background-color: #222222;
+	a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
+		color:white;
+		background-color: #222222;
+	}
+}

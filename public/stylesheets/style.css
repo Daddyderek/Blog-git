@@ -7,3 +7,14 @@
   bottom: 0;
   padding-left: 40px;
 }
+
+/* line 9, ../../sass/style.scss */
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active {
+  color: #999;
+  background-color: #222222;
+}
+/* line 12, ../../sass/style.scss */
+.navbar-inverse .navbar-nav > .active > a a:hover, .navbar-inverse .navbar-nav > .active > a .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active a:hover, .navbar-inverse .navbar-nav > .active .navbar-inverse .navbar-nav > .active > a:focus {
+  color: white;
+  background-color: #222222;
+}

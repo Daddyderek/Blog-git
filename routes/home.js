@@ -76,17 +76,16 @@ function mySignUp(req, res) {
 }// ends mySignUp
 
 
-// app.get("/home/profile")
-function myProfile(req, res) {
+// app.get("/home/portfolio")
+function myPortfolio(req, res) {
 	var auth = null;
 	if(req.session.name) {
 		auth = true;
 	}
-	res.render('profile', {
+	res.render('portfolio', {
 		loggedIn: auth
 	});
-}// ends myProfile
-
+}// ends myPortfolio	
 
 // app.get("/home/contact")
 function contactMe(req, res) {
@@ -291,9 +290,9 @@ app.get("/login/signup", function(req, res) {
 	mySignUp(req, res);
 });
 
-// Calls the profile
-app.get("/home/profile", function(req, res) {
-	myProfile(req, res);
+// Calls the portfolio
+app.get("/home/portfolio", function(req, res) {
+	myPortfolio(req, res);
 });
 
 // Calls the contact
