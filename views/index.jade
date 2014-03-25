@@ -18,6 +18,7 @@ block content
                   p.modalBlogPostBody 
                     - if (post.content.length > 100) 
                       =post.content.substring(0, 100)
+                      &hellip;
                     - else 
                       =post.content
                   p

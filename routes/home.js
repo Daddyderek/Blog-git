@@ -98,35 +98,16 @@ function viewBlogPost(req, res) {
 
 		if ( err ) {
 
-			console.log(err);
+			console.log('Error '+err);
+			res.send('Error '+err);
 
 		}
+			res.json(obj);
 
 	});
 
 
 } // ends viewBlogPost
-
-
-
-
-// app.get("/login/signup")
-function mySignUp( req, res ) {
-
-	var auth = null;
-
-	if ( req.session.name ) {
-
-		auth = true;
-
-	}
-
-	res.render('signup', 
-	{
-		loggedIn: auth
-	});
-
-}// ends mySignUp
 
 
 
@@ -180,26 +161,6 @@ function contactMe( req, res ) {
 	});
 
 } // ends contactME
-
-
-
-
-// end app.get("/home/projects")
-function myProjects( req, res ) {
-
-	var auth = null;
-
-	if ( req.session.name ) {
-
-		auth = true;
-	}
-
-	res.render('projects', 
-	{
-		loggedIn: auth
-	});
-
-}// ends myProjects
 
 
 
@@ -266,38 +227,42 @@ function addPortfolio( req, res ) {
 
 		auth = true;
 
+		var portfolioTitle 	 = req.body.title;
+		var portfolioContent = req.body.content;
+		var postDate 		 = req.body.date;
+		var myPortfolio 	 = new portfolio (
+		{
+
+			title 	: portfolioTitle,
+			content : portfolioContent
+
+		});// ends var myPortfolio
+
+		myPortfolio.save( function( err ) {
+
+			if ( err ) {
+
+				console.log('Error '+err);
+				res.send('Error '+err);
+
+			} else {
+
+				res.redirect("myPortfolio", 
+				{
+					
+					loggedIn: auth
+
+				});
+
+			}
+
+		});
+
+	} else {
+
+		res.redirect('/login');
+
 	}
-
-	var portfolioTitle 	 = req.body.title;
-	var portfolioContent = req.body.content;
-	var postDate 		 = req.body.date;
-	var myPortfolio 	 = new portfolio (
-	{
-
-		title 	: portfolioTitle,
-		content : portfolioContent
-
-	});// ends var myPortfolio
-
-	myPortfolio.save( function( err ) {
-
-		if ( err ) {
-
-			console.log('Error '+err);
-			res.send('Error '+err);
-
-		} else {
-
-			res.redirect("myPortfolio", 
-			{
-				
-				loggedIn: auth
-
-			});
-
-		}
-
-	});
 
 }// ends addPortfolio
 
@@ -313,38 +278,42 @@ function createPost( req, res ) {
 
 		auth = true;
 
+		var postTitle 	= req.body.title;
+		var postContent = req.body.content;
+		var postDate 	= req.body.date;
+		var myPost 		= new post({
+
+			title	: postTitle,
+			content : postContent
+
+		});// ends myPost
+
+		myPost.save( function( err ) {
+
+			if ( err ) {
+
+				console.log('Error '+err);
+				res.send('Error '+err);
+
+			} else {
+
+				res.render("newPost", 
+
+				{
+
+				loggedIn: auth
+
+				});
+			
+			}
+
+		});// ends myPost.save
+
+	} else {
+
+		res.redirect('/login');
+
 	}
-
-	var postTitle 	= req.body.title;
-	var postContent = req.body.content;
-	var postDate 	= req.body.date;
-	var myPost 		= new post({
-
-		title	: postTitle,
-		content : postContent
-
-	});// ends myPost
-
-	myPost.save( function( err ) {
-
-		if ( err ) {
-
-			console.log('Error '+err);
-			res.send('Error '+err);
-
-		} else {
-
-			res.render("newPost", 
-
-			{
-
-			loggedIn: auth
-
-			});
-		
-		}
-
-	});// ends myPost.save
 
 }// ends createPost
 
@@ -388,6 +357,7 @@ function verify( req, res ) {
 /*##############################  	GET EDIT	############################## */
 
 
+
 // app.get("/home/oldPosts")
 function oldPosts(req, res) {
 
@@ -422,7 +392,7 @@ function oldPosts(req, res) {
 
 	} else {
 
-		res.send("You're not logged in");
+		res.redirect('/login');
 
 	}
 
@@ -469,7 +439,7 @@ function editMyPost( req, res ) {
 
 	} else {
 
-		res.send("You are not logged in");
+		res.redirect('/login');
 
 	}
 
@@ -512,7 +482,7 @@ function editMyPortfolio(req, res) {
 
 	} else {
 
-		res.send( 'You are not logged in!' );
+		res.redirect('/login');
 
 	}
 
@@ -550,7 +520,7 @@ function deletePost( req, res ) {
 
 	} else {
 
-		res.send("You are not logged in");
+		res.redirect('/login');
 
 	}
 
@@ -587,7 +557,7 @@ function deletePortfolio(req, res) {
 
 	} else {
 
-		res.send( "You're not logged in" );
+		res.redirect('/login');
 
 	}
 
@@ -632,11 +602,6 @@ app.get("/home/portfolio", function(req, res) {
 // Calls the contact
 app.get("/home/contact", function(req, res) {
 	contactMe(req, res);
-});
-
-// Calls projects
-app.get("/home/projects", function(req, res) {
-	myProjects(req, res);
 });
 
 // Calls hack the planet!
