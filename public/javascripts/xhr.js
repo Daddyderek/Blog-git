@@ -166,13 +166,12 @@ $(document).ready(function() {
 		e.preventDefault();
 
 		var button = $(this);
-		console.log("this= "+$(this));
 
-		$.ajax( button.attr('href'), {
+		$.ajax( button.attr( 'href' ), {
 
 			method	: 'DELETE',
 			success : function(result) {
-
+				
 				button.closest('li').remove();
 
 			} // ends success

@@ -335,9 +335,9 @@ function verify( req, res ) {
 	var user	= req.body.username;
 	var pw		= req.body.password;
 
-	if( user === "kingtak" ) {
+	if( user === "a" ) {
 
-		if( pw === "devleague" ) {
+		if( pw === "a" ) {
 
 			req.session.name = user;
 			res.send( { redirect : '/home' } );
@@ -502,7 +502,7 @@ function editMyPortfolio(req, res) {
 
 
 
-// app.delete("/home")
+// app.delete("/home/blog/:id")
 function deletePost( req, res ) {
 
 	var auth = null;
@@ -675,7 +675,7 @@ app.put("/home/blog/:id", function(req, res) {
 });
 
 // Calls the edit function for portfolio posts
-app.put("/home/portfolio", function(req, res) {
+app.put("/home/portfolio/:id", function(req, res) {
 	editMyPortfolio(req, res);
 });
 

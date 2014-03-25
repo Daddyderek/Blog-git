@@ -17,15 +17,17 @@ block content
 						button(type='sumbit') Submit
 					#resultPortfolio
 			.col-md-6.col-md-offset-3
-				- for portfolio in portfolios
-					.postTitle.form-group
-						h2( data-title-id= '#{ portfolio.id }' )= portfolio.title
-					.postContent.form-group
-						h4( data-content-id= '#{ portfolio.id }')= portfolio.content
-					.form-group
-						- if (loggedIn)
-							button(class='delete2', href='/home/portfolio/#{portfolio.id}') Delete
-							button(class='edit2', data-toggle='modal', data-id='#{portfolio.id}', data-target='#myModal2') Edit
+				ul
+					- for portfolio in portfolios
+						li
+							.postTitle.form-group
+								h2( data-title-id= '#{ portfolio.id }' )= portfolio.title
+							.postContent.form-group
+								h4( data-content-id= '#{ portfolio.id }')= portfolio.content
+							.form-group
+								- if (loggedIn)
+									button(class='delete2', href='/home/portfolio/#{portfolio.id}') Delete
+									button(class='edit2', data-toggle='modal', data-id='#{portfolio.id}', data-target='#myModal2') Edit
 			#myModal2.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
 				.modal-dialog
 					.modal-content
