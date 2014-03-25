@@ -7,11 +7,41 @@ block content
 			.userPortfolio
 				if (loggedIn)
 					h4 Add A New Project
-					form(id='blogForm', action='/home/newPost', method='post', role='form')
+					form(id='portfolioForm', action='/home/portfolio', method='post', role='form')
 						.form-group
 							label(id="projectId", for="projectTitle") Title :
-							input(id='projectTitle', type='text', placeholder='Title of Project', name='projectTitle')
+							input(id='projectTitle', type='text', placeholder='Title of Project', name='title', required='required')
 						.form-group
 							label(id='projectDescriptionLabel', for="description") Description :
-							textarea(id='description', class='form control', type='text', placeholder='Describe Your Project', rows='12', cols='95', name='content')
+							textarea(id='description', class='form control', type='text', placeholder='Describe Your Project', rows='12', cols='95', name='content', required='required')
 						button(type='sumbit') Submit
+					#resultPortfolio
+			- for portfolio in portfolios
+				ul
+					.col-md-6.col-md-offset-3
+						li
+							h2. #{portfolio.title}
+							p. #{portfolio.content}
+							p. #{portfolio.date}
+							.form-group
+								- if (loggedIn)
+									button(class='delete2', href='/home/#{portfolio.id}') Delete
+									button(class='edit2', data-toggle='modal', data-id='#{portfolio.id}', data-target='#myModal2') Edit
+			#myModal2.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+				.modal-dialog
+					.modal-content
+						form(id='modalEditForm2',role='form', action='#')
+							.modal-header
+								.form-group
+									button.close(type='button', data-dismiss='modal', aria-hidden='true')
+									h4#myModalLabel2.modal-title
+										label(id="titleEditID2", for="titleEdit") Title :
+										input(id="titleEdit2", type="text", name="title")
+							.modal-body
+								.form-group
+									label(id='bodyEditID2', for='bodyEdit') Body :
+									textarea(id='bodyEdit2', class='form control', type='text', rows='17', cols='70', name='content')
+							.modal-footer
+								.form-group
+									button.btn.btn-default(type='button', data-dismiss='modal') Close
+									button.btn.btn-primary(id='modalSave2',type='button') Save changes

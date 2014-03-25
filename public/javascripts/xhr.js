@@ -2,7 +2,66 @@ $(document).ready(function() {
 
 	console.log("JavaScript is working!");
 
-	// dispays blog in a modal //
+
+	// Edit portfolio posts //
+	$('button.edit2').on('click', function(e) {
+
+		e.preventDefault();
+
+		var title	= $(this).closest('li').find('#portfolioTitle h2').html();
+		var body	= $(this).closest("li").find('#portfolioContent h4').html();
+		var id		= $(this).data('id');
+
+		$('#titleEdit2').val(title);
+
+		$('#bodyEdit2').val(body);
+
+		$("#modalEditForm2").attr('action', '/home/' + id);
+
+	}); // ends $('button.edit')
+
+
+	// delete portfolio post //
+	$('button.delete2').on('click', function(e) {
+
+		e.preventDefault();
+
+		var button = $(this);
+
+		$.ajax( button.attr('href'), {
+
+			method	: 'DELETE',
+			success : function(result) {
+
+				button.closest('li').remove();
+
+			} // ends success
+
+		}); // ends $.ajax	
+
+	}); // ends #delete
+
+
+
+	// create new portfolio post //
+	$('form#portfolioForm').on('submit', function(event) {
+
+		event.preventDefault();
+
+		$.ajax( '/home/portfolio', {
+			method	: 'POST',
+			data	: $('form#portfolioForm').serialize(),
+			success : function(result) {
+				$('#resultPorfolio').html('Your Post was successful');
+
+			} // ends success:
+
+		}); // ends $.ajax
+
+	}); // ends $(form#blog).on
+
+
+	// Displays blog in a modal //
 	$('.viewPostModal').on('click', function(e) {
 
 		e.preventDefault();
