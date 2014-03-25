@@ -30,7 +30,7 @@ $(document).ready(function() {
 
 		e.preventDefault();
 
-		var button = $(this);
+		var button = $("#modalEditForm").attr('data-editing-id');
 
 		$.ajax( button.attr('href'), {
 
@@ -60,8 +60,8 @@ $(document).ready(function() {
 			type	: 'json',
 			success : function(result) {
 
-				var $theTitle	= $( "h2[data-title-id="+id+"]" );
-				var $theContent = $( "h4[data-content-id="+id+"]" );
+				var $theTitle	= $( "h2[data-title-id='"+id+"']" );
+				var $theContent = $( "h4[data-content-id='"+id+"']" );
 
 				$theTitle.html( result.title );
 				$theContent.html( result.content );
@@ -171,7 +171,7 @@ $(document).ready(function() {
 
 			method	: 'DELETE',
 			success : function(result) {
-				
+
 				button.closest('li').remove();
 
 			} // ends success
@@ -233,24 +233,22 @@ $(document).ready(function() {
 
 		e.preventDefault();
 
-		var id = $(this).data('id');
+		var id = $("#modalEditForm").attr('data-editing-id');
 
 		$.ajax( $('#modalEditForm').attr('action'), {
 
 			method	: 'PUT',
 			data	: $("#modalEditForm").serialize(),
-			type 	: 'json',
+			type	: 'json',
 			success : function(result) {
 
-				var $theTitle 	= $( "h2[data-title-id="+id+"]" );
-				var $theContent = $( "h4[data-content-id="+id+"]" );
-
-				console.log("title "+$theTitle);
-				console.log("content "+$theContent);
-				console.log("result= "+result);
+				var $theTitle	= $( "h2[data-title-id='"+id+"']" );
+				var $theContent = $( "h4[data-content-id='"+id+"']" );
 
 				$theTitle.html( result.title );
 				$theContent.html( result.content );
+
+				$("button[data-dismiss='modal']").click();
 
 			} // ends success
 

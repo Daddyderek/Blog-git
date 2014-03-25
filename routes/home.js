@@ -406,7 +406,7 @@ function oldPosts(req, res) {
 
 
 
-/*##############################  	GET UPDATE	##############################*/
+/*##############################  	PUT UPDATE	##############################*/
 
 
 // app.put("/home/blog/oldPosts")
@@ -431,7 +431,7 @@ function editMyPost( req, res ) {
 			content : postContent
 		},
 
-		function( err ) {
+		function( err, obj ) {
 
 			if ( err ) {
 
@@ -441,7 +441,7 @@ function editMyPost( req, res ) {
 			}
 
 			console.log("Post Has Been Edited");
-			res.send('Post Edited');
+			res.json(obj);
 
 		});// ends post.findOneAndUpdate
 
@@ -472,7 +472,7 @@ function editMyPortfolio(req, res) {
 			content : portfolioContent 
 		},
 
-		function ( err ) {
+		function ( err, obj ) {
 
 			if ( err ) {
 
@@ -482,7 +482,7 @@ function editMyPortfolio(req, res) {
 			} else {
 
 				console.log('Portfolio Has Been Edited');
-				res.send('Portfolio Edited');
+				res.json(obj);
 
 			}
 
