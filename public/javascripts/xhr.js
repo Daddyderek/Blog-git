@@ -85,7 +85,8 @@ $(document).ready(function() {
 			data	: $('form#portfolioForm').serialize(),
 			success : function(result) {
 
-				$('#resultPorfolio').html('Your Post was successful');
+				$('form#portfolioForm').remove();
+				$('#resultPortfolio').html('Your Post was successful');
 
 			} // ends success:
 
@@ -188,7 +189,7 @@ $(document).ready(function() {
 
 		event.preventDefault();
 
-		$.ajax( '/home/newPost', {
+		$.ajax( '/home/blog/newPost', {
 
 			method	: 'POST',
 			data	: $('form#blogForm').serialize(),
@@ -220,10 +221,6 @@ $(document).ready(function() {
 		$('#bodyEdit').val(body);
 
 		$('#post_id').val(id);
-
-		console.log("this is post_id "+$('#post_id').val());
-		console.log("titile "+title);
-		console.log("body "+body);
 
 		$("#modalEditForm").attr('data-editing-id', id);
 

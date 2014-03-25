@@ -203,7 +203,7 @@ function myHackPlanet( req, res ) {
 
 
 
-// app.get("/home/newPost")
+// app.get("/home/blog/newPost")
 function newPost( req, res ) {
 
 	res.render('newPost');
@@ -278,7 +278,7 @@ function addPortfolio( req, res ) {
 
 
 
-// app.post('/home/newpost')
+// app.post('/home/blog/newpost')
 function createPost( req, res ) {
 
 	var auth = null;
@@ -368,7 +368,7 @@ function verify( req, res ) {
 
 
 
-// app.get("/home/oldPosts")
+// app.get("/home/blog/oldPosts")
 function oldPosts(req, res) {
 
 	var auth = null;
@@ -409,7 +409,7 @@ function oldPosts(req, res) {
 /*##############################  	GET UPDATE	##############################*/
 
 
-// app.put("/home/oldPosts")
+// app.put("/home/blog/oldPosts")
 function editMyPost( req, res ) {
 
 	var auth = null;
@@ -421,8 +421,6 @@ function editMyPost( req, res ) {
 		var numId 		= req.body.id;
 		var postTitle 	= req.body.title;
 		var postContent = req.body.content;
-
-		console.log("numid = "+numId);
 
 		post.findOneAndUpdate({
 
@@ -456,13 +454,13 @@ function editMyPost( req, res ) {
 }// ends editMyPost 
 
 
-// app.put("/home/:id")
+// app.put("/home/portfolio/:id")
 function editMyPortfolio(req, res) {
 
 	if ( req.session.name ) {
 
-		var numId 			 = req.param( 'id' );
-		var portfolioTitle 	 = req.body.title;
+		var numId			 = req.body.id;
+		var portfolioTitle	 = req.body.title;
 		var portfolioContent = req.body.content;
 
 		portfolio.findOneAndUpdate({ 
@@ -525,11 +523,12 @@ function deletePost( req, res ) {
 
 			if ( err ) {
 
-				console.log("WTF?");
+				console.log("Error "+err);
+				res.send("Error "+err);
 
 			}
 
-			console.log("Deleted Portfolio");
+			console.log("Deleted Post");
 			res.send('Deleted Successfully');
 
 		});
@@ -544,7 +543,7 @@ function deletePost( req, res ) {
 
 
 
-// app.delete('/home/:id')
+// app.delete('/home/portfolio/:id')
 function deletePortfolio(req, res) {
 
 	var auth = null;
@@ -559,19 +558,19 @@ function deletePortfolio(req, res) {
 
 			_id: idNum
 
-		}, function(err) {
+		}, 
+
+		function(err) {
 
 			if(err) {
 
 				console.log( "Error "+err );
 				res.send( 'Error '+err );
 
-			} else {
+			} 
 
-				console.log("deleted portfolio");
-				res.send('Deleted Successfully');
-
-			}
+			console.log("deleted portfolio");
+			res.send('Deleted Successfully');
 
 		});
 
@@ -609,11 +608,6 @@ app.get("/login", function(req, res) {
 	myLogin(req, res);
 });
 
-// Calls the signup page
-app.get("/login/signup", function(req, res) {
-	mySignUp(req, res);
-});
-
 // Calls the portfolio
 app.get("/home/portfolio", function(req, res) {
 	myPortfolio(req, res);
@@ -639,7 +633,7 @@ app.get("/logout", function(req, res) {
 
 
 // Calls the new post page
-app.get("/home/newPost", function(req, res) {
+app.get("/home/blog/newPost", function(req, res) {
 	newPost(req, res);
 });
 
@@ -653,7 +647,7 @@ app.post("/home/portfolio", function(req, res) {
 });
 
 // Calls the new post page so that it may POST
-app.post("/home/newpost", function(req, res) {
+app.post("/home/blog/newpost", function(req, res) {
 	createPost(req, res);
 });
 
@@ -667,7 +661,7 @@ app.post("/login", function(req, res) {
 
 
 // Calls the old posts
-app.get("/home/oldPosts", function(req, res) {
+app.get("/home/blog/oldPosts", function(req, res) {
 	oldPosts(req, res);
 });
 
@@ -676,12 +670,12 @@ app.get("/home/oldPosts", function(req, res) {
 
 
 // Calls the edit function for blog posts
-app.put("/home/:id", function(req, res) {
+app.put("/home/blog/:id", function(req, res) {
 	editMyPost(req, res);
 });
 
 // Calls the edit function for portfolio posts
-app.put("/home/:id", function(req, res) {
+app.put("/home/portfolio", function(req, res) {
 	editMyPortfolio(req, res);
 });
 
@@ -690,11 +684,11 @@ app.put("/home/:id", function(req, res) {
 
 
 // On the old posts page it deletes the current post
-app.delete('/home/:id', function(req, res) {
+app.delete('/home/blog/:id', function(req, res) {
 	deletePost(req, res);
 });
 
 // On the portfolio page it deletes the current post
-app.delete('/home/:id', function(req, res) {
+app.delete('/home/portfolio/:id', function(req, res) {
 	deletePortfolio(req, res);
 });
