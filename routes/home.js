@@ -18,7 +18,7 @@ var portfolio = mongoose.model('portfolio', schema);
 
 
 
-/*##############################  	GET SHOW 	############################## */
+/*##############################	GET SHOW	############################## */
 
 
 
@@ -27,7 +27,7 @@ var portfolio = mongoose.model('portfolio', schema);
 // app.get("/login")
 function myLogin( req, res ) {
 
-	 var auth = null;
+	var auth = null;
 
 	if ( req.session.name ) {
 
@@ -35,9 +35,10 @@ function myLogin( req, res ) {
 
 	}
 
-	res.render( 'login', 
+	res.render( 'login',
+
 	{
-		loggedIn: auth
+		loggedIn : auth
 	});
 
 }// ends myLogin
@@ -55,6 +56,7 @@ function homePage( req, res ) {
 		auth = true;
 
 	}
+
 	post.find().sort({
 
 		date: -1
@@ -68,10 +70,11 @@ function homePage( req, res ) {
 
 		}
 
-		res.render('index', 
+		res.render('index',
+
 		{
-			loggedIn: auth,
-			posts	: blogPost
+			loggedIn : auth,
+			posts	 : blogPost
 
 		}); // ends res.render
 
@@ -93,7 +96,8 @@ function viewBlogPost(req, res) {
 		
 		_id: idNum
 
-	}, 
+	},
+
 	function( err, obj ) {
 
 		if ( err ) {
@@ -123,7 +127,9 @@ function myPortfolio( req, res ) {
 
 	}
 
-	portfolio.find().sort({ date: -1 }).exec( function(err, portfolioPost) {
+	portfolio.find().sort( { date: -1 } ).exec( 
+
+		function(err, portfolioPost) {
 
 		if (err) {
 
@@ -132,10 +138,13 @@ function myPortfolio( req, res ) {
 
 		}
 
-		res.render('portfolio', 
+		res.render('portfolio',
+
 		{
-			loggedIn:auth,
-			portfolios: portfolioPost
+
+			loggedIn	: auth,
+			portfolios	: portfolioPost
+
 		});
 
 	});
@@ -153,11 +162,13 @@ function contactMe( req, res ) {
 	if( req.session.name ) {
 
 		auth = true;
+
 	}
 
-	res.render( 'contact', 
+	res.render( 'contact',
+
 	{
-		loggedIn: auth
+		loggedIn : auth
 	});
 
 } // ends contactME
@@ -176,9 +187,10 @@ function myHackPlanet( req, res ) {
 
 	}
 
-	res.render( 'hacktheplanet', 
+	res.render( 'hacktheplanet',
+
 	{
-		loggedIn: auth
+		loggedIn : auth
 	});
 
 }// ends myHackPlanet
@@ -206,7 +218,7 @@ function endSession( req, res ) {
 
 	req.session.destroy();
 
-	res.send('<br />logged out!<br /><a href="/login">Check Session</a>');
+	res.redirect('/login');
 
 }// ends endSession
 
@@ -227,42 +239,39 @@ function addPortfolio( req, res ) {
 
 		auth = true;
 
-		var portfolioTitle 	 = req.body.title;
-		var portfolioContent = req.body.content;
-		var postDate 		 = req.body.date;
-		var myPortfolio 	 = new portfolio (
-		{
-
-			title 	: portfolioTitle,
-			content : portfolioContent
-
-		});// ends var myPortfolio
-
-		myPortfolio.save( function( err ) {
-
-			if ( err ) {
-
-				console.log('Error '+err);
-				res.send('Error '+err);
-
-			} else {
-
-				res.redirect("myPortfolio", 
-				{
-					
-					loggedIn: auth
-
-				});
-
-			}
-
-		});
-
-	} else {
-
-		res.redirect('/login');
-
 	}
+
+	var portfolioTitle 	 = req.body.title;
+	var portfolioContent = req.body.content;
+	var postDate 		 = req.body.date;
+	var myPortfolio 	 = new portfolio (
+
+	{
+
+		title 	: portfolioTitle,
+		content : portfolioContent
+
+	});// ends var myPortfolio
+
+	myPortfolio.save( function( err ) {
+
+		if ( err ) {
+
+			console.log('Error '+err);
+			res.send('Error '+err);
+
+		} else {
+
+			res.redirect("myPortfolio", 
+			{
+				
+				loggedIn: auth
+
+			});
+
+		}
+
+	});
 
 }// ends addPortfolio
 
@@ -323,28 +332,29 @@ function createPost( req, res ) {
 // app.post("/login")
 function verify( req, res ) {
 
-	var user 	= req.body.username;
-	var pw 		= req.body.password;
+	var user	= req.body.username;
+	var pw		= req.body.password;
 
 	if( user === "kingtak" ) {
 
 		if( pw === "devleague" ) {
 
 			req.session.name = user;
-			res.send({ redirect : '/home' });
+			res.send( { redirect : '/home' } );
 
 			return;
 
 		} else {
 
-			res.send('Wrong password');
+			res.send( 'Wrong password' );
 
 			return;
 		}
 
 	} else {
 
-		res.send("Wrong User Name");
+		res.send( "Wrong User Name" );
+
 		return;
 
 	}
@@ -367,34 +377,30 @@ function oldPosts(req, res) {
 
 		auth = true;
 
-		post.find().sort({
-
-			date: -1
-
-		}).limit(6).exec(
-
-		function( err, myOldPosts ) {
-
-			if (err) {
-
-				console.log('Error '+err);
-				res.send('Error '+err);
-
-			}
-			res.render('oldPosts', {
-
-				loggedIn	: auth,
-				posts		: myOldPosts
-
-			}); // ends res.render
-
-		}); // ends post.find
-
-	} else {
-
-		res.redirect('/login');
-
 	}
+
+	post.find().sort({
+
+		date: -1
+
+	}).limit(6).exec(
+
+	function( err, myOldPosts ) {
+
+		if (err) {
+
+			console.log('Error '+err);
+			res.send('Error '+err);
+
+		}
+		res.render('oldPosts', {
+
+			loggedIn	: auth,
+			posts		: myOldPosts
+
+		}); // ends res.render
+
+	}); // ends post.find
 
 } // ends oldPosts
 
@@ -406,7 +412,11 @@ function oldPosts(req, res) {
 // app.put("/home/oldPosts")
 function editMyPost( req, res ) {
 
+	var auth = null;
+
 	if ( req.session.name ) {
+
+		auth = true;
 
 		var numId 		= req.body.id;
 		var postTitle 	= req.body.title;
@@ -497,14 +507,20 @@ function editMyPortfolio(req, res) {
 // app.delete("/home")
 function deletePost( req, res ) {
 
+	var auth = null;
+
 	if ( req.session.name ) {
+
+		auth = true;
 
 		var idNum = req.param('id');
 
 		post.findOneAndRemove({
 
 			_id: idNum
+
 		}, 
+
 		function( err ) {
 
 			if ( err ) {
@@ -531,7 +547,11 @@ function deletePost( req, res ) {
 // app.delete('/home/:id')
 function deletePortfolio(req, res) {
 
+	var auth = null;
+
 	if(req.session.name) {
+
+		auth = true;
 
 		var idNum = req.param('id');
 
