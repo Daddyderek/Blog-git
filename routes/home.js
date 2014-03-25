@@ -18,7 +18,7 @@ var portfolio = mongoose.model('portfolio', schema);
 
 
 
-/*############### 	GET SHOW ############### */
+/*##############################  	GET SHOW 	############################## */
 
 
 
@@ -193,6 +193,7 @@ function myProjects( req, res ) {
 
 		auth = true;
 	}
+
 	res.render('projects', 
 	{
 		loggedIn: auth
@@ -224,7 +225,7 @@ function myHackPlanet( req, res ) {
 
 
 
-/*############### 	GET NEW	 ###############*/
+/*##############################  	GET NEW	 	##############################*/
 
 
 
@@ -251,7 +252,7 @@ function endSession( req, res ) {
 
 
 
-/*############### 	POST CREATE		############### */
+/*##############################  	POST CREATE		############################## */
 
 
 
@@ -384,7 +385,7 @@ function verify( req, res ) {
 
 
 
-/*############### 	GET EDIT	############### */
+/*##############################  	GET EDIT	############################## */
 
 
 // app.get("/home/oldPosts")
@@ -429,7 +430,7 @@ function oldPosts(req, res) {
 
 
 
-/*############### 	GET UPDATE	###############*/
+/*##############################  	GET UPDATE	##############################*/
 
 
 // app.put("/home/oldPosts")
@@ -486,8 +487,8 @@ function editMyPortfolio(req, res) {
 			_id: numId
 		}, 
 		{ 
-			title: portfolioTitle, 
-			content: portfolioContent 
+			title	: portfolioTitle, 
+			content : portfolioContent 
 		},
 
 		function ( err ) {
@@ -516,7 +517,7 @@ function editMyPortfolio(req, res) {
 
 
 
-/* ###############	GET DELETE	###############*/
+/* ############################## 	GET DELETE	##############################*/
 
 
 
@@ -592,12 +593,12 @@ function deletePortfolio(req, res) {
 
 
 
-/*#########################		ROUTE HANDLERS		##########################*/
+/*######################################## 		ROUTE HANDLERS		#########################################*/
 
 
 
 
-/*###############	GET SHOW	###############*/
+/*############################## 	GET SHOW	##############################*/
 
 
 // This is just for XHR to view blog post //
@@ -646,7 +647,7 @@ app.get("/logout", function(req, res) {
 
 
 
-/*###############	GET NEW		###############*/
+/*############################## 	GET NEW		##############################*/
 
 
 // Calls the new post page
@@ -655,7 +656,7 @@ app.get("/home/newPost", function(req, res) {
 });
 
 
-/*###############	POST CREATE		###############*/
+/*############################## 	POST CREATE		##############################*/
 
 
 // Calls the portfolio to Post new
@@ -674,7 +675,7 @@ app.post("/login", function(req, res) {
 });
 
 
-/*###############	GET EDIT 	###############*/
+/*############################## 	GET EDIT 	##############################*/
 
 
 // Calls the old posts
@@ -683,7 +684,7 @@ app.get("/home/oldPosts", function(req, res) {
 });
 
 
-/*###############	PUT UPDATE	###############*/
+/*############################## 	PUT UPDATE	##############################*/
 
 
 // Calls the edit function for blog posts
@@ -697,7 +698,7 @@ app.put("/home/:id", function(req, res) {
 });
 
 
-/*###############	GET DELETE		###############*/
+/*############################## 	GET DELETE		##############################*/
 
 
 // On the old posts page it deletes the current post

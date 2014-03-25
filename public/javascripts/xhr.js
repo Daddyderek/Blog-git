@@ -21,6 +21,8 @@ $(document).ready(function() {
 	}); // ends $('button.edit')
 
 
+
+
 	// delete portfolio post //
 	$('button.delete2').on('click', function(e) {
 
@@ -43,6 +45,7 @@ $(document).ready(function() {
 
 
 
+
 	// create new portfolio post //
 	$('form#portfolioForm').on('submit', function(event) {
 
@@ -52,6 +55,7 @@ $(document).ready(function() {
 			method	: 'POST',
 			data	: $('form#portfolioForm').serialize(),
 			success : function(result) {
+
 				$('#resultPorfolio').html('Your Post was successful');
 
 			} // ends success:
@@ -59,6 +63,8 @@ $(document).ready(function() {
 		}); // ends $.ajax
 
 	}); // ends $(form#blog).on
+
+
 
 
 	// Displays blog in a modal //
@@ -83,6 +89,8 @@ $(document).ready(function() {
 		});
 		
 	});// ends $("#viewPostModal")
+
+
 
 
 	//displays failed password/username attempts //
@@ -121,6 +129,7 @@ $(document).ready(function() {
 
 
 
+
 	// delete blog post //
 	$('button.delete').on('click', function(e) {
 
@@ -143,12 +152,14 @@ $(document).ready(function() {
 
 
 
+
 	// create new blog post //
 	$('form#blogForm').on('submit', function(event) {
 
 		event.preventDefault();
 
 		$.ajax( '/home/newPost', {
+
 			method	: 'POST',
 			data	: $('form#blogForm').serialize(),
 			success : function(result) {
@@ -161,6 +172,7 @@ $(document).ready(function() {
 		}); // ends $.ajax
 
 	}); // ends $(form#blog).on
+
 
 
 
@@ -180,6 +192,7 @@ $(document).ready(function() {
 		$("#modalEditForm").attr('action', '/home/' + id);
 
 	}); // ends $('button.edit')
+
 
 
 
@@ -204,11 +217,15 @@ $(document).ready(function() {
 
 
 
+
 	// toggle the blue side nav-bar //
 	$('[data-toggle=offcanvas]').click(function() {
 
 		$('.row-offcanvas').toggleClass('active');
 		
 	}); // ends $('[data-toggle=offcanvas]')
+
+
+	
 
 }); // ends $doc.ready
