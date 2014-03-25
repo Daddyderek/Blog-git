@@ -8,15 +8,17 @@ $(document).ready(function() {
 
 		e.preventDefault();
 
-		var title	= $(this).closest('li').find('#portfolioTitle h2').html();
-		var body	= $(this).closest("li").find('#portfolioContent h4').html();
 		var id		= $(this).data('id');
+		var title	= $( "h2[data-title-id='"+id+"']" ).html();
+		var body	= $( "h4[data-content-id='"+id+"']" ).html();
 
 		$('#titleEdit2').val(title);
 
 		$('#bodyEdit2').val(body);
 
-		$("#modalEditForm2").attr('action', '/home/' + id);
+		$('#post_id2').val(id);
+
+		$("#modalEditForm").attr('data-editing-id', id);
 
 	}); // ends $('button.edit')
 
@@ -42,6 +44,33 @@ $(document).ready(function() {
 		}); // ends $.ajax	
 
 	}); // ends #delete
+
+
+
+	$("#modalSave2").click(function(e) {
+
+		e.preventDefault();
+
+		var id = $(this).data('id');
+
+		$.ajax( $('#modalEditForm2').attr('action'), {
+
+			method	: 'PUT',
+			data	: $("#modalEditForm2").serialize(),
+			type	: 'json',
+			success : function(result) {
+
+				var $theTitle	= $( "h2[data-title-id="+id+"]" );
+				var $theContent = $( "h4[data-content-id="+id+"]" );
+
+				$theTitle.html( result.title );
+				$theContent.html( result.content );
+
+			} // ends success
+
+		}); // ends $.ajax
+
+	}); // ends $('#modalSave2')
 
 
 
