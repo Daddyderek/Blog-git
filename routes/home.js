@@ -438,10 +438,12 @@ function editMyPost( req, res ) {
 
 	if ( req.session.name ) {
 
-		var numId 		= req.param('id');
+		var numId 		= req.body.id;
 		var postTitle 	= req.body.title;
 		var postContent = req.body.content;
-	 
+
+		console.log("numid = "+numId);
+
 		post.findOneAndUpdate({
 
 			_id: numId	
@@ -455,7 +457,8 @@ function editMyPost( req, res ) {
 
 			if ( err ) {
 
-				console.log("error in edit meow");
+				console.log("error in edit meow "+err);
+				res.send("Error"+err);
 
 			}
 

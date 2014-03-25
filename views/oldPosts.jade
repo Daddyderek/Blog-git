@@ -8,12 +8,12 @@ block content
 				ul
 				- for post in posts
 					li
-						#postTitle.form-group
-							h2=post.title
-						#postDate.form-group
+						.postTitle.form-group
+							h2( data-title-id= '#{ post.id }' )= post.title
+						.postDate.form-group
 							h6=post.date
-						#postContent.form-group
-							h4=post.content
+						.postContent.form-group
+							h4( data-content-id= '#{ post.id }')= post.content
 					.form-group
 						- if (loggedIn)
 							button(class='delete', href='/home/#{post.id}') Delete
@@ -28,6 +28,7 @@ block content
 										h4#myModalLabel.modal-title
 											label(id="titleEditID", for="titleEdit") Title :
 											input(id="titleEdit", type="text", name="title")
+											input(id="post_id", type="hidden", value="", name="id")
 								.modal-body
 									.form-group
 										label(id='bodyEditID', for='bodyEdit') Body :

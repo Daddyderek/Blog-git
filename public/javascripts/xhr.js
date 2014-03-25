@@ -102,11 +102,11 @@ $(document).ready(function() {
 
 		$.ajax( button.attr('href'), {
 
-			url		: '/login',
-			method	: "POST",
-			data	: $("#login").serialize(),
-			dataType: 'json',
-			success : function(data) {
+			url		 : '/login',
+			method	 : "POST",
+			data	 : $("#login").serialize(),
+			dataType : 'json',
+			success  : function(data) {
 
 				if (typeof data.redirect == 'string') {
 					
@@ -181,15 +181,21 @@ $(document).ready(function() {
 
 		e.preventDefault();
 
-		var title	= $(this).closest('li').find('#postTitle h2').html();
-		var body	= $(this).closest("li").find('#postContent h4').html();
 		var id		= $(this).data('id');
+		var title	= $( "h2[data-title-id='"+id+"']" ).html();
+		var body	= $( "h4[data-content-id='"+id+"']" ).html();
 
 		$('#titleEdit').val(title);
 
 		$('#bodyEdit').val(body);
 
-		$("#modalEditForm").attr('action', '/home/' + id);
+		$('#post_id').val(id);
+
+		console.log("this is post_id "+$('#post_id').val());
+		console.log("titile "+title);
+		console.log("body "+body);
+
+		$("#modalEditForm").attr('data-editing-id', id);
 
 	}); // ends $('button.edit')
 
@@ -201,13 +207,24 @@ $(document).ready(function() {
 
 		e.preventDefault();
 
+		var id = $(this).data('id');
+
 		$.ajax( $('#modalEditForm').attr('action'), {
 
 			method	: 'PUT',
 			data	: $("#modalEditForm").serialize(),
+			type 	: 'json',
 			success : function(result) {
 
-				console.log(result);
+				var $theTitle 	= $( "h2[data-title-id="+id+"]" );
+				var $theContent = $( "h4[data-content-id="+id+"]" );
+
+				console.log("title "+$theTitle);
+				console.log("content "+$theContent);
+				console.log("result= "+result);
+
+				$theTitle.html( result.title );
+				$theContent.html( result.content );
 
 			} // ends success
 
@@ -226,6 +243,6 @@ $(document).ready(function() {
 	}); // ends $('[data-toggle=offcanvas]')
 
 
-	
+
 
 }); // ends $doc.ready
