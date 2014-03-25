@@ -3,7 +3,7 @@ $(document).ready(function() {
 	console.log("JavaScript is working!");
 
 
-	// Edit portfolio posts //
+	// Edits a post on "/home/portfolio" //
 	$('button.edit2').on('click', function(e) {
 
 		e.preventDefault();
@@ -25,7 +25,7 @@ $(document).ready(function() {
 
 
 
-	// delete portfolio post //
+	// Deletes a post on "/home/portfolio" //
 	$('button.delete2').on('click', function(e) {
 
 		e.preventDefault();
@@ -46,7 +46,7 @@ $(document).ready(function() {
 	}); // ends #delete
 
 
-
+	// Saves an edited post on "/home/portfolio" //
 	$("#modalSave2").click(function(e) {
 
 		e.preventDefault();
@@ -75,7 +75,7 @@ $(document).ready(function() {
 
 
 
-	// create new portfolio post //
+	// Create new post on "/home/portfolio" //
 	$('form#portfolioForm').on('submit', function(event) {
 
 		event.preventDefault();
@@ -97,7 +97,7 @@ $(document).ready(function() {
 
 
 
-	// Displays blog in a modal //
+	// Displays a blog post in a modal on "/home" //
 	$('.viewPostModal').on('click', function(e) {
 
 		e.preventDefault();
@@ -123,7 +123,7 @@ $(document).ready(function() {
 
 
 
-	//displays failed password/username attempts //
+	// Validation flags for failed password/username attempts in "/login"//
 	$('button.login').on('click', function(e) {
 
 		e.preventDefault();
@@ -160,7 +160,7 @@ $(document).ready(function() {
 
 
 
-	// delete blog post //
+	// Deletes a blog post on "/home/blog/oldPosts" //
 	$('button.delete').on('click', function(e) {
 
 		e.preventDefault();
@@ -184,7 +184,7 @@ $(document).ready(function() {
 
 
 
-	// create new blog post //
+	// Creates a new blog post on "/home/blog/newPosts" //
 	$('form#blogForm').on('submit', function(event) {
 
 		event.preventDefault();
@@ -207,7 +207,7 @@ $(document).ready(function() {
 
 
 
-	// Edit old blog posts //
+	// Edits a blog post on "/home/blog/oldPosts" //
 	$('button.edit').on('click', function(e) {
 
 		e.preventDefault();
@@ -229,7 +229,7 @@ $(document).ready(function() {
 
 
 
-	// Saves the edited post //
+	// Saves a post edited on "/home/blog/oldPosts" //
 	$("#modalSave").click(function(e) {
 
 		e.preventDefault();
@@ -262,7 +262,7 @@ $(document).ready(function() {
 
 
 
-	// toggle the blue side nav-bar //
+	// Toggles the blue side nav-bar for mobile on "/home" //
 	$('[data-toggle=offcanvas]').click(function() {
 
 		$('.row-offcanvas').toggleClass('active');
