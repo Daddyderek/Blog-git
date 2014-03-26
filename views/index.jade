@@ -8,12 +8,12 @@ block content
             p.pull-right.visible-xs
               button.btn.btn-primary.btn-xs(type='button', data-toggle='offcanvas') Toggle
             .jumbotron
-              h1 Hello, world!
+              h1 console.Blog( );
               p
                 | This is what my future blog will look like.
             .row2
               - for post in posts
-                .col-6.col-sm-6.col-lg-4.row1
+                .index-blogs.col-6.col-sm-6.col-lg-6.row1
                   h2.modalBlogPostTitle #{post.title}
                   p.modalBlogPostBody 
                     - if (post.content.length > 100) 

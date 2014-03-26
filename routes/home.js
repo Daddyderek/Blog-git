@@ -454,7 +454,7 @@ function editMyPost( req, res ) {
 }// ends editMyPost 
 
 
-// app.put("/home/portfolio/:id")
+// app.put("/home/portfolio")
 function editMyPortfolio(req, res) {
 	
 	console.log("Inside editMyPortfolio");

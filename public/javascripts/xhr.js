@@ -216,9 +216,6 @@ $(document).ready(function() {
 				var $theTitle	= $( "h2[data-title-id='"+id+"']" );
 				var $theContent = $( "h4[data-content-id='"+id+"']" );
 
-				console.log("$title "+$theTitle);
-				console.log("$content "+$theContent);
-
 				$theTitle.html( result.title );
 				$theContent.html( result.content );
 
@@ -260,7 +257,6 @@ $(document).ready(function() {
 	$('button.delete2').on('click', function(e) {
 
 		e.preventDefault();
-		console.log("inside delete2");
 
 		var button = $(this);
 

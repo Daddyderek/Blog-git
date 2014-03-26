@@ -1,16 +1,153 @@
+.login-container {
+	background: grey;
+	width: 40%;
+	height: 100%;
+	margin: 15% 45% 65% 30%;
+	border-radius: 10px;
+}
+
+.login-content {
+	text-align: center;
+	background-color: white;
+	width: 80%;
+	margin: 5% 5% 5% 10%;
+	border-radius: 5px;
+
+	.form-group {
+		width: 90%;
+		margin-left: 5%;
+	}
+}
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active {
+	color: #999;
+	background-color: #222222;
+	
+	a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
+		color:white;
+		background-color: #222222;
+
+	}
+}
+// .navbar.navbar-inverse.navbar-fixed-top {
+// 	min-height: 60px;
+
+// 	.navbar-header {
+// 		min-height: 60px;
+// 	}
+
+// }
+.jumbotron {
+	margin-left: 1%;
+}
+.index-blogs {
+		//background-color: #EEEEEE;
+		border-radius: 5px;
+		margin: 1% 0 0 1%;
+		padding-top: 1px;
+	}
+.portfolio-container {
+	height: 90%;
+	width: 80%;
+	background-color: pink;
+	margin: 5% 5% 10% 10%;
+
+	ul {
+		list-style-type: none;
+	}
+
+}
+.portfolio-content {
+	width: 98%;
+	text-align: left;
+	background-color: green;
+	margin: 5% 25% 8% 1%
+
+}
 #footer {
 	display: block;
 	height: 20px;
 	background-color: green;
 	position: fixed;
 	bottom: 0;
-	padding-left: 40px;
+	float: right;
 }
-.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active {
-	color: #999;
-	background-color: #222222;
-	a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
-		color:white;
-		background-color: #222222;
+
+@media(min-width: 1200px) {
+	.index-blogs {
+		width: 270px;
+		height: 177px;
+		background-color: purple;
+	}
+	.jumbotron {
+		margin-right: 1.5%;
 	}
 }
+
+/* Large desktop */
+@media (min-width: 992px) and (max-width: 1200px) {
+	.index-blogs {
+		width: 340px;
+		height: 177px;
+		background-color: blue;
+	}
+}
+
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 991px) {
+	.index-blogs {
+		width: 250px;
+		height: 177px;
+		background-color: red;
+	}
+	.jumbotron {
+		margin-right: 4%;
+
+		h1 {
+			font-size: 52px;
+		}
+
+		p {
+			font-size: 35px;
+		}
+	}
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+	.index-blogs {
+		height: 177px;
+		background-color: yellow;
+	}
+
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+	.index-blogs {
+		height: 200px;
+		background-color: green;
+		margin-top: 3%;
+	}
+	.jumbotron {
+		margin-bottom: 3%;
+
+		h1 {
+			font-size: 27px;
+		}
+		p {
+			font-size: 18px;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,20 +1,150 @@
 /* line 1, ../../sass/style.scss */
+.login-container {
+  background: grey;
+  width: 40%;
+  height: 100%;
+  margin: 15% 45% 65% 30%;
+  border-radius: 10px;
+}
+
+/* line 9, ../../sass/style.scss */
+.login-content {
+  text-align: center;
+  background-color: white;
+  width: 80%;
+  margin: 5% 5% 5% 10%;
+  border-radius: 5px;
+}
+/* line 16, ../../sass/style.scss */
+.login-content .form-group {
+  width: 90%;
+  margin-left: 5%;
+}
+
+/* line 22, ../../sass/style.scss */
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active {
+  color: #999;
+  background-color: #222222;
+}
+/* line 26, ../../sass/style.scss */
+.navbar-inverse .navbar-nav > .active > a a:hover, .navbar-inverse .navbar-nav > .active > a .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active a:hover, .navbar-inverse .navbar-nav > .active .navbar-inverse .navbar-nav > .active > a:focus {
+  color: white;
+  background-color: #222222;
+}
+
+/* line 40, ../../sass/style.scss */
+.jumbotron {
+  margin-left: 1%;
+}
+
+/* line 43, ../../sass/style.scss */
+.index-blogs {
+  border-radius: 5px;
+  margin: 1% 0 0 1%;
+  padding-top: 1px;
+}
+
+/* line 49, ../../sass/style.scss */
+.portfolio-container {
+  height: 90%;
+  width: 80%;
+  background-color: pink;
+  margin: 5% 5% 10% 10%;
+}
+/* line 55, ../../sass/style.scss */
+.portfolio-container ul {
+  list-style-type: none;
+}
+
+/* line 60, ../../sass/style.scss */
+.portfolio-content {
+  width: 98%;
+  text-align: left;
+  background-color: green;
+  margin: 5% 25% 8% 1%;
+}
+
+/* line 67, ../../sass/style.scss */
 #footer {
   display: block;
   height: 20px;
   background-color: green;
   position: fixed;
   bottom: 0;
-  padding-left: 40px;
+  float: right;
 }
 
-/* line 9, ../../sass/style.scss */
-.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active {
-  color: #999;
-  background-color: #222222;
+@media (min-width: 1200px) {
+  /* line 77, ../../sass/style.scss */
+  .index-blogs {
+    width: 270px;
+    height: 177px;
+    background-color: purple;
+  }
+
+  /* line 82, ../../sass/style.scss */
+  .jumbotron {
+    margin-right: 1.5%;
+  }
 }
-/* line 12, ../../sass/style.scss */
-.navbar-inverse .navbar-nav > .active > a a:hover, .navbar-inverse .navbar-nav > .active > a .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active a:hover, .navbar-inverse .navbar-nav > .active .navbar-inverse .navbar-nav > .active > a:focus {
-  color: white;
-  background-color: #222222;
+/* Large desktop */
+@media (min-width: 992px) and (max-width: 1200px) {
+  /* line 89, ../../sass/style.scss */
+  .index-blogs {
+    width: 340px;
+    height: 177px;
+    background-color: blue;
+  }
+}
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 99, ../../sass/style.scss */
+  .index-blogs {
+    width: 250px;
+    height: 177px;
+    background-color: red;
+  }
+
+  /* line 104, ../../sass/style.scss */
+  .jumbotron {
+    margin-right: 4%;
+  }
+  /* line 107, ../../sass/style.scss */
+  .jumbotron h1 {
+    font-size: 52px;
+  }
+  /* line 111, ../../sass/style.scss */
+  .jumbotron p {
+    font-size: 35px;
+  }
+}
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+  /* line 119, ../../sass/style.scss */
+  .index-blogs {
+    height: 177px;
+    background-color: yellow;
+  }
+}
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  /* line 128, ../../sass/style.scss */
+  .index-blogs {
+    height: 200px;
+    background-color: green;
+    margin-top: 3%;
+  }
+
+  /* line 133, ../../sass/style.scss */
+  .jumbotron {
+    margin-bottom: 3%;
+  }
+  /* line 136, ../../sass/style.scss */
+  .jumbotron h1 {
+    font-size: 27px;
+  }
+  /* line 139, ../../sass/style.scss */
+  .jumbotron p {
+    font-size: 18px;
+  }
 }
