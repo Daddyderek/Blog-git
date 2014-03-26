@@ -1,3 +1,6 @@
+body {
+	background-color: #222222;
+}
 .login-container {
 	background: grey;
 	width: 40%;
@@ -35,21 +38,44 @@
 	.navbar-header {
 		min-height: 70px;
 	}
-
 }
-.container {
-	margin-top: 4%;
+.row.row-offcanvas.row-offcanvas-right {
+	margin-top: 7%;
+}
 
+// .container {
+// 	margin-top: 4%;
+// }
+.content {
+	background-color: white;
 }
 .jumbotron {
 	margin-left: 1%;
+	border: 2px solid #999999;
 }
 .index-blogs {
-		//background-color: #EEEEEE;
+		background-color: #EEEEEE;
 		border-radius: 5px;
 		margin: 1% 0 0 1%;
 		padding-top: 1px;
+		border: 2px solid #999999;
+
+		h2 {
+			line-height: 35px;
+			height: 35px;
+			overflow: hidden;
+			border-bottom: 1px solid #999999;
+		}
+
+		p {
+			height: 65px;
+			overflow: hidden;
+		}
 	}
+.viewPostModal {
+	margin-bottom: 5%;
+	border: 1px solid #999999;
+}
 .portfolio-container {
 	height: 90%;
 	width: 80%;
@@ -73,7 +99,7 @@
 	display: block;
 	height: 60px;
 	width: 100%;
-	background-color: black;
+	background-color: #222222;
 	bottom: 0;
 
 	.copy-right {
@@ -88,20 +114,15 @@
 @media(min-width: 1200px) {
 	.index-blogs {
 		width: 270px;
-		height: 177px;
-		background-color: purple;
+		height: 190px;
+		//background-color: purple;
+		
 	}
 	.jumbotron {
 		margin-right: 1.5%;
 	}
-	#footer {
-		display: block;
-		background-color: black;
-		bottom: 0;
-		position: fixed;
-	}
 	.container {
-		margin-bottom: 8%;
+		margin-bottom: 5%;
 	}
 }
 
@@ -109,8 +130,8 @@
 @media (min-width: 992px) and (max-width: 1200px) {
 	.index-blogs {
 		width: 340px;
-		height: 177px;
-		background-color: blue;
+		height: 190px;
+		//background-color: blue;
 	}
 	.jumbotron {
 
@@ -121,8 +142,11 @@
 			font-size: 35px;
 		}
 	}
-	.container {
-		margin-bottom: 10%;
+
+	#footer {
+		display: inline;
+		bottom: 0;
+		position: fixed;
 	}
 
 }
@@ -133,7 +157,7 @@
 	.index-blogs {
 		width: 250px;
 		height: 200px;
-		background-color: red;
+		//background-color: red;
 	}
 	.jumbotron {
 		margin-right: 4%;
@@ -146,9 +170,13 @@
 			font-size: 35px;
 		}
 	}
-	.container {
-		margin-bottom: 5%;
+	.col-xs-12.col-sm-9 {
+		margin-bottom: 12%;
 	}
+	.viewPostModal {
+		margin-top: 4%;
+	}
+
 	#footer {
 		display: inline;
 		bottom: 0;
@@ -159,11 +187,25 @@
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
 	.index-blogs {
-		height: 177px;
-		background-color: yellow;
+		height: auto;
+		//background-color: yellow;
 		margin-bottom: 3%;
+
+		h2 {
+			overflow: none;
+			height: auto;
+		}
+
+		p {
+			height: auto;
+		}
+
+	}
+	.canvas-toggle {
+		margin-top: 5%;
 	}
 	.jumbotron {
+		margin-top: 5%;
 
 		h1 {
 			font-size: 60px;
@@ -180,12 +222,24 @@
 /* Landscape phones and down */
 @media (max-width: 480px) {
 	.index-blogs {
-		height: 175px;
-		background-color: green;
+		height: auto;
+		//background-color: green;
 		margin-top: 3%;
+		h2 {
+			overflow: none;
+			height: auto;
+		}
+		p {
+			height: auto;
+		}
+	}
+	.canvas-toggle {
+		margin-right: 1%;
+		margin-top: 6%;
 	}
 	.jumbotron {
-		margin-bottom: 3%;
+		margin-top: 5%;
+		margin-bottom: 8%;
 
 		h1 {
 			font-size: 30px;
@@ -193,6 +247,7 @@
 		p {
 			font-size: 25px;
 		}
+
 	}
 	.container {
 		margin-bottom: 8%;
