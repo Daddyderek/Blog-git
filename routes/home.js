@@ -456,7 +456,8 @@ function editMyPost( req, res ) {
 
 // app.put("/home/portfolio/:id")
 function editMyPortfolio(req, res) {
-
+	
+	console.log("Inside editMyPortfolio");
 	if ( req.session.name ) {
 
 		var numId			 = req.body.id;
@@ -666,6 +667,7 @@ app.get("/home/blog/oldPosts", function(req, res) {
 });
 
 
+
 /*############################## 	PUT UPDATE	##############################*/
 
 
@@ -675,7 +677,7 @@ app.put("/home/blog/:id", function(req, res) {
 });
 
 // Calls the edit function for portfolio posts
-app.put("/home/portfolio/:id", function(req, res) {
+app.put("/home/portfolio", function(req, res) {
 	editMyPortfolio(req, res);
 });
 
