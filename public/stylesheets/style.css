@@ -32,31 +32,46 @@
   background-color: #222222;
 }
 
+/* line 32, ../../sass/style.scss */
+.navbar.navbar-inverse.navbar-fixed-top {
+  min-height: 70px;
+}
+/* line 35, ../../sass/style.scss */
+.navbar.navbar-inverse.navbar-fixed-top .navbar-header {
+  min-height: 70px;
+}
+
 /* line 40, ../../sass/style.scss */
+.container {
+  margin-top: 4%;
+}
+
+/* line 44, ../../sass/style.scss */
 .jumbotron {
   margin-left: 1%;
 }
 
-/* line 43, ../../sass/style.scss */
+/* line 47, ../../sass/style.scss */
 .index-blogs {
   border-radius: 5px;
   margin: 1% 0 0 1%;
   padding-top: 1px;
 }
 
-/* line 49, ../../sass/style.scss */
+/* line 53, ../../sass/style.scss */
 .portfolio-container {
   height: 90%;
   width: 80%;
   background-color: pink;
   margin: 5% 5% 10% 10%;
 }
-/* line 55, ../../sass/style.scss */
+/* line 59, ../../sass/style.scss */
 .portfolio-container ul {
   list-style-type: none;
+  height: 100%;
 }
 
-/* line 60, ../../sass/style.scss */
+/* line 65, ../../sass/style.scss */
 .portfolio-content {
   width: 98%;
   text-align: left;
@@ -64,87 +79,152 @@
   margin: 5% 25% 8% 1%;
 }
 
-/* line 67, ../../sass/style.scss */
+/* line 72, ../../sass/style.scss */
 #footer {
   display: block;
-  height: 20px;
-  background-color: green;
-  position: fixed;
+  height: 60px;
+  width: 100%;
+  background-color: black;
   bottom: 0;
-  float: right;
+}
+/* line 79, ../../sass/style.scss */
+#footer .copy-right {
+  line-height: 60px;
+  font-size: 15px;
+  margin-left: 1%;
 }
 
+/* For Large desktops */
 @media (min-width: 1200px) {
-  /* line 77, ../../sass/style.scss */
+  /* line 89, ../../sass/style.scss */
   .index-blogs {
     width: 270px;
     height: 177px;
     background-color: purple;
   }
 
-  /* line 82, ../../sass/style.scss */
+  /* line 94, ../../sass/style.scss */
   .jumbotron {
     margin-right: 1.5%;
   }
+
+  /* line 97, ../../sass/style.scss */
+  #footer {
+    display: block;
+    background-color: black;
+    bottom: 0;
+    position: fixed;
+  }
+
+  /* line 103, ../../sass/style.scss */
+  .container {
+    margin-bottom: 8%;
+  }
 }
-/* Large desktop */
+/* For desktops */
 @media (min-width: 992px) and (max-width: 1200px) {
-  /* line 89, ../../sass/style.scss */
+  /* line 110, ../../sass/style.scss */
   .index-blogs {
     width: 340px;
     height: 177px;
     background-color: blue;
   }
+
+  /* line 117, ../../sass/style.scss */
+  .jumbotron h1 {
+    font-size: 70px;
+  }
+  /* line 120, ../../sass/style.scss */
+  .jumbotron p {
+    font-size: 35px;
+  }
+
+  /* line 124, ../../sass/style.scss */
+  .container {
+    margin-bottom: 10%;
+  }
 }
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 99, ../../sass/style.scss */
+  /* line 133, ../../sass/style.scss */
   .index-blogs {
     width: 250px;
-    height: 177px;
+    height: 200px;
     background-color: red;
   }
 
-  /* line 104, ../../sass/style.scss */
+  /* line 138, ../../sass/style.scss */
   .jumbotron {
     margin-right: 4%;
   }
-  /* line 107, ../../sass/style.scss */
+  /* line 141, ../../sass/style.scss */
   .jumbotron h1 {
     font-size: 52px;
   }
-  /* line 111, ../../sass/style.scss */
+  /* line 145, ../../sass/style.scss */
   .jumbotron p {
     font-size: 35px;
+  }
+
+  /* line 149, ../../sass/style.scss */
+  .container {
+    margin-bottom: 5%;
+  }
+
+  /* line 152, ../../sass/style.scss */
+  #footer {
+    display: inline;
+    bottom: 0;
+    position: fixed;
   }
 }
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
-  /* line 119, ../../sass/style.scss */
+  /* line 161, ../../sass/style.scss */
   .index-blogs {
     height: 177px;
     background-color: yellow;
+    margin-bottom: 3%;
+  }
+
+  /* line 168, ../../sass/style.scss */
+  .jumbotron h1 {
+    font-size: 60px;
+  }
+  /* line 171, ../../sass/style.scss */
+  .jumbotron p {
+    font-size: 35px;
+  }
+
+  /* line 175, ../../sass/style.scss */
+  .container {
+    margin-bottom: 8%;
   }
 }
 /* Landscape phones and down */
 @media (max-width: 480px) {
-  /* line 128, ../../sass/style.scss */
+  /* line 182, ../../sass/style.scss */
   .index-blogs {
-    height: 200px;
+    height: 175px;
     background-color: green;
     margin-top: 3%;
   }
 
-  /* line 133, ../../sass/style.scss */
+  /* line 187, ../../sass/style.scss */
   .jumbotron {
     margin-bottom: 3%;
   }
-  /* line 136, ../../sass/style.scss */
+  /* line 190, ../../sass/style.scss */
   .jumbotron h1 {
-    font-size: 27px;
+    font-size: 30px;
   }
-  /* line 139, ../../sass/style.scss */
+  /* line 193, ../../sass/style.scss */
   .jumbotron p {
-    font-size: 18px;
+    font-size: 25px;
+  }
+
+  /* line 197, ../../sass/style.scss */
+  .container {
+    margin-bottom: 8%;
   }
 }

@@ -29,14 +29,18 @@
 
 	}
 }
-// .navbar.navbar-inverse.navbar-fixed-top {
-// 	min-height: 60px;
+.navbar.navbar-inverse.navbar-fixed-top {
+	min-height: 70px;
 
-// 	.navbar-header {
-// 		min-height: 60px;
-// 	}
+	.navbar-header {
+		min-height: 70px;
+	}
 
-// }
+}
+.container {
+	margin-top: 4%;
+
+}
 .jumbotron {
 	margin-left: 1%;
 }
@@ -54,6 +58,7 @@
 
 	ul {
 		list-style-type: none;
+		height: 100%;
 	}
 
 }
@@ -66,13 +71,20 @@
 }
 #footer {
 	display: block;
-	height: 20px;
-	background-color: green;
-	position: fixed;
+	height: 60px;
+	width: 100%;
+	background-color: black;
 	bottom: 0;
-	float: right;
+
+	.copy-right {
+		line-height: 60px;
+		font-size: 15px;
+		margin-left: 1%;
+	}
+
 }
 
+/* For Large desktops */
 @media(min-width: 1200px) {
 	.index-blogs {
 		width: 270px;
@@ -82,15 +94,37 @@
 	.jumbotron {
 		margin-right: 1.5%;
 	}
+	#footer {
+		display: block;
+		background-color: black;
+		bottom: 0;
+		position: fixed;
+	}
+	.container {
+		margin-bottom: 8%;
+	}
 }
 
-/* Large desktop */
+/* For desktops */
 @media (min-width: 992px) and (max-width: 1200px) {
 	.index-blogs {
 		width: 340px;
 		height: 177px;
 		background-color: blue;
 	}
+	.jumbotron {
+
+		h1 {
+			font-size: 70px;
+		}
+		p {
+			font-size: 35px;
+		}
+	}
+	.container {
+		margin-bottom: 10%;
+	}
+
 }
 
 
@@ -98,7 +132,7 @@
 @media (min-width: 768px) and (max-width: 991px) {
 	.index-blogs {
 		width: 250px;
-		height: 177px;
+		height: 200px;
 		background-color: red;
 	}
 	.jumbotron {
@@ -112,6 +146,14 @@
 			font-size: 35px;
 		}
 	}
+	.container {
+		margin-bottom: 5%;
+	}
+	#footer {
+		display: inline;
+		bottom: 0;
+		position: fixed;
+	}
 }
 
 /* Landscape phone to portrait tablet */
@@ -119,14 +161,26 @@
 	.index-blogs {
 		height: 177px;
 		background-color: yellow;
+		margin-bottom: 3%;
 	}
+	.jumbotron {
 
+		h1 {
+			font-size: 60px;
+		}
+		p {
+			font-size: 35px;
+		}
+	}
+	.container {
+		margin-bottom: 8%;
+	}
 }
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
 	.index-blogs {
-		height: 200px;
+		height: 175px;
 		background-color: green;
 		margin-top: 3%;
 	}
@@ -134,11 +188,14 @@
 		margin-bottom: 3%;
 
 		h1 {
-			font-size: 27px;
+			font-size: 30px;
 		}
 		p {
-			font-size: 18px;
+			font-size: 25px;
 		}
+	}
+	.container {
+		margin-bottom: 8%;
 	}
 }
 

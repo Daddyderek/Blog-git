@@ -10,7 +10,7 @@ block content
             .jumbotron
               h1 console.Blog( );
               p
-                | This is what my future blog will look like.
+                | My life in code.
             .row2
               - for post in posts
                 .index-blogs.col-6.col-sm-6.col-lg-6.row1
@@ -38,4 +38,5 @@ block content
               - for post in posts
                 a.list-group-item(href='/home/blog/oldPosts/#postTitle') #{post.title}
       #footer
-        p © DaddyDerek 2014
+        .copy-right 
+          © DaddyDerek 2014
