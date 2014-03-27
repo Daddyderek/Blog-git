@@ -241,6 +241,7 @@ li.portfolio-boxes {
 		font-size: 16px;
 		line-height: 28px;
 		color: #555555;
+		margin-bottom: 20%;
 	}
 	h6 {
 		margin: 3% 0 -2% 5%;
@@ -276,7 +277,12 @@ li.portfolio-boxes {
 	}
 	.oldPosts-content {
 		width: 72%;
-		margin-left: 16%;
+		margin-left: 14%;
+
+		h6{
+			margin-top: 4%;
+			margin-bottom: 6%;
+		}
 
 		h4 {
 			margin-left: 10%;
@@ -307,11 +313,17 @@ li.portfolio-boxes {
 	}
 	.oldPosts-content {
 		width: 162%;
-		margin-left: 25%;
+		margin-left: 23.5%;
+		
+		h6 {
+			margin-bottom: 6%;
+			margin-top: 4%;
+		}
 
 		h4 {
 			width: 75%;
 			margin-left: 10%;
+			margin-bottom: 20%;
 		}
 	}
 
@@ -345,9 +357,19 @@ li.portfolio-boxes {
 
 	.oldPosts-content {
 		width: 85%;
-		margin-left: 10%;
+		margin-left: 9%;
+		h2 {
+			margin-left: 4%;
+		}
+
+		h6 {
+			margin: 6% 0 5% 4%;		
+		}
+
 		h4 {
-			width: 80%;
+			width: 82%;
+			margin-left: 7%;
+			margin-bottom: 20%;
 		}
 
 	}
@@ -375,22 +397,26 @@ li.portfolio-boxes {
 		}
 
 	}
+
 	.canvas-toggle {
 		margin-top: 5%;
 	}
+
 	.list-group {
 		margin-top: 11%;
 	}
+
 	.jumbotron {
 		margin-top: 5%;
 
 		h1 {
-			font-size: 60px;
+			font-size: 55px;
 		}
 		p {
 			font-size: 35px;
 		}
 	}
+
 	.container {
 		margin-bottom: 8%;
 	}
@@ -398,6 +424,19 @@ li.portfolio-boxes {
 	.oldPosts-content {
 		width: 95%;
 		margin-left: 5%;
+
+		h2 {
+			margin-left: 1%;
+		}
+		h6 {
+			margin: 6% 0 7% 1%;
+
+		}
+
+		h4 {
+			width: 85%;
+			margin-left: 4%;
+		}
 
 	}
 
@@ -441,18 +480,20 @@ li.portfolio-boxes {
 	}
 	.oldPosts-content {
 		width: 85%;
-		margin-left: 12%;
+		margin-left: 11%;
 
 		h2 {
 			margin-left: -2%;
 		}
 
 		h4 {
-			margin-left: -2%;
-			width: 90%;
+			margin-left: 1.5%;
+			width: 85%;
 		}
 		h6 {
 			margin-left: -2%;
+			margin-bottom: 8%;
+			margin-top: 4%;
 		}
 
 	}
