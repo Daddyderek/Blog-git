@@ -1,23 +1,23 @@
 extends layout
 block content
-	include head
-	.container
-		.row
-			.col-md-6.col-md-offset-3
-				h1 Old Posts
+	.oldPosts-container.row
+		.col-md-6.col-lg-12
+			.oldPosts-content
+				#oldPosts-title
+					h1 Old Posts
 				ul
-				- for post in posts
-					li
-						.postTitle.form-group
-							h2( data-title-id= '#{ post.id }' )= post.title
-						.postDate.form-group
-							h6=post.date
-						.postContent.form-group
-							h4( data-content-id= '#{ post.id }')= post.content
-						.form-group
-							- if (loggedIn)
-								button(class='delete', href='/home/blog/#{post.id}', data-id='#{post.id}') Delete
-								button(class='edit', data-toggle='modal', data-id='#{post.id}', data-target='#myModal') Edit
+					- for post in posts
+						li
+							.postTitle.form-group
+								h2( data-title-id= '#{ post.id }' )= post.title
+							.postDate.form-group
+								h6=post.date
+							.postContent.form-group
+								h4( data-content-id= '#{ post.id }')= post.content
+							.form-group
+								- if (loggedIn)
+									button(class='delete', href='/home/blog/#{post.id}', data-id='#{post.id}') Delete
+									button(class='edit', data-toggle='modal', data-id='#{post.id}', data-target='#myModal') Edit
 				#myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
 					.modal-dialog
 						.modal-content

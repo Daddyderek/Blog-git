@@ -1,5 +1,8 @@
 body {
-	background-color: #222222;
+	background-color: #777777;
+}
+#main-container {
+	background-color: white;
 }
 .login-container {
 	background: grey;
@@ -22,39 +25,128 @@ body {
 	}
 }
 
+/* ########## Navbar ########## */
+
+// This is for the Nav-bar "Home" link //
 .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active {
-	color: #999;
-	background-color: #222222;
-	
+	color: white;
+	font: 15px/2 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+	background-color: rgba(119, 119, 119, 0);
+
 	a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
-		color:white;
-		background-color: #222222;
+		color:#444445;
+		background-color: rgba(119, 119, 119, 0);
 
 	}
+
 }
-.navbar.navbar-inverse.navbar-fixed-top {
+
+// Nav-bar menu toggle //
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+	background-color: #444445;
+}
+
+// Mobile menu //
+.navbar-inverse .navbar-toggle {
+	border-color: white;
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active {
+	text-align: center;
+	font: 15px/2 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+}
+
+.navbar-inverse .navbar-nav > li > a {
+	text-align: center;
+	font: 15px/2 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+}
+.dropdown-menu {
+	background-color: rgba(119, 119, 119, .8);
+}
+.navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
+	color: white;
+	text-align: center;
+	font: 15px/2 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+
+	&:hover {
+		color: #444445;
+	}
+}
+
+// Nav-bar logo //
+.navbar-inverse .navbar-brand {
+	color: white;
+	font: 23px/1.5 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+	&:hover {
+		color: #444445;
+	}
+
+}
+
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus{
+	background-color: rgba(119, 119, 119, 1);
+}
+
+nav.navbar.navbar-inverse.navbar-fixed-top {
 	min-height: 70px;
+	background-color: rgba(119, 119, 119, .8);
+	color: black;
 
 	.navbar-header {
 		min-height: 70px;
 	}
 }
+
+.navbar-inverse .navbar-nav>li>a {
+	color: white;
+	font: 15px/2 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+	&:hover {
+		color: #444445;
+	}
+}
+.list-group {
+	border: 2px solid #999999;
+	border-radius: 5px;
+}
+
+a.list-group-item.active, a.list-group-item.active:hover, a.list-group-item.active:focus {
+	background-color: rgba(119, 119, 119, 1);
+	border-color: rgba(119, 119, 119, 1);
+	border-radius: 0;
+	text-align: center;
+}
+
+
+
+
 .row.row-offcanvas.row-offcanvas-right {
 	margin-top: 7%;
 }
-
-// .container {
-// 	margin-top: 4%;
-// }
 .content {
-	background-color: white;
+	background: url("../img/roughcloth_@2X.png") repeat;
 }
 .jumbotron {
 	margin-left: 1%;
 	border: 2px solid #999999;
 }
-.index-blogs {
+.btn-primary {
+	color: #fff;
+	background-color: #656565;
+	border-color: #999999;
+
+	&:hover {
 		background-color: #EEEEEE;
+		color: #656565;
+	}
+}
+.index-blogs {
+		background-color: #F9FAFA;
 		border-radius: 5px;
 		margin: 1% 0 0 1%;
 		padding-top: 1px;
@@ -76,6 +168,24 @@ body {
 	margin-bottom: 5%;
 	border: 1px solid #999999;
 }
+
+#footer {
+	display: block;
+	height: 60px;
+	width: 100%;
+	background-color: rgba(119, 119, 119, 1);
+	bottom: 0;
+
+	.copy-right {
+		line-height: 60px;
+		font-size: 15px;
+		margin-left: 1%;
+	}
+
+}
+
+/* ############# Portfolio ############# */
+
 .portfolio-container {
 	height: 90%;
 	width: 80%;
@@ -95,20 +205,47 @@ body {
 	margin: 5% 25% 8% 1%
 
 }
-#footer {
-	display: block;
-	height: 60px;
-	width: 100%;
-	background-color: #222222;
-	bottom: 0;
 
-	.copy-right {
-		line-height: 60px;
+/* ############# oldPosts ############# */
+
+#oldPosts-title {
+	text-align: center;
+}
+
+.oldPosts-content {
+	background-color: white;
+	width: 100%;
+	height: 100%;
+	margin-top: 5%;
+	margin-bottom: 10%;
+	border-radius: 20px;
+	border: 2px solid white;
+
+	ul {
+		list-style-type: none;
+		height: 100%;
+	}
+	h2 {
+		margin-left: 5%;
+		width: 85%;
+		border-bottom: 2px solid black;
+	}
+	h4 {
+		margin: 5%;
+	}
+	h6 {
+		margin: 3% 0 -2% 5%;
 		font-size: 15px;
-		margin-left: 1%;
 	}
 
 }
+.oldPosts-container {
+	background: url("../img/sunrise_beach-wide.jpg") fixed;
+	width: 100%;
+}
+
+/* ############# Media Queries ############# */
+
 
 /* For Large desktops */
 @media(min-width: 1200px) {
@@ -123,6 +260,16 @@ body {
 	}
 	.container {
 		margin-bottom: 5%;
+	}
+	.oldPosts-content {
+		width: 54%;
+		margin-left: 25%;
+
+		h4 {
+			margin-left: 18%;
+			width: 60%;
+		}
+
 	}
 }
 
@@ -142,11 +289,12 @@ body {
 			font-size: 35px;
 		}
 	}
-
-	#footer {
-		display: inline;
-		bottom: 0;
-		position: fixed;
+	.col-xs-12.col-sm-9 {
+		margin-bottom: 12%;
+	}
+	.oldPosts-content {
+		width: 162%;
+		margin-left: 25%;
 	}
 
 }
@@ -177,15 +325,20 @@ body {
 		margin-top: 4%;
 	}
 
-	#footer {
-		display: inline;
-		bottom: 0;
-		position: fixed;
+	.oldPosts-content {
+		width: 85%;
+		margin-left: 10%;
+
 	}
 }
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
+
+	.navbar-inverse .navbar-toggle {
+		margin-top: 2%;
+	}
+
 	.index-blogs {
 		height: auto;
 		//background-color: yellow;
@@ -204,6 +357,9 @@ body {
 	.canvas-toggle {
 		margin-top: 5%;
 	}
+	.list-group {
+		margin-top: 11%;
+	}
 	.jumbotron {
 		margin-top: 5%;
 
@@ -217,10 +373,21 @@ body {
 	.container {
 		margin-bottom: 8%;
 	}
+
+	.oldPosts-content {
+		width: 95%;
+		margin-left: 5%;
+
+	}
+
+
 }
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
+	.navbar-inverse .navbar-toggle {
+		margin-top: 5%;
+	}
 	.index-blogs {
 		height: auto;
 		//background-color: green;
@@ -233,9 +400,8 @@ body {
 			height: auto;
 		}
 	}
-	.canvas-toggle {
-		margin-right: 1%;
-		margin-top: 6%;
+	.list-group {
+		margin-top: 12%;
 	}
 	.jumbotron {
 		margin-top: 5%;
@@ -252,6 +418,12 @@ body {
 	.container {
 		margin-bottom: 8%;
 	}
+	.oldPosts-content {
+		width: 92%;
+		margin-left: 8%;
+
+	}
+
 }
 
 
