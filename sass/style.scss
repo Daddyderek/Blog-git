@@ -215,6 +215,19 @@ li.portfolio-boxes {
 
 #oldPosts-title {
 	text-align: center;
+	color: white;
+	background-color: black;
+	height: 200px;
+	margin: -3% -.2% 12% -.2%;
+	border-top-left-radius: 13px;
+	border-top-right-radius: 13px;
+	font-family: Helvetica,Arial,sans-serif;
+	font: 40px;
+
+	h1 {
+		line-height: 5;
+	}
+
 }
 
 .oldPosts-content {
@@ -354,6 +367,11 @@ li.portfolio-boxes {
 	.viewPostModal {
 		margin-top: 4%;
 	}
+	#oldPosts-title {
+		margin-left: -.4%;
+		margin-top: -3.5%;
+		margin-right: -.4%;
+	}
 
 	.oldPosts-content {
 		width: 85%;
@@ -420,6 +438,11 @@ li.portfolio-boxes {
 	.container {
 		margin-bottom: 8%;
 	}
+	#oldPosts-title {
+		margin-left: -.5%;
+		margin-top: -6%;
+		margin-right: -.4%;
+	}
 
 	.oldPosts-content {
 		width: 95%;
@@ -477,6 +500,12 @@ li.portfolio-boxes {
 	}
 	.container {
 		margin-bottom: 8%;
+	}
+	#oldPosts-title {
+		margin-top: -7%;
+		margin-right: -.6%;
+		margin-left: -.6%;
+
 	}
 	.oldPosts-content {
 		width: 85%;
