@@ -4,6 +4,9 @@ body {
 #main-container {
 	background-color: white;
 }
+
+/* ############# login ############# */
+
 .login-container {
 	background: grey;
 	width: 40%;
@@ -25,7 +28,7 @@ body {
 	}
 }
 
-/* ########## Navbar ########## */
+/* ############# NavBar ############# */
 
 // This is for the Nav-bar "Home" link //
 .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active {
@@ -122,19 +125,25 @@ a.list-group-item.active, a.list-group-item.active:hover, a.list-group-item.acti
 	text-align: center;
 }
 
+/* ############# Index ############# */
 
-
-
+// Side bar 'off-canvas' //
 .row.row-offcanvas.row-offcanvas-right {
 	margin-top: 7%;
 }
+
+// index background //
 .content {
 	background: url("../img/roughcloth_@2X.png") repeat;
 }
+
+// banner //
 .jumbotron {
 	margin-left: 1%;
 	border: 2px solid #999999;
 }
+
+// toggle button in banner //
 .btn-primary {
 	color: #fff;
 	background-color: #656565;
@@ -145,29 +154,36 @@ a.list-group-item.active, a.list-group-item.active:hover, a.list-group-item.acti
 		color: #656565;
 	}
 }
+
+// blog posts on index //
 .index-blogs {
-		background-color: #F9FAFA;
-		border-radius: 5px;
-		margin: 1% 0 0 1%;
-		padding-top: 1px;
-		border: 2px solid #999999;
+	background-color: #F9FAFA;
+	border-radius: 5px;
+	margin: 1% 0 0 1%;
+	padding-top: 1px;
+	border: 2px solid #999999;
 
-		h2 {
-			line-height: 35px;
-			height: 35px;
-			overflow: hidden;
-			border-bottom: 1px solid #999999;
-		}
-
-		p {
-			height: 65px;
-			overflow: hidden;
-		}
+	h2 {
+		line-height: 35px;
+		height: 35px;
+		overflow: hidden;
+		border-bottom: 1px solid #999999;
 	}
+	p {
+		height: 65px;
+		overflow: hidden;
+	}
+}
+
+// view modal button //
 .viewPostModal {
 	margin-bottom: 5%;
 	border: 1px solid #999999;
+
 }
+
+
+/* ############# footer ############# */
 
 #footer {
 	display: block;
@@ -181,10 +197,11 @@ a.list-group-item.active, a.list-group-item.active:hover, a.list-group-item.acti
 		font-size: 15px;
 		margin-left: 1%;
 	}
-
 }
 
-/* ############# Portfolio ############# */
+
+/* ############# Portfolio  Page ############# */
+
 
 .portfolio-container {
 	// height: 90%;
@@ -210,6 +227,50 @@ li.portfolio-boxes {
 	margin-bottom: 20%;
 	width: 120%;
 }
+
+
+/* ############# contact  Page ############# */
+
+#home {
+	background: url("../img/parallax1.jpg") 50% 0 repeat fixed; min-height: 1000px;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1920px;
+	position: relative;
+
+	article {
+		height: 458px;
+		position: absolute;
+		text-align: center;
+		top: 150px;
+		width: 100%;
+	}
+
+}
+
+#about {
+	background: url("../img/parallax2.jpg") 50% 0 no-repeat fixed; min-height: 1000px;
+	height: 1000px;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1920px;
+	position: relative;
+	-webkit-box-shadow: 0 0 50px rgba(0,0,0,0.8);
+	box-shadow: 0 0 50px rba(0,0,0,0.8);
+
+	article {
+		height: 458px;
+		position: absolute;
+		text-align: center;
+		top: 150px;
+		width: 100%;
+
+	}
+
+
+}
+
+
 
 /* ############# oldPosts ############# */
 

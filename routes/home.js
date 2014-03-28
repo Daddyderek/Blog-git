@@ -154,8 +154,8 @@ function myPortfolio( req, res ) {
 
 
 
-// app.get("/home/contact")
-function contactMe( req, res ) {
+// app.get("/home/about")
+function aboutMe( req, res ) {
 
 	var auth = null;
 
@@ -165,13 +165,13 @@ function contactMe( req, res ) {
 
 	}
 
-	res.render( 'contact',
+	res.render( 'about',
 
 	{
 		loggedIn : auth
 	});
 
-} // ends contactME
+} // ends about
 
 
 
@@ -614,9 +614,9 @@ app.get("/home/portfolio", function(req, res) {
 	myPortfolio(req, res);
 });
 
-// Calls the contact
-app.get("/home/contact", function(req, res) {
-	contactMe(req, res);
+// Calls the about
+app.get("/home/about", function(req, res) {
+	aboutMe(req, res);
 });
 
 // Calls hack the planet!

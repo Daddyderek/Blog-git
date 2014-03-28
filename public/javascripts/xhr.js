@@ -2,6 +2,13 @@ $(document).ready(function() {
 
 	console.log("JavaScript is working!");
 
+	// Parallax example //
+	$('section[data-type="background"]').each( function() {
+		
+		var $bgObj = $( this ); // assigning the object
+
+		$(window).scroll( function() {})
+	}); // ends $('section[data-type="background"')
 
 	// Validation flags for failed password/username attempts in "/login"//
 	$('button.login').on('click', function(e) {
