@@ -32,13 +32,13 @@ body {
 
 // This is for the Nav-bar "Home" link //
 .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active {
-	color: white;
+	color: #999;
 	font: 15px/2 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 	background-color: rgba(34, 34, 34, 0);
 
 	a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
-		color:#444445;
+		color: white;
 		background-color: rgba(34, 34, 34, 0);
 
 	}
@@ -92,19 +92,19 @@ body {
 }
 
 .navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus{
-	background-color: rgba(34, 34, 34, 1);
+	background-color: rgba(34, 34, 34, 0);
 }
 
 nav.navbar.navbar-inverse.navbar-fixed-top {
 	min-height: 70px;
-	background-color: rgba(34, 34, 34, .8);
+	background-color: rgba(34, 34, 34, .7);
 	color: black;
 
 	.navbar-header {
 		min-height: 70px;
 	}
 }
-
+.nav.navbar-nav
 .navbar-inverse .navbar-nav>li>a {
 	color: white;
 	font: 15px/2 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -117,10 +117,17 @@ nav.navbar.navbar-inverse.navbar-fixed-top {
 	border: 2px solid #999999;
 	border-radius: 5px;
 }
+a.list-group-item {
+	background-color: #EBEBEB;
+
+	&:hover {
+		background-color: #999999;
+	}
+}
 
 a.list-group-item.active, a.list-group-item.active:hover, a.list-group-item.active:focus {
-	background-color: rgba(34, 34, 34, 1);
-	border-color: rgba(34, 34, 34, 1);
+	background-color: rgba(34, 34, 34, 0);
+	border-color: rgba(34, 34, 34, 0);
 	border-radius: 0;
 	text-align: center;
 }
@@ -134,13 +141,14 @@ a.list-group-item.active, a.list-group-item.active:hover, a.list-group-item.acti
 
 // index background //
 .content {
-	background: url("../img/roughcloth_@2X.png") repeat;
+	background: url("../img/geometry.png") repeat;
 }
 
 // banner //
 .jumbotron {
 	margin-left: 1%;
 	border: 2px solid #999999;
+	background-color: #EBEBEB;
 }
 
 // toggle button in banner //
@@ -157,7 +165,7 @@ a.list-group-item.active, a.list-group-item.active:hover, a.list-group-item.acti
 
 // blog posts on index //
 .index-blogs {
-	background-color: #F9FAFA;
+	background-color: #EBEBEB;
 	border-radius: 5px;
 	margin: 1% 0 0 1%;
 	padding-top: 1px;
@@ -179,6 +187,9 @@ a.list-group-item.active, a.list-group-item.active:hover, a.list-group-item.acti
 .viewPostModal {
 	margin-bottom: 5%;
 	border: 1px solid #999999;
+	&:hover {
+		background-color: #999999;
+	}
 
 }
 
@@ -255,14 +266,14 @@ article {
 }
 .im {
 	margin-top: -3%;
-	font-family: 'Lato', sans-serif;
-	text-shadow: 5px 5px white;
-	font-size: 80px;
+	font-family: 'Audiowide';
+	text-shadow: 4px 4px white;
+	font-size: 90px;
 }
 .name {
 	font-family: 'Pathway Gothic One', sans-serif;
 	text-shadow: 8px 8px white;
-	font-size: 350px;
+	font-size: 300px;
 }
 #connect {
 	background: url("../img/carbon_fibre.png") repeat fixed;
@@ -270,9 +281,51 @@ article {
 }
 .connect-with-me {
 	color: white;
-	font-size: 100px;
-	font-family: 'Arvo', serif;
+	font-size: 70px;
+	font-family: 'Candal', sans-serif;
+	margin-top: 4%;
 
+
+}
+ul.social-icons-large {
+	list-style: none;
+	background-repeat: no-repeat;
+	margin: auto;
+	width: 250px;
+	margin-top: 5%;
+
+	.clearfix {
+		display: block;
+	}
+
+	li {
+		background-image: url("../img/social-icons.png");
+		background-color: white;
+		background-repeat: no-repeat;
+		width: 84px;
+		height: 84px;
+		display: inline-block;
+		float: left;
+		margin: 1px;
+
+		&:hover {
+			background-color: red;
+		}
+	}
+
+	.facebook {
+		background-position: 0 0;
+	}
+	.twitter {
+		background-position: 0 -85px;
+	}
+	.linkedin {
+		background-position: 0 -170px;
+	}
+	.github {
+		background-position: 0px -765px;
+
+	}
 }
 
 #about {
@@ -284,6 +337,16 @@ article {
 	position: relative;
 	-webkit-box-shadow: 0 0 50px rgba(0,0,0,0.8);
 	box-shadow: 0 0 50px rba(0,0,0,0.8);
+}
+.aboutMe {
+	line-height: 1.1;
+	margin: 16% 0 0 10%;
+	width: 600px;
+	background-color: red;
+	height: 300px;
+	font-size: 90px;
+	color: white;
+	font-family: 'BenchNine', sans-serif;
 }
 #resume {
 	background: url("../img/soft_circle_scales.png") repeat fixed;
