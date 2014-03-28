@@ -44,7 +44,6 @@ body {
 	}
 
 }
-
 // Nav-bar menu toggle //
 .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
 	background-color: #444445;
@@ -70,13 +69,14 @@ body {
 	background-color: rgba(34, 34, 34,.8);
 }
 .navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
-	color: white;
+	background-color: rgba(34, 34, 34,.8);
+	color: #999;
 	text-align: center;
 	font: 15px/2 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 
 	&:hover {
-		color: #444445;
+		color: white;
 	}
 }
 
@@ -86,22 +86,22 @@ body {
 	font: 23px/1.5 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 	&:hover {
-		color: #444445;
+		color: green;//#444445;
 	}
 
 }
 
 .navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus{
-	background-color: rgba(34, 34, 34, 0);
+	background-color: rgba(34, 34, 34, 1);
 }
 
 nav.navbar.navbar-inverse.navbar-fixed-top {
-	min-height: 70px;
+	min-height: 50px;
 	background-color: rgba(34, 34, 34, .7);
 	color: black;
 
 	.navbar-header {
-		min-height: 70px;
+		min-height: 50px;
 	}
 }
 .nav.navbar-nav
@@ -136,7 +136,7 @@ a.list-group-item.active, a.list-group-item.active:hover, a.list-group-item.acti
 
 // Side bar 'off-canvas' //
 .row.row-offcanvas.row-offcanvas-right {
-	margin-top: 7%;
+	margin-top: 4%;
 }
 
 // index background //
@@ -189,12 +189,13 @@ a.list-group-item.active, a.list-group-item.active:hover, a.list-group-item.acti
 	border: 1px solid #999999;
 	&:hover {
 		background-color: #999999;
+		color: white;
 	}
 
 }
 
 
-/* ############# footer ############# */
+// Footer For Index //
 
 #footer {
 	display: block;
@@ -259,7 +260,6 @@ article {
 	color: #222;
 }
 .aloha {
-	margin-top: 2%;
 	font-family: 'Allura', cursive;
 	text-shadow: 7px 7px white;
 	font-size: 350px;
@@ -274,6 +274,10 @@ article {
 	font-family: 'Pathway Gothic One', sans-serif;
 	text-shadow: 8px 8px white;
 	font-size: 300px;
+}
+.developer {
+	font-family: 'Pathway Gothic One', sans-serif;
+	font-size: 60px;
 }
 #connect {
 	background: url("../img/carbon_fibre.png") repeat fixed;
@@ -298,7 +302,7 @@ ul.social-icons-large {
 		display: block;
 	}
 
-	li {
+	li a span {
 		background-image: url("../img/social-icons.png");
 		background-color: white;
 		background-repeat: no-repeat;
@@ -313,24 +317,25 @@ ul.social-icons-large {
 		}
 	}
 
-	.facebook {
+	li.facebook span.social-icon {
 		background-position: 0 0;
+
 	}
-	.twitter {
+	li.twitter span.social-icon {
 		background-position: 0 -85px;
 	}
-	.linkedin {
+	li.linkedin span.social-icon {
 		background-position: 0 -170px;
 	}
-	.github {
+	li.github span.social-icon {
 		background-position: 0px -765px;
 
 	}
 }
 
 #about {
-	background: url("../img/parallax2.jpg") 50% 0 no-repeat fixed; min-height: 1000px;
-	height: 1000px;
+	background: url("../img/parallax2.jpg") 50% 0 no-repeat fixed; min-height: 800px;
+	height: 800px;
 	margin: 0 auto;
 	width: 100%;
 	max-width: 1920px;
@@ -340,7 +345,7 @@ ul.social-icons-large {
 }
 .aboutMe {
 	line-height: 1.1;
-	margin: 16% 0 0 10%;
+	margin: 17% 0 0 10%;
 	width: 600px;
 	background-color: red;
 	height: 300px;
@@ -438,6 +443,12 @@ ul.social-icons-large {
 
 /* For Large desktops */
 @media(min-width: 1200px) {
+	#main-container {
+		margin-top: -8px;
+	}
+	.navbar-nav {
+		float: right;
+	}
 	.index-blogs {
 		width: 270px;
 		height: 190px;
@@ -469,10 +480,16 @@ ul.social-icons-large {
 
 /* For desktops */
 @media (min-width: 992px) and (max-width: 1200px) {
+	#main-container {
+		margin-top: -8px;
+	}
 	.index-blogs {
 		width: 340px;
 		height: 190px;
 		//background-color: blue;
+	}
+	.navbar-nav {
+		float: right;
 	}
 	.jumbotron {
 
@@ -484,7 +501,7 @@ ul.social-icons-large {
 		}
 	}
 	.col-xs-12.col-sm-9 {
-		margin-bottom: 12%;
+		margin-bottom: 3%;
 	}
 	.oldPosts-content {
 		width: 162%;
@@ -507,6 +524,12 @@ ul.social-icons-large {
 
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 991px) {
+	.navbar-nav {
+		float: right;
+	}
+	#main-container {
+		margin-top: -10px;
+	}
 	.index-blogs {
 		width: 250px;
 		height: 200px;
@@ -557,7 +580,10 @@ ul.social-icons-large {
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
-
+	
+	#main-container {
+		margin-top: -12px;
+	}
 	.navbar-inverse .navbar-toggle {
 		margin-top: 2%;
 	}
@@ -630,6 +656,10 @@ ul.social-icons-large {
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
+
+	#main-container {
+		margin-top: -9px;
+	}
 	.navbar-inverse .navbar-toggle {
 		margin-top: 5%;
 	}

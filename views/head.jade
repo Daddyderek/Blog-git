@@ -8,6 +8,25 @@
           span.icon-bar
           span.icon-bar
       #bs-example-navbar-collapse-1.collapse.navbar-collapse
+        ul.nav.navbar-nav.navbar-right
+          //- li.dropdown
+          //-   a.dropdown-toggle(href='#', data-toggle='dropdown')
+          //-     | Menu
+          //-     b.caret
+          //-   ul.dropdown-menu
+          //-     li
+          //-       - if (loggedIn)
+          //-         a(href="/home/blog/newPost") New Post
+          //-     li
+          //-       a(href='/home/blog/oldPosts') Old Posts
+          //-     li
+          //-       a(href='/home/hacktheplanet') Hack The Planet!
+          //-     li.divider
+          //-     li
+          //-       - if (!loggedIn)
+          //-         a(href="/login") Login
+          //-       - else
+          //-         a(href="/logout") Logout
         ul.nav.navbar-nav
           li.active
             a(href='/home') Home
@@ -15,22 +34,3 @@
             a(href='/home/portfolio') Portfolio
           li
             a(href='/home/about') About Me
-        ul.nav.navbar-nav.navbar-right
-          li.dropdown
-            a.dropdown-toggle(href='#', data-toggle='dropdown')
-              | Menu
-              b.caret
-            ul.dropdown-menu
-              li
-                - if (loggedIn)
-                  a(href="/home/blog/newPost") New Post
-              li
-                a(href='/home/blog/oldPosts') Old Posts
-              li
-                a(href='/home/hacktheplanet') Hack The Planet!
-              li.divider
-              li
-                - if (!loggedIn)
-                  a(href="/login") Login
-                - else
-                  a(href="/logout") Logout
