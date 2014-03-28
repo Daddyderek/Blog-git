@@ -90,7 +90,7 @@ ul.nav.navbar-nav {
 	font: 23px/1.5 Helvetica, Arial, sans-serif;
 
 	&:hover {
-		color: green;//#444445;
+		color: #444445; // <--- double check?
 	}
 
 }
@@ -388,7 +388,45 @@ ul.social-icons-large {
 	position: relative;
 
 }
+.contactForm {
+	display: block;
+	font-family: Ariel, sans-serif;
+	font-size: 14px;
 
+
+	#cust-name {
+		width: 300px;
+		height: 55px;
+		margin-bottom: -15px;
+	}
+	#cust-email {
+		width: 300px;
+		height: 55px;
+		margin-bottom: -15px;
+
+	}
+	#cust-message {
+		width: 300px;
+
+	}
+	button#cust-submit {
+		margin-top: 10px;
+		width: 100px;
+		height: 40px;
+		background-color: rgba(0,0,0,0);
+		border-color: white;
+		color: white;
+		font-family: 'Pathway Gothic One', sans-serif;
+		font-size: 30px;
+		border-width: 1.5px;
+
+
+		&:hover {
+			background-color: white;
+			color: black;
+		} 
+	}
+}
 
 
 

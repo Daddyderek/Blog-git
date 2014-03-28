@@ -13,6 +13,7 @@ var app = express();
 
 // route to homePage
 var home = require("./routes/home");
+var nodemailer = require("nodemailer");
 
 // all environments
 app.set('port', process.env.PORT || 3000);
