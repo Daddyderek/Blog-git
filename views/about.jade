@@ -48,4 +48,13 @@ block content
 	section#night(data-type='background', data-speed='10')
 		article
 			.contactMe
-				h1 Contact Me
+				h1 Contact Me For Work?
+			.contactForm
+				form(id='contact/Form', action='/home', method='post', role='form')
+					.form-group
+						input(id='cust-name', type='text', placeholder='NAME', name='name', required='required')
+					.form-group
+						input(id='cust-email', type='text', placeholder='EMAIL', name='email', required='required')
+					.form-group
+						textarea(id='cust-message', class='form control', type='text', placeholder='MESSAGE', rows='17', cols='50', name='content', required='required')
+				button(type='sumbit') SUBMIT
