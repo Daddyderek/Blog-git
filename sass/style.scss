@@ -1,5 +1,5 @@
 body {
-	background-color: #777777;
+	background-color: #222222;
 }
 #main-container {
 	background-color: white;
@@ -35,11 +35,11 @@ body {
 	color: white;
 	font: 15px/2 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
-	background-color: rgba(119, 119, 119, 0);
+	background-color: rgba(34, 34, 34, 0);
 
 	a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
 		color:#444445;
-		background-color: rgba(119, 119, 119, 0);
+		background-color: rgba(34, 34, 34, 0);
 
 	}
 
@@ -67,7 +67,7 @@ body {
 
 }
 .dropdown-menu {
-	background-color: rgba(119, 119, 119, .8);
+	background-color: rgba(34, 34, 34,.8);
 }
 .navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
 	color: white;
@@ -92,12 +92,12 @@ body {
 }
 
 .navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus{
-	background-color: rgba(119, 119, 119, 1);
+	background-color: rgba(34, 34, 34, 1);
 }
 
 nav.navbar.navbar-inverse.navbar-fixed-top {
 	min-height: 70px;
-	background-color: rgba(119, 119, 119, .8);
+	background-color: rgba(34, 34, 34, .8);
 	color: black;
 
 	.navbar-header {
@@ -119,8 +119,8 @@ nav.navbar.navbar-inverse.navbar-fixed-top {
 }
 
 a.list-group-item.active, a.list-group-item.active:hover, a.list-group-item.active:focus {
-	background-color: rgba(119, 119, 119, 1);
-	border-color: rgba(119, 119, 119, 1);
+	background-color: rgba(34, 34, 34, 1);
+	border-color: rgba(34, 34, 34, 1);
 	border-radius: 0;
 	text-align: center;
 }
@@ -233,43 +233,57 @@ li.portfolio-boxes {
 
 #home {
 	background: url("../img/parallax1.jpg") 50% 0 no-repeat fixed; min-height: 1000px;
+	background-color: rgba(0,0,0,.8);
 	margin: 0 auto;
 	width: 100%;
 	max-width: 1920px;
 	position: relative;
-
-	article {
-		height: 458px;
-		position: absolute;
-		text-align: center;
-		top: 150px;
-		width: 100%;
-	}
-
 }
-#aboutMe {
+article {
+	height: 458px;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	line-height: 1;
+	color: #222;
+}
+.aloha {
+	margin-top: 2%;
+	font-family: 'Allura', cursive;
+	text-shadow: 7px 7px white;
+	font-size: 350px;
+}
+.im {
+	margin-top: -3%;
+	font-family: 'Lato', sans-serif;
+	text-shadow: 5px 5px white;
+	font-size: 80px;
+}
+.name {
+	font-family: 'Pathway Gothic One', sans-serif;
+	text-shadow: 8px 8px white;
+	font-size: 350px;
+}
+#connect {
 	background: url("../img/carbon_fibre.png") repeat fixed;
 	height: 500px;
 }
+.connect-with-me {
+	color: white;
+	font-size: 100px;
+	font-family: 'Arvo', serif;
+
+}
 
 #about {
-	background: url("../img/parallax2.jpg") 50% 0 no-repeat fixed; min-height: 500px;
-	height: 700px;
+	background: url("../img/parallax2.jpg") 50% 0 no-repeat fixed; min-height: 1000px;
+	height: 1000px;
 	margin: 0 auto;
 	width: 100%;
 	max-width: 1920px;
 	position: relative;
 	-webkit-box-shadow: 0 0 50px rgba(0,0,0,0.8);
 	box-shadow: 0 0 50px rba(0,0,0,0.8);
-
-	article {
-		height: 458px;
-		position: absolute;
-		text-align: center;
-		top: 150px;
-		width: 100%;
-
-	}
 }
 #resume {
 	background: url("../img/soft_circle_scales.png") repeat fixed;
@@ -277,6 +291,14 @@ li.portfolio-boxes {
 }
 #wave {
 	background: url("../img/parallax3.jpg") 50% 0 no-repeat fixed; min-height: 500px;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1920px;
+	position: relative;
+
+}
+#night {
+	background: url("../img/parallax4.jpg") 50% 0 no-repeat fixed; min-height: 1000px;
 	margin: 0 auto;
 	width: 100%;
 	max-width: 1920px;
