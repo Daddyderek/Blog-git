@@ -229,10 +229,10 @@ li.portfolio-boxes {
 }
 
 
-/* ############# contact  Page ############# */
+/* ############# About Me  Page ############# */
 
 #home {
-	background: url("../img/parallax1.jpg") 50% 0 repeat fixed; min-height: 1000px;
+	background: url("../img/parallax1.jpg") 50% 0 no-repeat fixed; min-height: 1000px;
 	margin: 0 auto;
 	width: 100%;
 	max-width: 1920px;
@@ -247,10 +247,14 @@ li.portfolio-boxes {
 	}
 
 }
+#aboutMe {
+	background: url("../img/carbon_fibre.png") repeat fixed;
+	height: 500px;
+}
 
 #about {
-	background: url("../img/parallax2.jpg") 50% 0 no-repeat fixed; min-height: 1000px;
-	height: 1000px;
+	background: url("../img/parallax2.jpg") 50% 0 no-repeat fixed; min-height: 500px;
+	height: 700px;
 	margin: 0 auto;
 	width: 100%;
 	max-width: 1920px;
@@ -266,9 +270,21 @@ li.portfolio-boxes {
 		width: 100%;
 
 	}
-
+}
+#resume {
+	background: url("../img/soft_circle_scales.png") repeat fixed;
+	height: 1000px;
+}
+#wave {
+	background: url("../img/parallax3.jpg") 50% 0 no-repeat fixed; min-height: 500px;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1920px;
+	position: relative;
 
 }
+
+
 
 
 

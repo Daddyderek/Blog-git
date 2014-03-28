@@ -5,10 +5,35 @@ $(document).ready(function() {
 	// Parallax example //
 	$('section[data-type="background"]').each( function() {
 		
-		var $bgObj = $( this ); // assigning the object
+		var $window	= $(window);
+		var $bgObj	= $( this ); // assigning the object
 
-		$(window).scroll( function() {})
+		$(window).scroll( function() {
+
+			var yPos	= -($window.scrollTop() / $bgObj.data('speed') );
+			var coords	= yPos + 'px';
+
+			// Move the background
+			$bgObj.css(
+
+			{
+				
+				backgroundPosition				: "coords",
+				"-webkit-background-size"		: "cover",
+				"-moz-background-size"			: "cover",
+				"-o-background-size"			: "cover",
+				"background-size"				: "cover"
+
+			});
+
+		});// $(window).scroll
+
 	}); // ends $('section[data-type="background"')
+
+
+
+
+
 
 	// Validation flags for failed password/username attempts in "/login"//
 	$('button.login').on('click', function(e) {
