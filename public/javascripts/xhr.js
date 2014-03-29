@@ -31,15 +31,36 @@ $(document).ready(function() {
 
 	}); // ends $('section[data-type="background"')
 
-	// $("button#cust-submit").click( function(e) {
+	$("#contact-form").submit( function(e) {
 
-	// 	e.preventDefault();
+		e.preventDefault();
 
-	// 	var button = $(this);
+		var button = $(this);
 
-	// 	$.ajax( "/home",
+		$.ajax( "/home",
 
-	// });
+		{
+			method		: 'POST',
+			type		: 'json',
+			success		: function( data ) {
+
+				if (data.success == true) {
+
+					$("#contactAlert").hide().removeClass("hidden").fadeIn("slow");
+					$("#contact-form").remove();
+
+				} else {
+
+					$("#contactFail").fadeIn("slow").delay( 2000 ).fadeOut("slow");
+
+
+				}
+
+			}
+
+		});
+
+	});// $("button#cust-submit")
 
 
 

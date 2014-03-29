@@ -375,7 +375,19 @@ function mail( post_obj ) {
 
 	}
 
-	transport.sendMail( mailOptions );
+	transport.sendMail( mailOptions, function(err, res) {
+
+		if (err) {
+
+			return true;
+		
+		} else {
+
+			return false;
+
+		}
+
+	});
 
 
 }
@@ -674,9 +686,10 @@ app.post("/login", function(req, res) {
 });
 
 app.post("/home", function(req, res) {
-	mail( req.body );
 
-	res.json({ success : true });
+	var result = mail( req.body );
+
+	res.json({ success : result });
 });
 
 
@@ -684,9 +697,8 @@ app.post("/home", function(req, res) {
 
 
 // Calls the old posts
-app.get("/home/blog/oldPosts", function(req, res) {
-	oldPosts(req, res);
-});
+app.get("/home/blog/oldPosts", oldPosts);
+
 
 
 

@@ -1,3 +1,23 @@
+@font-face {
+    font-family: 'LeagueGothicRegular';
+    src: url('../fonts/leaguegothic-regular-webfont.eot');
+    src: url('../fonts/leaguegothic-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/leaguegothic-regular-webfont.woff') format('woff'),
+         url('../fonts/leaguegothic-regular-webfont.ttf') format('truetype'),
+         url('../fonts/leaguegothic-regular-webfont.svg#LeagueGothicRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+	font-family: 'Novecentosanswide-Normal';
+    src: url('../fonts/nova.eot');
+    src: url('../fonts/nova.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/nova.woff') format('woff'),
+         url('../fonts/nova.ttf') format('truetype');
+	font-weight: normal;
+    font-style: normal;
+}
+
 body {
 	background-color: #222222;
 }
@@ -281,7 +301,7 @@ article {
 }
 .im {
 	margin-top: -3%;
-	font-family: 'Audiowide';
+	font-family: 'Montserrat', sans-serif;
 	text-shadow: 4px 4px white;
 	font-size: 90px;
 }
@@ -291,8 +311,10 @@ article {
 	font-size: 300px;
 }
 .developer {
-	font-family: 'Pathway Gothic One', sans-serif;
-	font-size: 60px;
+	line-height: 1.5;
+	font-family: 'Montserrat', sans-serif;
+	text-shadow: 4px 4px white;
+	font-size: 50px;
 }
 #connect {
 	background: url("../img/carbon_fibre.png") repeat fixed;
@@ -301,7 +323,7 @@ article {
 .connect-with-me {
 	color: white;
 	font-size: 70px;
-	font-family: 'Candal', sans-serif;
+	font-family: 'LeagueGothicRegular', sans-serif;
 	margin-top: 4%;
 
 
@@ -366,11 +388,45 @@ ul.social-icons-large {
 	height: 300px;
 	font-size: 90px;
 	color: white;
-	font-family: 'BenchNine', sans-serif;
+	font-family: 'LeagueGothicRegular', sans-serif;
 }
 #resume {
 	background: url("../img/soft_circle_scales.png") repeat fixed;
 	height: 1000px;
+}
+
+.myResume {
+	margin-top: 5%;
+	h1 {
+		font-family: 'Montserrat', sans-serif;
+		font-size: 70px;
+		margin-top: -1%;
+	}
+	h3 {
+		font-family: 'Novecentosanswide-Normal', sans-serif;
+		font-size: 40px;
+	}
+}
+.resume {
+	width: 50%;
+	float: right;
+	margin-top: 2%;
+	margin-right: 20%;
+	line-height: 1;
+
+	h4 {
+		text-align: left;
+	}
+	p {
+		font-family: ariel, sans-serif;
+		text-align: left;
+		line-height: 1.5;
+	}
+	li {
+		margin-right: 80%;
+		margin-top: 2%;
+	}
+
 }
 #wave {
 	background: url("../img/parallax3.jpg") 50% 0 no-repeat fixed; min-height: 500px;
@@ -388,11 +444,47 @@ ul.social-icons-large {
 	position: relative;
 
 }
+
+.contactMe {
+	color: white;
+	font-size: 90px;
+	text-shadow: 4px 4px #222;
+	margin-top: 6%;
+	.contactContact {
+		font-family: 'Novecentosanswide-Normal', sans-serif;
+		font-size: 40px;
+		font-weight: 300;
+	}
+	.contactMe {
+		font-family: 'LeagueGothicRegular';
+		text-transform: uppercase;
+		font-size: 100px;
+	}
+	.contactPlease {
+		font-family: 'Lobster', cursive;
+		font-size: 50px;
+	}
+	.contactRight {
+		width: 500px;
+		background-color: white;
+		height: 3px;
+		float: right;
+		margin: -2.5% 7% 0 0;
+	}
+	.contactLeft {
+		width: 500px;
+		background-color: white;
+		height: 3px;
+		float: left;
+		margin: -2.5% 0 0 7%;
+	}
+}
+
 .contactForm {
 	display: block;
 	font-family: Ariel, sans-serif;
 	font-size: 14px;
-
+	margin: 10% 45% 0 0;
 
 	#cust-name {
 		width: 300px;
@@ -419,11 +511,13 @@ ul.social-icons-large {
 		font-family: 'Pathway Gothic One', sans-serif;
 		font-size: 30px;
 		border-width: 1.5px;
+		transition: .5s;
 
 
 		&:hover {
 			background-color: white;
 			color: black;
+
 		} 
 	}
 }

@@ -34,27 +34,69 @@ block content
 	section#about(data-type='background', data-speed='10')
 		article 
 			.aboutMe 
-				p I LOVE JAVASCRIPT, MUAYTHAI, AND HAWAII!
+				p I AM A JAVASCRIPT JUNKIE WHO LOVES TO BUILD!
 	section#resume
 		article
-			h3 My
-			h1 Resume
-			p loremisdjafoijsofijsdojfaskdjf
-			p loremisdjafoijsofijsdojfaskdjf
-			p loremisdjafoijsofijsdojfaskdjf
-			p loremisdjafoijsofijsdojfaskdjf
-			p loremisdjafoijsofijsdojfaskdjf
+			.myResume
+				h3 My
+				h1 RESUME
+				.resume
+					h4 Summary
+					p I am a full-stack developer who strives to build effcient web applications with clean code. I aim for modern designs with UX always in mind.
+					h4 Education
+					p 
+						| DevLeague	
+						b 2014
+					p 
+						| University of Hawaii at Manoa 
+						b 2012
+						ul 
+							li Communications
+							li Political Science
+					h4 Technical Qualifications
+					p HTML5, CSS3, Javascript
+					p Node.js, Sails.js, Express.js, Meteor.js, Mongoose.js, Underscore.js
+					p Jasmine, jQuery, jQueryUI, 
+					p MongoDB, MySQL, PosgreSQL
+					p SASS, Github, Nginx
+
+
+					h4 Experience
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, porro, dolorem, aperiam, fugiat commodi doloremque impedit sunt in consectetur reprehenderit vel earum perferendis nostrum placeat inventore? Rerum doloribus illum rem!
 	section#wave(data-type='background', data-speed='10')
 	section#night(data-type='background', data-speed='10')
 		article
 			.contactMe
-				h1 Contact Me For Work?
+				span.contactContact
+					p CONTACT
+				span.contactMe
+					p ME,
+				span.contactPlease
+					p Please?
+						div.contactRight
+						div.contactLeft
 			.contactForm
-				form(id='contact/Form', action='/home', method='post', role='form')
+				#contactAlert.alert.alert-success.hidden Thank You For Your Message!
+				form(id='contact-form', action='/home', method='post', role='form')
 					.form-group
 						input(id='cust-name', type='text', placeholder='   NAME', name='name', required='required')
 					.form-group
-						input(id='cust-email', type='text', placeholder='   EMAIL', name='email', required='required')
+						input(id='cust-email', type='email', placeholder='   EMAIL', name='email', required='required')
 					.form-group
 						textarea(id='cust-message', class='form control', type='text', placeholder='   MESSAGE', rows='20', cols='50', name='message', required='required')
 					button(id="cust-submit", type='sumbit') SEND
+				#contactFail.alert.alert-danger.hidden Uh Oh Something Went Wrong, Please Try Again!
+			.connect-with-me2
+				ul.social-icons-large.clearfix
+					li.facebook 
+						a(href='http://www.facebook.com/DerekAhn')
+							span.social-icon 
+					li.twitter
+						a(href='http://www.twitter.com/dataderek')
+							span.social-icon
+					li.github
+						a(href='http://www.github.com/daddyderek')
+							span.social-icon
+					li.linkedin
+						a(href='https://www.linkedin.com/pub/derek-ahn/78/473/2a0')
+							span.social-icon
