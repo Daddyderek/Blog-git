@@ -361,33 +361,23 @@ function verify( req, res ) {
 
 
 // app.post("/home")
-function mail( post_obj ) {
+function mail( post_obj, cb ) {
 
 	var transport = nodemailer.createTransport("Sendmail");
 
 	var mailOptions = 
 
 	{
-		from 	: "ahndere@gmail.com",
-		to 	 	: "ahndere@gmail.com",
+		from	: "ahndere@gmail.com",
+		to	 	: "ahndere@gmail.com",
 		subject : "Contact submission from www.derekahn.com",
 		text	: "<p>name : " + post_obj.name + " </p><p>email : " + post_obj.email + "</p><p>message : " + post_obj.message + "</p>"
 
 	}
 
-	transport.sendMail( mailOptions, function(err, res) {
+	
 
-		if (err) {
-
-			return true;
-		
-		} else {
-
-			return false;
-
-		}
-
-	});
+	transport.sendMail( mailOptions, cb);
 
 
 }
@@ -623,38 +613,25 @@ function deletePortfolio(req, res) {
 
 
 // This is just for XHR to view blog post //
-app.get("/blogPost/:id", function(req, res) {
-	viewBlogPost(req, res);
-});
+app.get( "/blogPost/:id", viewBlogPost );
 
 // Calls the home page
-app.get("/home", function(req, res) {
-	homePage(req, res);
-});
+app.get( "/home", homePage );
 
 // Calls the login page
-app.get("/login", function(req, res) {
-	myLogin(req, res);
-});
+app.get( "/login", myLogin );
 
 // Calls the portfolio
-app.get("/home/portfolio", function(req, res) {
-	myPortfolio(req, res);
-});
+app.get( "/home/portfolio", myPortfolio );
 
 // Calls the about
-app.get("/home/about", function(req, res) {
-	aboutMe(req, res);
-});
+app.get( "/home/about", aboutMe );
 
 // Calls hack the planet!
-app.get("/home/hacktheplanet", function(req, res) {
-	myHackPlanet(req, res);
-});// ends app.get("home/hacktheplanet")
+app.get( "/home/hacktheplanet", myHackPlanet );
 
-app.get("/logout", function(req, res) {
-	endSession(req, res);
-});
+// Calls the Logout page
+app.get( "/logout", endSession );
 
 
 
@@ -662,34 +639,30 @@ app.get("/logout", function(req, res) {
 
 
 // Calls the new post page
-app.get("/home/blog/newPost", function(req, res) {
-	newPost(req, res);
-});
+app.get( "/home/blog/newPost", newPost );
 
 
 /*############################## 	POST CREATE		##############################*/
 
 
 // Calls the portfolio to Post new
-app.post("/home/portfolio", function(req, res) {
-	addPortfolio(req, res);
-});
+app.post( "/home/portfolio", addPortfolio );
 
 // Calls the new post page so that it may POST
-app.post("/home/blog/newpost", function(req, res) {
-	createPost(req, res);
-});
+app.post( "/home/blog/newpost", createPost );
 
 // Verifies User Name and Password
-app.post("/login", function(req, res) {
-	verify(req, res);
-});
+app.post( "/login", verify );
 
-app.post("/home", function(req, res) {
+// For the contact form
+app.post( "/home", function(req, res) {
 
-	var result = mail( req.body );
+	mail( req.body, function(err, result){
+		// only runs after mail is done async processing
+		// cause we want to know that email was sent successfully (err is null)
+		res.json({ success : (err==null) });
+	} );
 
-	res.json({ success : result });
 });
 
 
@@ -697,7 +670,7 @@ app.post("/home", function(req, res) {
 
 
 // Calls the old posts
-app.get("/home/blog/oldPosts", oldPosts);
+app.get( "/home/blog/oldPosts", oldPosts );
 
 
 
@@ -706,25 +679,17 @@ app.get("/home/blog/oldPosts", oldPosts);
 
 
 // Calls the edit function for blog posts
-app.put("/home/blog/:id", function(req, res) {
-	editMyPost(req, res);
-});
+app.put( "/home/blog/:id", editMyPost );
 
 // Calls the edit function for portfolio posts
-app.put("/home/portfolio", function(req, res) {
-	editMyPortfolio(req, res);
-});
+app.put( "/home/portfolio", editMyPortfolio );
 
 
 /*############################## 	GET DELETE		##############################*/
 
 
 // On the old posts page it deletes the current post
-app.delete('/home/blog/:id', function(req, res) {
-	deletePost(req, res);
-});
+app.delete( '/home/blog/:id', deletePost );
 
 // On the portfolio page it deletes the current post
-app.delete('/home/portfolio/:id', function(req, res) {
-	deletePortfolio(req, res);
-});
+app.delete( '/home/portfolio/:id', deletePortfolio );

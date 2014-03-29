@@ -495,19 +495,19 @@ ul.social-icons-large li.github span.social-icon {
 }
 /* line 467, ../../sass/style.scss */
 .contactMe .contactRight {
-  width: 500px;
+  width: 400px;
   background-color: white;
   height: 3px;
   float: right;
-  margin: -2.5% 7% 0 0;
+  margin: -2% 18% 0 0;
 }
 /* line 474, ../../sass/style.scss */
 .contactMe .contactLeft {
-  width: 500px;
+  width: 400px;
   background-color: white;
   height: 3px;
   float: left;
-  margin: -2.5% 0 0 7%;
+  margin: -2% 0 0 18%;
 }
 
 /* line 483, ../../sass/style.scss */
@@ -552,8 +552,16 @@ ul.social-icons-large li.github span.social-icon {
   color: black;
 }
 
+/* line 524, ../../sass/style.scss */
+.freelance {
+  width: 20%;
+  float: right;
+  color: white;
+  margin-right: 20%;
+}
+
 /* ############# oldPosts ############# */
-/* line 530, ../../sass/style.scss */
+/* line 533, ../../sass/style.scss */
 #oldPosts-title {
   text-align: center;
   color: white;
@@ -565,12 +573,12 @@ ul.social-icons-large li.github span.social-icon {
   font-family: Helvetica,Arial,sans-serif;
   font: 40px;
 }
-/* line 541, ../../sass/style.scss */
+/* line 544, ../../sass/style.scss */
 #oldPosts-title h1 {
   line-height: 5;
 }
 
-/* line 547, ../../sass/style.scss */
+/* line 550, ../../sass/style.scss */
 .oldPosts-content {
   background-color: white;
   width: 100%;
@@ -580,18 +588,18 @@ ul.social-icons-large li.github span.social-icon {
   border-radius: 20px;
   border: 2px solid white;
 }
-/* line 556, ../../sass/style.scss */
+/* line 559, ../../sass/style.scss */
 .oldPosts-content ul {
   list-style-type: none;
   height: 100%;
 }
-/* line 560, ../../sass/style.scss */
+/* line 563, ../../sass/style.scss */
 .oldPosts-content h2 {
   margin-left: 5%;
   width: 85%;
   border-bottom: 2px solid black;
 }
-/* line 565, ../../sass/style.scss */
+/* line 568, ../../sass/style.scss */
 .oldPosts-content h4 {
   margin: 5%;
   font-family: 'Oxygen', sans-serif;
@@ -600,13 +608,13 @@ ul.social-icons-large li.github span.social-icon {
   color: #555555;
   margin-bottom: 20%;
 }
-/* line 573, ../../sass/style.scss */
+/* line 576, ../../sass/style.scss */
 .oldPosts-content h6 {
   margin: 3% 0 -2% 5%;
   font-size: 15px;
 }
 
-/* line 579, ../../sass/style.scss */
+/* line 582, ../../sass/style.scss */
 .oldPosts-container {
   background: url("../img/cool_beach.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -619,43 +627,43 @@ ul.social-icons-large li.github span.social-icon {
 /* ############# Media Queries ############# */
 /* For Large desktops */
 @media (min-width: 1200px) {
-  /* line 593, ../../sass/style.scss */
+  /* line 596, ../../sass/style.scss */
   #main-container {
     margin-top: -8px;
   }
 
-  /* line 596, ../../sass/style.scss */
+  /* line 599, ../../sass/style.scss */
   .navbar-nav {
     float: right;
   }
 
-  /* line 599, ../../sass/style.scss */
+  /* line 602, ../../sass/style.scss */
   .index-blogs {
     width: 270px;
     height: 190px;
   }
 
-  /* line 605, ../../sass/style.scss */
+  /* line 608, ../../sass/style.scss */
   .jumbotron {
     margin-right: 1.5%;
   }
 
-  /* line 608, ../../sass/style.scss */
+  /* line 611, ../../sass/style.scss */
   .container {
     margin-bottom: 5%;
   }
 
-  /* line 611, ../../sass/style.scss */
+  /* line 614, ../../sass/style.scss */
   .oldPosts-content {
     width: 72%;
     margin-left: 14%;
   }
-  /* line 615, ../../sass/style.scss */
+  /* line 618, ../../sass/style.scss */
   .oldPosts-content h6 {
     margin-top: 4%;
     margin-bottom: 6%;
   }
-  /* line 620, ../../sass/style.scss */
+  /* line 623, ../../sass/style.scss */
   .oldPosts-content h4 {
     margin-left: 10%;
     width: 75%;
@@ -663,47 +671,47 @@ ul.social-icons-large li.github span.social-icon {
 }
 /* For desktops */
 @media (min-width: 992px) and (max-width: 1200px) {
-  /* line 630, ../../sass/style.scss */
+  /* line 633, ../../sass/style.scss */
   #main-container {
     margin-top: -8px;
   }
 
-  /* line 633, ../../sass/style.scss */
+  /* line 636, ../../sass/style.scss */
   .index-blogs {
     width: 340px;
     height: 190px;
   }
 
-  /* line 638, ../../sass/style.scss */
+  /* line 641, ../../sass/style.scss */
   .navbar-nav {
     float: right;
   }
 
-  /* line 643, ../../sass/style.scss */
+  /* line 646, ../../sass/style.scss */
   .jumbotron h1 {
     font-size: 70px;
   }
-  /* line 646, ../../sass/style.scss */
+  /* line 649, ../../sass/style.scss */
   .jumbotron p {
     font-size: 35px;
   }
 
-  /* line 650, ../../sass/style.scss */
+  /* line 653, ../../sass/style.scss */
   .col-xs-12.col-sm-9 {
     margin-bottom: 3%;
   }
 
-  /* line 653, ../../sass/style.scss */
+  /* line 656, ../../sass/style.scss */
   .oldPosts-content {
     width: 162%;
     margin-left: 23.5%;
   }
-  /* line 657, ../../sass/style.scss */
+  /* line 660, ../../sass/style.scss */
   .oldPosts-content h6 {
     margin-bottom: 6%;
     margin-top: 4%;
   }
-  /* line 662, ../../sass/style.scss */
+  /* line 665, ../../sass/style.scss */
   .oldPosts-content h4 {
     width: 75%;
     margin-left: 10%;
@@ -712,66 +720,66 @@ ul.social-icons-large li.github span.social-icon {
 }
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 675, ../../sass/style.scss */
+  /* line 678, ../../sass/style.scss */
   .navbar-nav {
     float: right;
   }
 
-  /* line 678, ../../sass/style.scss */
+  /* line 681, ../../sass/style.scss */
   #main-container {
     margin-top: -10px;
   }
 
-  /* line 681, ../../sass/style.scss */
+  /* line 684, ../../sass/style.scss */
   .index-blogs {
     width: 250px;
     height: 200px;
   }
 
-  /* line 686, ../../sass/style.scss */
+  /* line 689, ../../sass/style.scss */
   .jumbotron {
     margin-right: 4%;
   }
-  /* line 689, ../../sass/style.scss */
+  /* line 692, ../../sass/style.scss */
   .jumbotron h1 {
     font-size: 52px;
   }
-  /* line 693, ../../sass/style.scss */
+  /* line 696, ../../sass/style.scss */
   .jumbotron p {
     font-size: 35px;
   }
 
-  /* line 697, ../../sass/style.scss */
+  /* line 700, ../../sass/style.scss */
   .col-xs-12.col-sm-9 {
     margin-bottom: 12%;
   }
 
-  /* line 700, ../../sass/style.scss */
+  /* line 703, ../../sass/style.scss */
   .viewPostModal {
     margin-top: 4%;
   }
 
-  /* line 703, ../../sass/style.scss */
+  /* line 706, ../../sass/style.scss */
   #oldPosts-title {
     margin-left: -.4%;
     margin-top: -3.5%;
     margin-right: -.4%;
   }
 
-  /* line 709, ../../sass/style.scss */
+  /* line 712, ../../sass/style.scss */
   .oldPosts-content {
     width: 85%;
     margin-left: 9%;
   }
-  /* line 712, ../../sass/style.scss */
+  /* line 715, ../../sass/style.scss */
   .oldPosts-content h2 {
     margin-left: 4%;
   }
-  /* line 716, ../../sass/style.scss */
+  /* line 719, ../../sass/style.scss */
   .oldPosts-content h6 {
     margin: 6% 0 5% 4%;
   }
-  /* line 720, ../../sass/style.scss */
+  /* line 723, ../../sass/style.scss */
   .oldPosts-content h4 {
     width: 82%;
     margin-left: 7%;
@@ -780,85 +788,85 @@ ul.social-icons-large li.github span.social-icon {
 }
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
-  /* line 732, ../../sass/style.scss */
+  /* line 735, ../../sass/style.scss */
   ul.nav.navbar-nav {
     margin-right: 0;
   }
 
-  /* line 735, ../../sass/style.scss */
+  /* line 738, ../../sass/style.scss */
   #main-container {
     margin-top: -12px;
   }
 
-  /* line 738, ../../sass/style.scss */
+  /* line 741, ../../sass/style.scss */
   .navbar-inverse .navbar-toggle {
     margin-top: 1.5%;
   }
 
-  /* line 742, ../../sass/style.scss */
+  /* line 745, ../../sass/style.scss */
   .index-blogs {
     height: auto;
     margin-bottom: 3%;
   }
-  /* line 747, ../../sass/style.scss */
+  /* line 750, ../../sass/style.scss */
   .index-blogs h2 {
     overflow: none;
     height: auto;
   }
-  /* line 752, ../../sass/style.scss */
+  /* line 755, ../../sass/style.scss */
   .index-blogs p {
     height: auto;
   }
 
-  /* line 758, ../../sass/style.scss */
+  /* line 761, ../../sass/style.scss */
   .canvas-toggle {
     margin-top: 5%;
   }
 
-  /* line 762, ../../sass/style.scss */
+  /* line 765, ../../sass/style.scss */
   .list-group {
     margin-top: 11%;
   }
 
-  /* line 766, ../../sass/style.scss */
+  /* line 769, ../../sass/style.scss */
   .jumbotron {
     margin-top: 5%;
   }
-  /* line 769, ../../sass/style.scss */
+  /* line 772, ../../sass/style.scss */
   .jumbotron h1 {
     font-size: 55px;
   }
-  /* line 772, ../../sass/style.scss */
+  /* line 775, ../../sass/style.scss */
   .jumbotron p {
     font-size: 35px;
   }
 
-  /* line 777, ../../sass/style.scss */
+  /* line 780, ../../sass/style.scss */
   .container {
     margin-bottom: 8%;
   }
 
-  /* line 780, ../../sass/style.scss */
+  /* line 783, ../../sass/style.scss */
   #oldPosts-title {
     margin-left: -.5%;
     margin-top: -6%;
     margin-right: -.4%;
   }
 
-  /* line 786, ../../sass/style.scss */
+  /* line 789, ../../sass/style.scss */
   .oldPosts-content {
     width: 95%;
     margin-left: 5%;
   }
-  /* line 790, ../../sass/style.scss */
+  /* line 793, ../../sass/style.scss */
   .oldPosts-content h2 {
     margin-left: 1%;
   }
-  /* line 793, ../../sass/style.scss */
+  /* line 796, ../../sass/style.scss */
   .oldPosts-content h6 {
     margin: 6% 0 7% 1%;
   }
-  /* line 798, ../../sass/style.scss */
+  /* line 801, ../../sass/style.scss */
   .oldPosts-content h4 {
     width: 85%;
     margin-left: 4%;
@@ -866,82 +874,82 @@ ul.social-icons-large li.github span.social-icon {
 }
 /* Landscape phones and down */
 @media (max-width: 480px) {
-  /* line 811, ../../sass/style.scss */
+  /* line 814, ../../sass/style.scss */
   ul.nav.navbar-nav {
     margin-right: 0;
   }
 
-  /* line 814, ../../sass/style.scss */
+  /* line 817, ../../sass/style.scss */
   #main-container {
     margin-top: -9px;
   }
 
-  /* line 817, ../../sass/style.scss */
+  /* line 820, ../../sass/style.scss */
   .navbar-inverse .navbar-toggle {
     margin-top: 3%;
   }
 
-  /* line 820, ../../sass/style.scss */
+  /* line 823, ../../sass/style.scss */
   .index-blogs {
     height: auto;
     margin-top: 3%;
   }
-  /* line 824, ../../sass/style.scss */
+  /* line 827, ../../sass/style.scss */
   .index-blogs h2 {
     overflow: none;
     height: auto;
   }
-  /* line 828, ../../sass/style.scss */
+  /* line 831, ../../sass/style.scss */
   .index-blogs p {
     height: auto;
   }
 
-  /* line 832, ../../sass/style.scss */
+  /* line 835, ../../sass/style.scss */
   .list-group {
     margin-top: 12%;
   }
 
-  /* line 835, ../../sass/style.scss */
+  /* line 838, ../../sass/style.scss */
   .jumbotron {
     margin-top: 5%;
     margin-bottom: 8%;
   }
-  /* line 839, ../../sass/style.scss */
+  /* line 842, ../../sass/style.scss */
   .jumbotron h1 {
     font-size: 30px;
   }
-  /* line 842, ../../sass/style.scss */
+  /* line 845, ../../sass/style.scss */
   .jumbotron p {
     font-size: 25px;
   }
 
-  /* line 847, ../../sass/style.scss */
+  /* line 850, ../../sass/style.scss */
   .container {
     margin-bottom: 8%;
   }
 
-  /* line 850, ../../sass/style.scss */
+  /* line 853, ../../sass/style.scss */
   #oldPosts-title {
     margin-top: -7%;
     margin-right: -.6%;
     margin-left: -.6%;
   }
 
-  /* line 856, ../../sass/style.scss */
+  /* line 859, ../../sass/style.scss */
   .oldPosts-content {
     width: 85%;
     margin-left: 11%;
   }
-  /* line 860, ../../sass/style.scss */
+  /* line 863, ../../sass/style.scss */
   .oldPosts-content h2 {
     margin-left: -2%;
   }
-  /* line 864, ../../sass/style.scss */
+  /* line 867, ../../sass/style.scss */
   .oldPosts-content h4 {
     margin-left: 1.5%;
     width: 85%;
   }
-  /* line 868, ../../sass/style.scss */
+  /* line 871, ../../sass/style.scss */
   .oldPosts-content h6 {
     margin-left: -2%;
     margin-bottom: 8%;

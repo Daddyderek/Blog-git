@@ -465,18 +465,18 @@ ul.social-icons-large {
 		font-size: 50px;
 	}
 	.contactRight {
-		width: 500px;
+		width: 400px;
 		background-color: white;
 		height: 3px;
 		float: right;
-		margin: -2.5% 7% 0 0;
+		margin: -2% 18% 0 0;
 	}
 	.contactLeft {
-		width: 500px;
+		width: 400px;
 		background-color: white;
 		height: 3px;
 		float: left;
-		margin: -2.5% 0 0 7%;
+		margin: -2% 0 0 18%;
 	}
 }
 
@@ -521,9 +521,12 @@ ul.social-icons-large {
 		} 
 	}
 }
-
-
-
+.freelance {
+	width: 20%;
+	float: right;
+	color: white;
+	margin-right: 20%;
+}
 
 /* ############# oldPosts ############# */
 

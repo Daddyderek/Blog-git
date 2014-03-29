@@ -41,11 +41,12 @@ $(document).ready(function() {
 
 		{
 			method		: 'POST',
-			type		: 'json',
+			data 		: $('#contact-form').serialize(),
+			dataType	: 'json',
 			success		: function( data ) {
 
 				if (data.success == true) {
-
+					console.log("data is = "+data);
 					$("#contactAlert").hide().removeClass("hidden").fadeIn("slow");
 					$("#contact-form").remove();
 
