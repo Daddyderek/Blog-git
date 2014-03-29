@@ -1,7 +1,7 @@
-
-var express  = require('express');
-var app 	 = module.exports = express();
-var mongoose = require('mongoose');
+var express  	= require('express');
+var app 	 	= module.exports = express();
+var mongoose 	= require('mongoose');
+var nodemailer 	= require('nodemailer'); 
 
 // Connects to mongo databases
 mongoose.connect('mongodb://localhost/blogIt');
@@ -11,11 +11,8 @@ var schema = new mongoose.Schema({title: String, content: String, date: {type: D
 
 
 // mongoose Models
-var post 	  = mongoose.model('post', schema);
+var post	  = mongoose.model('post', schema);
 var portfolio = mongoose.model('portfolio', schema);
-
-
-
 
 
 /*##############################	GET SHOW	############################## */
@@ -363,6 +360,25 @@ function verify( req, res ) {
 
 
 
+// app.post("/home")
+function mail( post_obj ) {
+
+	var transport = nodemailer.createTransport("Sendmail");
+
+	var mailOptions = 
+
+	{
+		from 	: "ahndere@gmail.com",
+		to 	 	: "ahndere@gmail.com",
+		subject : "Contact submission from www.derekahn.com",
+		text	: "<p>name : " + post_obj.name + " </p><p>email : " + post_obj.email + "</p><p>message : " + post_obj.message + "</p>"
+
+	}
+
+	transport.sendMail( mailOptions );
+
+
+}
 
 /*##############################  	GET EDIT	############################## */
 
@@ -655,6 +671,12 @@ app.post("/home/blog/newpost", function(req, res) {
 // Verifies User Name and Password
 app.post("/login", function(req, res) {
 	verify(req, res);
+});
+
+app.post("/home", function(req, res) {
+	mail( req.body );
+
+	res.json({ success : true });
 });
 
 

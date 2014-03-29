@@ -2,7 +2,8 @@ $(document).ready(function() {
 
 	console.log("JavaScript is working!");
 
-	// Parallax example //
+
+	// Parallax for About //
 	$('section[data-type="background"]').each( function() {
 		
 		var $window	= $(window);
@@ -29,6 +30,16 @@ $(document).ready(function() {
 		});// $(window).scroll
 
 	}); // ends $('section[data-type="background"')
+
+	// $("button#cust-submit").click( function(e) {
+
+	// 	e.preventDefault();
+
+	// 	var button = $(this);
+
+	// 	$.ajax( "/home",
+
+	// });
 
 
 
