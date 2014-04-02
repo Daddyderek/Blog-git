@@ -8,15 +8,15 @@
     font-weight: normal;
     font-style: normal;
 }
-@font-face {
-	font-family: 'Novecentosanswide-Normal';
-    src: url('../fonts/nova.eot');
-    src: url('../fonts/nova.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/nova.woff') format('woff'),
-         url('../fonts/nova.ttf') format('truetype');
-	font-weight: normal;
-    font-style: normal;
-}
+// @font-face {
+// 	font-family: 'Novecentosanswide-Normal';
+//     src: url('../fonts/nova.eot');
+//     src: url('../fonts/nova.eot?#iefix') format('embedded-opentype'),
+//          url('../fonts/nova.woff') format('woff'),
+//          url('../fonts/nova.ttf') format('truetype');
+// 	font-weight: normal;
+//     font-style: normal;
+// }
 
 body {
 	background-color: #222222;
@@ -234,7 +234,7 @@ a.list-group-item {
 
 #footer {
 	display: block;
-	height: 60px;
+	//height: 60px;
 	width: 100%;
 	background-color: rgba(119, 119, 119, .2);
 	bottom: 0;
@@ -244,7 +244,45 @@ a.list-group-item {
 		font-size: 15px;
 		margin-left: 1%;
 	}
-}
+	.connect2 {
+		width: 500px;
+		height: 50px;
+		float: right;
+		margin-top: -1%;
+
+		ul.social-icons-large {
+			list-style: none;
+			background-repeat: no-repeat;
+			width: 500px;
+
+			li a span {
+				background-color: rgba(255,255,255,0);
+				width: 50px;
+				height: 40px;
+				display: inline-block;
+				margin: 4px;
+				&:hover {
+					background-color: red;
+				}
+			}
+
+			li.facebook span.social-icon {
+				background-position: -5px -20px;
+
+			}
+			li.twitter span.social-icon {
+				background-position: -15px -108px;
+			}
+			li.linkedin span.social-icon {
+				background-position: -19px -190px;
+			}
+			li.github span.social-icon {
+				background-position: -17px -788px;
+
+			}
+		}
+	}
+}// #footer
 
 
 /* ############# Portfolio  Page ############# */
@@ -422,9 +460,12 @@ ul.social-icons-large {
 		text-align: left;
 		line-height: 1.5;
 	}
-	li {
-		margin-right: 80%;
+	h5 {
+		text-align: left;
 		margin-top: 2%;
+	}
+	li {
+		text-align: left;
 	}
 
 }
@@ -522,11 +563,18 @@ ul.social-icons-large {
 	}
 }
 .freelance {
-	width: 20%;
+	width: 30%;
 	float: right;
 	color: white;
-	margin-right: 20%;
+	margin-right: 12%;
 	margin-top: 2%;
+}
+.alert-success {
+	background-color: purple;
+	border-color: white;
+	color: white;
+	width: 230px;
+	margin-left: 10%;
 }
 
 /* ############# oldPosts ############# */
@@ -627,7 +675,17 @@ ul.social-icons-large {
 		}
 
 	}
-}
+	/* ############ About Me ############ */
+	.contactMe {
+		.contactRight {
+			margin: -2.5% 11% 0 0;
+		}
+		.contactLeft {
+			margin: -2.5% 0 0 11%;
+		}
+	}
+
+}// Ends Purple
 
 /* For desktops */
 @media (min-width: 992px) and (max-width: 1200px) {
@@ -669,8 +727,32 @@ ul.social-icons-large {
 			margin-bottom: 20%;
 		}
 	}
+	/* ########## About Me ######### */
+	.aloha {
+		margin-right: 5%;
+	}
+	.name {
+		margin-left: 2%;
+	}
+	.developer {
+		line-height: 1.5;
+		font-family: 'Montserrat', sans-serif;
+		text-shadow: 4px 4px white;
+		font-size: 50px;
+	}
+	.connect-with-me {
+		margin-top: 8%;
+	}
+	.contactMe {
+		.contactRight {
+			margin: -3% 4% 0 0;
+		}
+		.contactLeft {
+			margin: -3% 0 0 4%;
+		}
+	}
 
-}
+}// ends BLUE
 
 
 /* Portrait tablet to landscape and desktop */
@@ -693,7 +775,6 @@ ul.social-icons-large {
 		h1 {
 			font-size: 52px;
 		}
-
 		p {
 			font-size: 35px;
 		}
@@ -709,26 +790,147 @@ ul.social-icons-large {
 		margin-top: -3.5%;
 		margin-right: -.4%;
 	}
-
 	.oldPosts-content {
 		width: 85%;
 		margin-left: 9%;
 		h2 {
 			margin-left: 4%;
 		}
-
 		h6 {
 			margin: 6% 0 5% 4%;		
 		}
-
 		h4 {
 			width: 82%;
 			margin-left: 7%;
 			margin-bottom: 20%;
 		}
+	}
+
+/* ############# About Me  Page ############# */
+
+	.aloha {
+		text-shadow: 3px 3px white;
+		font-size: 250px;
+		margin-top: 5%;
+		margin-right: 4%;
+	}
+	.im {
+		margin-top: -3%;
+		text-shadow: 2px 2px white;
+		font-size: 65px;
+	}
+	.name {
+		text-shadow: 5px 5px white;
+		font-size: 200px;
+		margin-left: 3%;
+		margin-top: 4%;
+	}
+	.developer {
+		line-height: 1.5;
+		text-shadow: 2px 2px white;
+		font-size: 50px;
+		margin-top: 4%;
+	}
+
+	.resume {
+		width: 60%;
+		float: right;
+		margin-top: 2%;
+		margin-right: 15%;
+		line-height: 1;
+
+		h4 {
+			text-align: left;
+		}
+		p {
+			font-family: ariel, sans-serif;
+			text-align: left;
+			line-height: 1.5;
+		}
+		li {
+			margin-right: 80%;
+			margin-top: 2%;
+			width: 100%;
+		}
 
 	}
+
+.contactMe {
+	color: white;
+	font-size: 90px;
+	text-shadow: 4px 4px #222;
+	margin-top: 6%;
+	.contactMe {
+		font-family: 'LeagueGothicRegular';
+		text-transform: uppercase;
+		font-size: 100px;
+	}
+	.contactRight {
+		width: 250px;
+		background-color: white;
+		height: 3px;
+		float: right;
+		margin: -3.4% 7.5% 0 0;
+	}
+	.contactLeft {
+		width: 250px;
+		background-color: white;
+		height: 3px;
+		float: left;
+		margin: -3.4% 0 0 7%;
+	}
 }
+
+.contactForm {
+	display: block;
+	font-family: Ariel, sans-serif;
+	font-size: 14px;
+	margin: 5% 45% 0 0;
+
+	#cust-name {
+		width: 300px;
+		height: 55px;
+		margin-bottom: -15px;
+	}
+	#cust-email {
+		width: 300px;
+		height: 55px;
+		margin-bottom: -15px;
+
+	}
+	#cust-message {
+		width: 300px;
+
+	}
+	button#cust-submit {
+		margin-top: 10px;
+		width: 100px;
+		height: 40px;
+		background-color: rgba(0,0,0,0);
+		border-color: white;
+		color: white;
+		font-family: 'Pathway Gothic One', sans-serif;
+		font-size: 30px;
+		border-width: 1.5px;
+		transition: .5s;
+
+
+		&:hover {
+			background-color: white;
+			color: black;
+
+		} 
+	}
+}
+	.freelance {
+		width: 40%;
+		margin-right: 6%;
+		margin-top: 1%;
+	}
+
+
+
+}// ends RED
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
@@ -760,7 +962,8 @@ ul.social-icons-large {
 	}
 
 	.canvas-toggle {
-		margin-top: 5%;
+		margin-top: 6.4%;
+		margin-right: 1.6%;
 	}
 
 	.list-group {
@@ -806,6 +1009,117 @@ ul.social-icons-large {
 
 	}
 
+/* ############# About Me  Page ############# */
+
+	.aloha {
+		text-shadow: 2px 2px white;
+		font-size: 150px;
+		margin-top: 5%;
+		margin-right: 2%;
+	}
+	.im {
+		margin-top: -3%;
+		text-shadow: 3px 3px white;
+		font-size: 55px;
+	}
+	.name {
+		text-shadow: 5px 5px white;
+		font-size: 190px;
+		margin-left: 3%;
+		margin-top: 4%;
+	}
+	.developer {
+		line-height: 1.5;
+		text-shadow: 2px 2px white;
+		font-size: 30px;
+		margin-top: 10%;
+	}
+	.connect-with-me {
+		font-size: 70px;
+		margin-top: 20%;
+		margin-left: 9%;
+	}
+
+	#about {
+		background: url("../img/parallax2@2X.jpg") 50% 0 no-repeat fixed; min-height: 500px;
+		height: 500px;
+		margin: 0 auto;
+		width: 100%;
+		max-width: 1920px;
+		position: relative;
+		-webkit-box-shadow: 0 0 50px rgba(0,0,0,0.8);
+		box-shadow: 0 0 50px rba(0,0,0,0.8);
+	}
+	.aboutMe {
+		line-height: 1.3;
+		margin: 17% 0 0 10%;
+		width: 350px;
+		height: 200px;
+		font-size: 50px;
+	}
+
+	.contactMe {
+
+		.contactRight {
+			width: 120px;
+			margin: -7% 7.5% 0 0;
+		}
+		.contactLeft {
+			width: 120px;
+			margin: -7% 0 0 7%;
+		}
+	}
+	.contactForm {
+		display: block;
+		font-family: Ariel, sans-serif;
+		font-size: 14px;
+		margin-right: 5%;
+
+		#cust-name {
+			width: 200px;
+			height: 35px;
+			margin-bottom: -55px;
+		}
+		#cust-email {
+			width: 200px;
+			height: 35px;
+			margin-bottom: -55px;
+
+		}
+		#cust-message {
+			width: 200px;
+			height: 200px;
+
+		}
+		button#cust-submit {
+			margin-top: 10px;
+			width: 100px;
+			height: 40px;
+			background-color: rgba(0,0,0,0);
+			border-color: white;
+			color: white;
+			font-family: 'Pathway Gothic One', sans-serif;
+			font-size: 30px;
+			border-width: 1.5px;
+			transition: .5s;
+
+
+			&:hover {
+				background-color: white;
+				color: black;
+
+			} 
+		}
+	}
+	.freelance {
+		width: 55%;
+		margin-right: 6%;
+		margin-top: 1%;
+		float: left;
+		margin-left: 20%;
+		margin-bottom: 5%;
+	}
+
 
 }
 
@@ -816,7 +1130,7 @@ ul.social-icons-large {
 		margin-right: 0;
 	}
 	#main-container {
-		margin-top: -9px;
+		margin-top: -20px;
 	}
 	.navbar-inverse .navbar-toggle {
 		margin-top: 3%;
@@ -824,7 +1138,8 @@ ul.social-icons-large {
 	.index-blogs {
 		height: auto;
 		//background-color: green;
-		margin-top: 3%;
+		margin-top: 2%;
+		margin-left: .3%;
 		h2 {
 			overflow: none;
 			height: auto;
@@ -835,10 +1150,12 @@ ul.social-icons-large {
 	}
 	.list-group {
 		margin-top: 12%;
+		margin-right: 2%;
 	}
 	.jumbotron {
 		margin-top: 5%;
 		margin-bottom: 8%;
+		margin-right: 1%;
 
 		h1 {
 			font-size: 30px;
@@ -877,14 +1194,225 @@ ul.social-icons-large {
 
 	}
 
+/* ############# About Me  Page ############# */
+
+	#home {
+		background: url("../img/parallax1@2X.jpg") 50% 0 no-repeat fixed; min-height: 1000px;
+	}
+	// article {
+	// 	height: 8px;
+	// 	text-align: center;
+	// 	width: 60%;
+	// 	line-height: 1;
+	// 	color: #222;
+	// }
+	.aloha {
+		text-shadow: 3px 3px white;
+		font-size: 125px;
+	}
+	.im {
+		margin-top: -3%;
+		text-shadow: 1px 1px white;
+		font-size: 50px;
+	}
+	.name {
+		text-shadow: 3px 3px white;
+		font-size: 150px;
+	}
+	.developer {
+		line-height: 1;
+		text-shadow: 1px 1px white;
+		font-size: 30px;
+	}
+	#connect {
+		height: 350px;
+	}
+	.connect-with-me {
+		font-size: 50px;
+		margin-top: 16%;
+		margin-left: 9%;
+	}
+	ul.social-icons-large {
+		margin-top: 5%;
+
+		.clearfix {
+			display: block;
+		}
+		li a span {
+			margin: 1px;
+		}
+	}
+
+	#about {
+		background: url("../img/parallax2@2X.jpg") 50% 0 no-repeat fixed; min-height: 500px;
+		height: 500px;
+		margin: 0 auto;
+		width: 100%;
+		max-width: 1920px;
+		position: relative;
+		-webkit-box-shadow: 0 0 50px rgba(0,0,0,0.8);
+		box-shadow: 0 0 50px rba(0,0,0,0.8);
+	}
+	.aboutMe {
+		line-height: 1.3;
+		margin: 17% 0 0 10%;
+		width: 250px;
+		height: 170px;
+		font-size: 45px;
+	}
+#resume {
+	background: url("../img/soft_circle_scales.png") repeat fixed;
+	height: 1000px;
 }
 
+.myResume {
+	margin-top: 10%;
+	h1 {
+		font-size: 70px;
+		margin-top: -1%;
+		margin-left: 4%;
+	}
+	h3 {
+		font-size: 40px;
+		margin-left: 10%;
+	}
+}
+.resume {
+	width: 80%;
+	float: right;
+	margin-top: 2%;
+	margin-right: 10%;
+	line-height: 1;
+
+	h4 {
+		text-align: left;
+	}
+	p {
+		font-family: ariel, sans-serif;
+		text-align: left;
+		line-height: 1.5;
+	}
+	li {
+		margin-right: 80%;
+		margin-top: 2%;
+		width: 100%;
+	}
+
+}
+#wave {
+	background: url("../img/parallax3@2X.jpg") 50% 0 no-repeat fixed; min-height: 500px;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1920px;
+	position: relative;
+
+}
+#night {
+	background: url("../img/parallax4@2x.jpg") 50% 0 no-repeat fixed; min-height: 1000px;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1920px;
+	position: relative;
+
+}
+
+.contactMe {
+	color: white;
+	font-size: 90px;
+	text-shadow: 4px 4px #222;
+	margin-top: 6%;
+	.contactContact {
+		font-family: 'Novecentosanswide-Normal', sans-serif;
+		font-size: 40px;
+		font-weight: 300;
+	}
+	.contactMe {
+		font-family: 'LeagueGothicRegular';
+		text-transform: uppercase;
+		font-size: 100px;
+	}
+	.contactPlease {
+		font-family: 'Lobster', cursive;
+		font-size: 50px;
+	}
+	.contactRight {
+		width: 400px;
+		background-color: white;
+		height: 3px;
+		float: right;
+		margin: -2.5% 13% 0 0;
+	}
+	.contactLeft {
+		width: 400px;
+		background-color: white;
+		height: 3px;
+		float: left;
+		margin: -2.5% 0 0 13%;
+	}
+}
+
+.contactForm {
+	display: block;
+	font-family: Ariel, sans-serif;
+	font-size: 14px;
+	margin: 5% 45% 0 0;
+
+	#cust-name {
+		width: 300px;
+		height: 55px;
+		margin-bottom: -15px;
+	}
+	#cust-email {
+		width: 300px;
+		height: 55px;
+		margin-bottom: -15px;
+
+	}
+	#cust-message {
+		width: 300px;
+
+	}
+	button#cust-submit {
+		margin-top: 10px;
+		width: 100px;
+		height: 40px;
+		background-color: rgba(0,0,0,0);
+		border-color: white;
+		color: white;
+		font-family: 'Pathway Gothic One', sans-serif;
+		font-size: 30px;
+		border-width: 1.5px;
+		transition: .5s;
 
 
+		&:hover {
+			background-color: white;
+			color: black;
 
+		} 
+	}
+}
+.freelance {
+	width: 20%;
+	float: right;
+	color: white;
+	margin-right: 20%;
+	margin-top: 2%;
+}
+/* ########### Footer ######### */
 
+	.connect2 {
+		width: 500px;
+		height: 50px;
+		float: right;
+		margin-top: -1%;
+		margin-left: 5%; 
 
+		ul.social-icons-large {
+			list-style: none;
+			background-repeat: no-repeat;
+			width: 500px;
+		}
+	}
 
-
-
-
+}// ends small
