@@ -806,7 +806,7 @@ ul.social-icons-large {
 		}
 	}
 
-/* ############# About Me  Page ############# */
+/* ############# About Me  Page (RED) ############# */
 
 	.aloha {
 		text-shadow: 3px 3px white;
@@ -830,6 +830,14 @@ ul.social-icons-large {
 		text-shadow: 2px 2px white;
 		font-size: 50px;
 		margin-top: 4%;
+	}
+	.connect-with-me {
+		color: white;
+		font-size: 70px;
+		margin-top: 8%;
+		margin-left: 6%;
+
+
 	}
 
 	.resume {
@@ -1009,7 +1017,7 @@ ul.social-icons-large {
 
 	}
 
-/* ############# About Me  Page ############# */
+/* ############# About Me  Page YELLOW ############# */
 
 	.aloha {
 		text-shadow: 2px 2px white;
@@ -1057,6 +1065,12 @@ ul.social-icons-large {
 		height: 200px;
 		font-size: 50px;
 	}
+	.resume {
+		width: 70%;
+		float: none;
+		margin-top: 2%;
+		margin-left: 25%;
+	}
 
 	.contactMe {
 
@@ -1073,7 +1087,7 @@ ul.social-icons-large {
 		display: block;
 		font-family: Ariel, sans-serif;
 		font-size: 14px;
-		margin-right: 5%;
+		margin-right: 2%;
 
 		#cust-name {
 			width: 200px;
@@ -1116,9 +1130,9 @@ ul.social-icons-large {
 		margin-right: 6%;
 		margin-top: 1%;
 		float: left;
-		margin-left: 20%;
+		margin-left: 22%;
 		margin-bottom: 5%;
-	}
+	}		
 
 
 }
@@ -1193,54 +1207,37 @@ ul.social-icons-large {
 		}
 
 	}
+/* ############# About Me  Page  GREEN ############# */
 
-/* ############# About Me  Page ############# */
-
-	#home {
-		background: url("../img/parallax1@2X.jpg") 50% 0 no-repeat fixed; min-height: 1000px;
-	}
-	// article {
-	// 	height: 8px;
-	// 	text-align: center;
-	// 	width: 60%;
-	// 	line-height: 1;
-	// 	color: #222;
-	// }
 	.aloha {
-		text-shadow: 3px 3px white;
-		font-size: 125px;
+		text-shadow: 2px 2px white;
+		font-size: 110px;
+		margin-top: 5%;
+		margin-left: 2.5%;
 	}
 	.im {
 		margin-top: -3%;
-		text-shadow: 1px 1px white;
-		font-size: 50px;
+		margin-left: 3%;
+		text-shadow: 2px 2px white;
+		font-size: 35px;
 	}
 	.name {
 		text-shadow: 3px 3px white;
-		font-size: 150px;
+		font-size: 140px;
+		margin-left: 3%;
+		margin-top: 4%;
 	}
 	.developer {
-		line-height: 1;
-		text-shadow: 1px 1px white;
+		line-height: 1.5;
+		text-shadow: 2px 2px white;
 		font-size: 30px;
-	}
-	#connect {
-		height: 350px;
+		margin-top: 10%;
+		margin-left: 4%;
 	}
 	.connect-with-me {
 		font-size: 50px;
-		margin-top: 16%;
+		margin-top: 18%;
 		margin-left: 9%;
-	}
-	ul.social-icons-large {
-		margin-top: 5%;
-
-		.clearfix {
-			display: block;
-		}
-		li a span {
-			margin: 1px;
-		}
 	}
 
 	#about {
@@ -1256,163 +1253,155 @@ ul.social-icons-large {
 	.aboutMe {
 		line-height: 1.3;
 		margin: 17% 0 0 10%;
-		width: 250px;
-		height: 170px;
-		font-size: 45px;
-	}
-#resume {
-	background: url("../img/soft_circle_scales.png") repeat fixed;
-	height: 1000px;
-}
-
-.myResume {
-	margin-top: 10%;
-	h1 {
-		font-size: 70px;
-		margin-top: -1%;
-		margin-left: 4%;
-	}
-	h3 {
-		font-size: 40px;
-		margin-left: 10%;
-	}
-}
-.resume {
-	width: 80%;
-	float: right;
-	margin-top: 2%;
-	margin-right: 10%;
-	line-height: 1;
-
-	h4 {
-		text-align: left;
-	}
-	p {
-		font-family: ariel, sans-serif;
-		text-align: left;
-		line-height: 1.5;
-	}
-	li {
-		margin-right: 80%;
-		margin-top: 2%;
-		width: 100%;
-	}
-
-}
-#wave {
-	background: url("../img/parallax3@2X.jpg") 50% 0 no-repeat fixed; min-height: 500px;
-	margin: 0 auto;
-	width: 100%;
-	max-width: 1920px;
-	position: relative;
-
-}
-#night {
-	background: url("../img/parallax4@2x.jpg") 50% 0 no-repeat fixed; min-height: 1000px;
-	margin: 0 auto;
-	width: 100%;
-	max-width: 1920px;
-	position: relative;
-
-}
-
-.contactMe {
-	color: white;
-	font-size: 90px;
-	text-shadow: 4px 4px #222;
-	margin-top: 6%;
-	.contactContact {
-		font-family: 'Novecentosanswide-Normal', sans-serif;
-		font-size: 40px;
-		font-weight: 300;
-	}
-	.contactMe {
-		font-family: 'LeagueGothicRegular';
-		text-transform: uppercase;
-		font-size: 100px;
-	}
-	.contactPlease {
-		font-family: 'Lobster', cursive;
+		width: 270px;
+		height: 200px;
 		font-size: 50px;
 	}
-	.contactRight {
-		width: 400px;
-		background-color: white;
-		height: 3px;
-		float: right;
-		margin: -2.5% 13% 0 0;
+	#connect {
+		height: 350px;
 	}
-	.contactLeft {
-		width: 400px;
-		background-color: white;
-		height: 3px;
-		float: left;
-		margin: -2.5% 0 0 13%;
+	.connect-with-me {
+		font-size: 50px;
+		margin-top: 16%;
+		margin-left: 9%;
 	}
-}
 
-.contactForm {
-	display: block;
-	font-family: Ariel, sans-serif;
-	font-size: 14px;
-	margin: 5% 45% 0 0;
-
-	#cust-name {
-		width: 300px;
-		height: 55px;
-		margin-bottom: -15px;
+	#resume {
+		background: url("../img/soft_circle_scales.png") repeat fixed;
+		height: 1000px;
 	}
-	#cust-email {
-		width: 300px;
-		height: 55px;
-		margin-bottom: -15px;
 
-	}
-	#cust-message {
-		width: 300px;
-
-	}
-	button#cust-submit {
-		margin-top: 10px;
-		width: 100px;
-		height: 40px;
-		background-color: rgba(0,0,0,0);
-		border-color: white;
-		color: white;
-		font-family: 'Pathway Gothic One', sans-serif;
-		font-size: 30px;
-		border-width: 1.5px;
-		transition: .5s;
-
-
-		&:hover {
-			background-color: white;
-			color: black;
-
-		} 
-	}
-}
-.freelance {
-	width: 20%;
-	float: right;
-	color: white;
-	margin-right: 20%;
-	margin-top: 2%;
-}
-/* ########### Footer ######### */
-
-	.connect2 {
-		width: 500px;
-		height: 50px;
-		float: right;
-		margin-top: -1%;
-		margin-left: 5%; 
-
-		ul.social-icons-large {
-			list-style: none;
-			background-repeat: no-repeat;
-			width: 500px;
+	.myResume {
+		margin-top: 10%;
+		h1 {
+			font-size: 70px;
+			margin-top: -1%;
+			margin-left: 6%;
+		}
+		h3 {
+			font-size: 40px;
+			margin-left: 10%;
 		}
 	}
+	.resume {
+		width: 75%;
+		float: none;
+		margin-top: 2%;
+		margin-left: 20%;
+	}
 
+	.contactMe {
+		.contactRight {
+			width: 60px;
+			margin: -9% 9% 0 0;
+		}
+		.contactLeft {
+			width: 60px;
+			margin: -9% 0 0 9%;
+		}
+	}
+	.connect-with-me2 {
+		ul.social-icons-large {
+			margin-right: 18%;
+		}
+	}
+	.contactForm {
+		display: block;
+		font-family: Ariel, sans-serif;
+		font-size: 14px;
+		margin-right: 2%;
+
+		#cust-name {
+			width: 200px;
+			height: 35px;
+			margin-bottom: -65px;
+		}
+		#cust-email {
+			width: 200px;
+			height: 35px;
+			margin-bottom: -65px;
+
+		}
+		#cust-message {
+			width: 200px;
+			height: 200px;
+
+		}
+		button#cust-submit {
+			margin-top: 10px;
+			width: 100px;
+			height: 40px;
+			background-color: rgba(0,0,0,0);
+			border-color: white;
+			color: white;
+			font-family: 'Pathway Gothic One', sans-serif;
+			font-size: 30px;
+			border-width: 1.5px;
+			transition: .5s;
+
+
+			&:hover {
+				background-color: white;
+				color: black;
+
+			} 
+		}
+	}
+	.freelance {
+		float: none;
+		width: 60%;
+		margin-top: 1%;
+		margin-bottom: 5%;
+		margin-right: 5%;
+	}
+
+/* ############# 22222  ############# */
+
+// 	#home {
+// 		background: url("../img/parallax1@2X.jpg") 50% 0 no-repeat fixed; min-height: 1000px;
+// 	}
+// 	.aloha {
+// 		text-shadow: 3px 3px white;
+// 		font-size: 40px;
+// 	}
+// 	.im {
+// 		margin-top: -3%;
+// 		text-shadow: 1px 1px white;
+// 		font-size: 50px;
+// 	}
+// 	.name {
+// 		text-shadow: 3px 3px white;
+// 		font-size: 150px;
+// 	}
+// 	.developer {
+// 		line-height: 1;
+// 		text-shadow: 1px 1px white;
+// 		font-size: 30px;
+// 	}
+// 	#connect {
+// 		height: 350px;
+// 	}
+// 	.connect-with-me {
+// 		font-size: 50px;
+// 		margin-top: 16%;
+// 		margin-left: 9%;
+// 	}
+
+// 	#about {
+// 		background: url("../img/parallax2@2X.jpg") 50% 0 no-repeat fixed; min-height: 500px;
+// 		height: 500px;
+// 		margin: 0 auto;
+// 		width: 100%;
+// 		max-width: 1920px;
+// 		position: relative;
+// 		-webkit-box-shadow: 0 0 50px rgba(0,0,0,0.8);
+// 		box-shadow: 0 0 50px rba(0,0,0,0.8);
+// 	}
+// 	.aboutMe {
+// 		line-height: 1.3;
+// 		margin: 17% 0 0 10%;
+// 		width: 250px;
+// 		height: 170px;
+// 		font-size: 45px;
+// 	}
 }// ends small
