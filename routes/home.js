@@ -334,7 +334,7 @@ function verify( req, res ) {
 
 	if( user === "reptar" ) {
 
-		if( pw === "deannad28" ) {
+		if( pw === "k1ingt@kboob" ) {
 
 			req.session.name = user;
 			res.send( { redirect : '/' } );
