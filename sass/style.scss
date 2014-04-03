@@ -277,31 +277,12 @@ a.list-group-item {
 
 
 /* ############# Portfolio  Page ############# */
-
-
 .portfolio-container {
-	// height: 90%;
-	// width: 80%;
-	// background-color: pink;
-	// margin: 5% 5% 10% 10%;
-
-	ul {
-		list-style-type: none;
-		height: 100%;
-	}
-
+	background-color: green;
 }
-.portfolio-content {
-	// width: 98%;
-	// text-align: left;
-	// background-color: green;
-	// margin: 5% 25% 8% 1%
-
-}
-li.portfolio-boxes {
+.portfolio-boxes {
 	background-color: yellow;
-	margin-bottom: 20%;
-	width: 120%;
+	list-style: none;
 }
 
 
@@ -511,7 +492,16 @@ ul.social-icons-large {
 		margin: -2.5% 0 0 13%;
 	}
 }
+.connect-with-me2 {
+	ul.social-icons-large {
 
+		li a span {
+			&:hover {
+				background-color: #CE256E;
+			}
+		}
+	}
+}
 .contactForm {
 	display: block;
 	font-family: Ariel, sans-serif;
@@ -743,6 +733,10 @@ ul.social-icons-large {
 		}
 	}
 
+
+
+
+
 }// ends BLUE
 
 
@@ -926,7 +920,11 @@ ul.social-icons-large {
 		margin-right: 6%;
 		margin-top: 1%;
 	}
-
+/* ########## PORTFOLIO ############## */
+	.portfolio-posts {
+		margin-right: 8%;
+		margin-left: 3%;
+	}
 
 
 }// ends RED
@@ -978,7 +976,7 @@ ul.social-icons-large {
 		margin-top: 5%;
 
 		h1 {
-			font-size: 55px;
+			font-size: 50px;
 		}
 		p {
 			font-size: 35px;
@@ -1144,10 +1142,14 @@ ul.social-icons-large {
 		float: left;
 		margin-left: 22%;
 		margin-bottom: 5%;
-	}		
+	}	
 
+/* ########## PORTFOLIO ############## */
+	.portfolio-posts {
+		margin-right: 7%;
+	}
 
-}
+}// ENDS YELLOW
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
@@ -1371,5 +1373,10 @@ ul.social-icons-large {
 		width: 100%;
 		margin: 1% auto 5%;
 	}
+
+/* ################ PORTFOLIO ################### */
+.portfolio-posts {
+	margin-right: 9%;
+}
 
 }// ends small

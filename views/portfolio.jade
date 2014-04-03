@@ -1,22 +1,21 @@
 extends layout
 block content
-	.portfolio-back-ground.col-md-12
-		.portfolio-container
-			h1 My Portfolio
+	.portfolio-container.row
+		.col-md-6.col-md-offset-3
 			.userPortfolio
 				if (loggedIn)
 					h4 Add A New Project
 					form(id='portfolioForm', action='/home/portfolio/:id', method='post', role='form')
 						.form-group
-							label(id="projectId", for="projectTitle") Title :
 							input(id='projectTitle', type='text', placeholder='Title of Project', name='title', required='required')
 						.form-group
-							label(id='projectDescriptionLabel', for="description") Description :
-							textarea(id='description', class='form control', type='text', placeholder='Describe Your Project', rows='12', cols='95', name='content', required='required')
+							textarea(id='description', class='form control', type='text', placeholder='Describe Your Project', rows='12', cols='65', name='content', required='required')
 						button(type='sumbit') Submit
 					#resultPortfolio
-			.portfolio-content.col-md-6.col-md-offset-3
-				ul
+			.portfolio-content.row
+				div.portfolio-title
+					h1 My Portfolio
+				ul.portfolio-posts
 					- for portfolio in portfolios
 						li.portfolio-boxes
 							.postTitle.form-group
