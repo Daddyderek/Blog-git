@@ -37,7 +37,7 @@ block content
               .list-group
                 a.list-group-item.active(href='/blog/archive') Archive
                 - for post in posts
-                  a.list-group-item(href='/blog/archive/#postTitle') #{post.title}
+                  a.list-group-item(href='/blog/archive/##{ post.id }') #{post.title}
         #footer
           .copy-right 
             © DaddyDerek 2014

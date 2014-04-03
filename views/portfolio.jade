@@ -24,7 +24,7 @@ block content
 								h4( data-content-id= '#{ portfolio.id }')= portfolio.content
 							.form-group
 								- if (loggedIn)
-									button(class='delete2', href='/home/portfolio/#{portfolio.id}') Delete
+									button(class='delete2', href='/portfolio/#{portfolio.id}') Delete
 									button(class='edit2', data-toggle='modal', data-id='#{portfolio.id}', data-target='#myModal2') Edit
 			#myModal2.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
 				.modal-dialog

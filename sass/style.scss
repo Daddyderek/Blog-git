@@ -278,10 +278,12 @@ a.list-group-item {
 
 /* ############# Portfolio  Page ############# */
 .portfolio-container {
-	background-color: green;
+	background: url("../img/photography.png") repeat center center fixed;
+	width: 100%;
+	min-height: 1000px;
 }
 .portfolio-boxes {
-	background-color: yellow;
+	//background-color: yellow;
 	list-style: none;
 }
 

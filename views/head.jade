@@ -18,3 +18,9 @@
             a(href='/portfolio') Portfolio
           li
             a(href='/blog/archive') Archive
+          li
+            - if ( loggedIn )
+              a(href="/blog/newPost") New Post
+          li
+            - if ( loggedIn )
+              a(href="/logout") Logout
