@@ -5,7 +5,7 @@ block content
 			.userPortfolio
 				if (loggedIn)
 					h4 Add A New Project
-					form(id='portfolioForm', action='/home/portfolio/:id', method='post', role='form')
+					form(id='portfolioForm', action='/portfolio/:id', method='post', role='form')
 						.form-group
 							input(id='projectTitle', type='text', placeholder='Title of Project', name='title', required='required')
 						.form-group

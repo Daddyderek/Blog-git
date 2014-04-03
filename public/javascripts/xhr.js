@@ -37,7 +37,7 @@ $(document).ready(function() {
 
 		var button = $(this);
 
-		$.ajax( "/home",
+		$.ajax( "/",
 
 		{
 			method		: 'POST',
@@ -105,7 +105,7 @@ $(document).ready(function() {
 
 
 
-	// Toggles the blue side nav-bar for mobile on "/home" //
+	// Toggles the blue side nav-bar for mobile on "/" //
 	$('[data-toggle=offcanvas]').click(function() {
 
 		$('.row-offcanvas').toggleClass('active');
@@ -114,7 +114,7 @@ $(document).ready(function() {
 
 
 
-	// Displays a blog post in a modal on "/home" //
+	// Displays a blog post in a modal on "/" //
 	$('.viewPostModal').on('click', function(e) {
 
 		e.preventDefault();
@@ -122,7 +122,7 @@ $(document).ready(function() {
 		var button = $(e.currentTarget);
 		var title = $(this).closest('.row1').find(".modalBlogPostTitle").html();
 
-		$.ajax( "/blogPost/" + button.data("id"), {
+		$.ajax( "/blog/blogPost/" + button.data("id"), {
 
 			method	: 'GET',
 			dataType: 'json',
@@ -140,12 +140,12 @@ $(document).ready(function() {
 
 
 
-	// Creates a new blog post on "/home/blog/newPosts" //
+	// Creates a new blog post on "/blog/newPosts" //
 	$('form#blogForm').on('submit', function(event) {
 
 		event.preventDefault();
 
-		$.ajax( '/home/blog/newPost', {
+		$.ajax( '/blog/newPost', {
 
 			method	: 'POST',
 			data	: $('form#blogForm').serialize(),
@@ -163,12 +163,12 @@ $(document).ready(function() {
 
 
 
-	// Create new post on "/home/portfolio" //
+	// Create new post on "/portfolio" //
 	$('form#portfolioForm').on('submit', function(event) {
 
 		event.preventDefault();
 
-		$.ajax( '/home/portfolio', {
+		$.ajax( '/portfolio', {
 			method	: 'POST',
 			data	: $('form#portfolioForm').serialize(),
 			success : function(result) {
@@ -185,7 +185,7 @@ $(document).ready(function() {
 
 
 
-	// Edits a blog post on "/home/blog/oldPosts" //
+	// Edits a blog post on "/blog/archive" //
 	$('button.edit').on('click', function(e) {
 
 		e.preventDefault();
@@ -207,7 +207,7 @@ $(document).ready(function() {
 
 
 
-	// Edits a post on "/home/portfolio" //
+	// Edits a post on "/portfolio" //
 	$('button.edit2').on('click', function(e) {
 
 		e.preventDefault();
@@ -229,7 +229,7 @@ $(document).ready(function() {
 
 
 
-	// Saves a post edited on "/home/blog/oldPosts" //
+	// Saves a post edited on "/blog/archive" //
 	$("#modalSave").click(function(e) {
 
 		e.preventDefault();
@@ -260,15 +260,13 @@ $(document).ready(function() {
 
 
 
-	// Saves an edited post on "/home/portfolio" //
+	// Saves an edited post on "/portfolio" //
 	$("#modalSave2").click(function(e) {
-
-		console.log("inside modal edit2");
 
 		e.preventDefault();
 
 		var id = $("#modalEditForm2").attr('data-editing-id');
-		console.log("This is id = "+id);
+
 		console.log("$modaleEdit2 "+$('#modalEditForm2').attr('action'));
 
 		$.ajax( $('#modalEditForm2').attr('action'), {
@@ -295,7 +293,7 @@ $(document).ready(function() {
 
 
 
-	// Deletes a blog post on "/home/blog/oldPosts" //
+	// Deletes a blog post on "/blog/archive" //
 	$('button.delete').on('click', function(e) {
 
 		e.preventDefault();
@@ -318,7 +316,7 @@ $(document).ready(function() {
 
 
 
-	// Deletes a post on "/home/portfolio" //
+	// Deletes a post on "/portfolio" //
 	$('button.delete2').on('click', function(e) {
 
 		e.preventDefault();

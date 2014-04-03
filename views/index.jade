@@ -35,9 +35,9 @@ block content
                           button.btn.btn-default(type='button', data-dismiss='modal') Close
             #sidebar.col-xs-6.col-sm-3.sidebar-offcanvas(role='navigation')
               .list-group
-                a.list-group-item.active(href='/home/blog/oldPosts') Older Posts
+                a.list-group-item.active(href='/blog/archive') Archive
                 - for post in posts
-                  a.list-group-item(href='/home/blog/oldPosts/#postTitle') #{post.title}
+                  a.list-group-item(href='/blog/archive/#postTitle') #{post.title}
         #footer
           .copy-right 
             © DaddyDerek 2014

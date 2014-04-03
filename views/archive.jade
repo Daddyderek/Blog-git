@@ -16,7 +16,7 @@ block content
 								h4( data-content-id= '#{ post.id }')= post.content
 							.form-group
 								- if (loggedIn)
-									button(class='delete', href='/home/blog/#{post.id}', data-id='#{post.id}') Delete
+									button(class='delete', href='/blog/#{post.id}', data-id='#{post.id}') Delete
 									button(class='edit', data-toggle='modal', data-id='#{post.id}', data-target='#myModal') Edit
 				#myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
 					.modal-dialog

@@ -4,7 +4,7 @@ var mongoose 	= require('mongoose');
 var nodemailer 	= require('nodemailer'); 
 
 // Connects to mongo databases
-mongoose.connect('mongodb://localhost/blogIt');
+mongoose.connect('mongodb://reptar:w0rsh1p2010@ds033907.mongolab.com:33907/blog');
 
 // mongoose Schema
 var schema = new mongoose.Schema({title: String, content: String, date: {type: Date, default: Date.now}});
@@ -43,7 +43,7 @@ function myLogin( req, res ) {
 
 
 
-// app.get("/home")
+// app.get("/")
 function homePage( req, res ) {
 
 	var auth = null;
@@ -66,7 +66,7 @@ function homePage( req, res ) {
 			res.send('Error '+err);
 
 		}
-
+		console.log()
 		res.render('index',
 
 		{
@@ -113,7 +113,7 @@ function viewBlogPost(req, res) {
 
 
 
-// app.get("/home/portfolio")
+// app.get("/portfolio")
 function myPortfolio( req, res ) {
 
 	var auth = null;
@@ -151,7 +151,7 @@ function myPortfolio( req, res ) {
 
 
 
-// app.get("/home/about")
+// app.get("/about")
 function aboutMe( req, res ) {
 
 	var auth = null;
@@ -173,7 +173,7 @@ function aboutMe( req, res ) {
 
 
 
-// app.get("/home/hacktheplanet")
+// app.get("/hacktheplanet")
 function myHackPlanet( req, res ) {
 
 	var auth = null;
@@ -200,7 +200,7 @@ function myHackPlanet( req, res ) {
 
 
 
-// app.get("/home/blog/newPost")
+// app.get("/blog/newPost")
 function newPost( req, res ) {
 
 	res.render('newPost');
@@ -227,7 +227,7 @@ function endSession( req, res ) {
 
 
 
-// app.post("/home/portfolio")
+// app.post("/portfolio")
 function addPortfolio( req, res ) {
 
 	var auth = null;
@@ -275,7 +275,7 @@ function addPortfolio( req, res ) {
 
 
 
-// app.post('/home/blog/newpost')
+// app.post('/blog/newpost')
 function createPost( req, res ) {
 
 	var auth = null;
@@ -332,12 +332,12 @@ function verify( req, res ) {
 	var user	= req.body.username;
 	var pw		= req.body.password;
 
-	if( user === "a" ) {
+	if( user === "reptar" ) {
 
-		if( pw === "a" ) {
+		if( pw === "deannad28" ) {
 
 			req.session.name = user;
-			res.send( { redirect : '/home' } );
+			res.send( { redirect : '/' } );
 
 			return;
 
@@ -360,7 +360,7 @@ function verify( req, res ) {
 
 
 
-// app.post("/home")
+// app.post("/")
 function mail( post_obj, cb ) {
 
 	var transport = nodemailer.createTransport("Sendmail");
@@ -386,7 +386,7 @@ function mail( post_obj, cb ) {
 
 
 
-// app.get("/home/blog/oldPosts")
+// app.get("/blog/archive")
 function oldPosts(req, res) {
 
 	var auth = null;
@@ -411,7 +411,7 @@ function oldPosts(req, res) {
 			res.send('Error '+err);
 
 		}
-		res.render('oldPosts', {
+		res.render('archive', {
 
 			loggedIn	: auth,
 			posts		: myOldPosts
@@ -427,7 +427,7 @@ function oldPosts(req, res) {
 /*##############################  	PUT UPDATE	##############################*/
 
 
-// app.put("/home/blog/oldPosts")
+// app.put("/blog/archive")
 function editMyPost( req, res ) {
 
 	var auth = null;
@@ -472,7 +472,7 @@ function editMyPost( req, res ) {
 }// ends editMyPost 
 
 
-// app.put("/home/portfolio")
+// app.put("/portfolio")
 function editMyPortfolio(req, res) {
 	
 	console.log("Inside editMyPortfolio");
@@ -521,7 +521,7 @@ function editMyPortfolio(req, res) {
 
 
 
-// app.delete("/home/blog/:id")
+// app.delete("/blog/:id")
 function deletePost( req, res ) {
 
 	var auth = null;
@@ -562,7 +562,7 @@ function deletePost( req, res ) {
 
 
 
-// app.delete('/home/portfolio/:id')
+// app.delete('/portfolio/:id')
 function deletePortfolio(req, res) {
 
 	var auth = null;
@@ -613,22 +613,22 @@ function deletePortfolio(req, res) {
 
 
 // This is just for XHR to view blog post //
-app.get( "/blogPost/:id", viewBlogPost );
+app.get( "/blog/blogPost/:id", viewBlogPost );
 
 // Calls the home page
-app.get( "/home", homePage );
+app.get( "/", homePage );
 
 // Calls the login page
 app.get( "/login", myLogin );
 
 // Calls the portfolio
-app.get( "/home/portfolio", myPortfolio );
+app.get( "/portfolio", myPortfolio );
 
 // Calls the about
-app.get( "/home/about", aboutMe );
+app.get( "/about", aboutMe );
 
 // Calls hack the planet!
-app.get( "/home/hacktheplanet", myHackPlanet );
+app.get( "/hacktheplanet", myHackPlanet );
 
 // Calls the Logout page
 app.get( "/logout", endSession );
@@ -639,23 +639,23 @@ app.get( "/logout", endSession );
 
 
 // Calls the new post page
-app.get( "/home/blog/newPost", newPost );
+app.get( "/blog/newPost", newPost );
 
 
 /*############################## 	POST CREATE		##############################*/
 
 
 // Calls the portfolio to Post new
-app.post( "/home/portfolio", addPortfolio );
+app.post( "/portfolio", addPortfolio );
 
 // Calls the new post page so that it may POST
-app.post( "/home/blog/newpost", createPost );
+app.post( "/blog/newPost", createPost );
 
 // Verifies User Name and Password
 app.post( "/login", verify );
 
 // For the contact form
-app.post( "/home", function(req, res) {
+app.post( "/", function(req, res) {
 
 	mail( req.body, function(err, result){
 		// only runs after mail is done async processing
@@ -670,7 +670,7 @@ app.post( "/home", function(req, res) {
 
 
 // Calls the old posts
-app.get( "/home/blog/oldPosts", oldPosts );
+app.get( "/blog/archive", oldPosts );
 
 
 
@@ -679,17 +679,17 @@ app.get( "/home/blog/oldPosts", oldPosts );
 
 
 // Calls the edit function for blog posts
-app.put( "/home/blog/:id", editMyPost );
+app.put( "/blog/:id", editMyPost );
 
 // Calls the edit function for portfolio posts
-app.put( "/home/portfolio", editMyPortfolio );
+app.put( "/portfolio", editMyPortfolio );
 
 
 /*############################## 	GET DELETE		##############################*/
 
 
 // On the old posts page it deletes the current post
-app.delete( '/home/blog/:id', deletePost );
+app.delete( '/blog/:id', deletePost );
 
 // On the portfolio page it deletes the current post
-app.delete( '/home/portfolio/:id', deletePortfolio );
+app.delete( '/portfolio/:id', deletePortfolio );
