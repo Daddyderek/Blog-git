@@ -1,46 +1,41 @@
-var express  	= require('express');
-var app 	 	= module.exports = express();
-var mongoose 	= require('mongoose');
-var nodemailer 	= require('nodemailer'); 
+var express		= require('express');
+var app			= module.exports = express();
+var mongoose	= require('mongoose');
+var nodemailer	= require('nodemailer');
+
+
+/************************************************
+				* mongoose.js
+************************************************/
+
 
 // Connects to mongo databases
 mongoose.connect('mongodb://reptar:w0rsh1p2010@ds033907.mongolab.com:33907/blog');
 
 // mongoose Schema
-var schema = new mongoose.Schema({title: String, content: String, date: {type: Date, default: Date.now}});
+var schema = new mongoose.Schema({
 
+	title		: String,
+	content		: String,
+	date		: {
 
-// mongoose Models
-var post	  = mongoose.model('post', schema);
-var portfolio = mongoose.model('portfolio', schema);
-
-
-/*##############################	GET SHOW	############################## */
-
-
-
-
-
-// app.get("/login")
-function myLogin( req, res ) {
-
-	var auth = null;
-
-	if ( req.session.name ) {
-
-		auth = true;
+		type	: Date,
+		default	: Date.now
 
 	}
 
-	res.render( 'login',
-
-	{
-		loggedIn : auth
-	});
-
-}// ends myLogin
+});
 
 
+// mongoose Models
+var post		= mongoose.model('post', schema);
+var portfolio	= mongoose.model('portfolio', schema);
+
+
+
+/************************************************
+				* index.jade
+************************************************/
 
 
 // app.get("/")
@@ -66,20 +61,18 @@ function homePage( req, res ) {
 			res.send('Error '+err);
 
 		}
-		console.log()
+
 		res.render('index',
 
 		{
-			loggedIn : auth,
-			posts	 : blogPost
+			loggedIn	: auth,
+			posts		: blogPost
 
 		}); // ends res.render
 
 	}); // ends post.find
 
 } // ends homePage
-
-
 
 
 // This is just for XHR to view blogPost //
@@ -107,13 +100,66 @@ function viewBlogPost(req, res) {
 
 	});
 
-
 } // ends viewBlogPost
 
 
 
 
-// app.get("/portfolio")
+/************************************************
+				* about.jade
+************************************************/
+
+
+// app.get("/about") //
+function aboutMe( req, res ) {
+
+	var auth = null;
+
+	if( req.session.name ) {
+
+		auth = true;
+
+	}
+
+	res.render( 'about',
+
+	{
+		loggedIn : auth
+	});
+
+} // ends about
+
+
+/* This is for the contact form */
+
+// app.post("/") //
+function mail( post_obj, cb ) {
+
+	var transport = nodemailer.createTransport("Sendmail");
+
+	var mailOptions =
+
+	{
+
+		from	: "ahndere@gmail.com",
+		to		: "ahndere@gmail.com",
+		subject : "Contact submission from www.derekahn.com",
+		text	: "<p>name : " + post_obj.name + " </p><p>email : " + post_obj.email + "</p><p>message : " + post_obj.message + "</p>"
+
+	};
+
+	transport.sendMail( mailOptions, cb);
+
+}// mail
+
+
+
+/************************************************
+				* portfolio.jade
+************************************************/
+
+
+// app.get("/portfolio") //
 function myPortfolio( req, res ) {
 
 	var auth = null;
@@ -124,7 +170,7 @@ function myPortfolio( req, res ) {
 
 	}
 
-	portfolio.find().sort( { date: -1 } ).exec( 
+	portfolio.find().sort( { date: -1 } ).exec(
 
 		function(err, portfolioPost) {
 
@@ -146,88 +192,10 @@ function myPortfolio( req, res ) {
 
 	});
 
-}// ends myPortfolio	
+}// ends myPortfolio
 
 
-
-
-// app.get("/about")
-function aboutMe( req, res ) {
-
-	var auth = null;
-
-	if( req.session.name ) {
-
-		auth = true;
-
-	}
-
-	res.render( 'about',
-
-	{
-		loggedIn : auth
-	});
-
-} // ends about
-
-
-
-
-// app.get("/hacktheplanet")
-function myHackPlanet( req, res ) {
-
-	var auth = null;
-
-	if ( req.session.name ) {
-
-		auth = true;
-
-	}
-
-	res.render( 'hacktheplanet',
-
-	{
-		loggedIn : auth
-	});
-
-}// ends myHackPlanet
-
-
-
-
-/*##############################  	GET NEW	 	##############################*/
-
-
-
-
-// app.get("/blog/newPost")
-function newPost( req, res ) {
-
-	res.render('newPost');
-
-}// ends newPost
-
-
-
-
-// app.get('/logout')
-function endSession( req, res ) {
-
-	req.session.destroy();
-
-	res.redirect('/login');
-
-}// ends endSession
-
-
-
-
-/*##############################  	POST CREATE		############################## */
-
-
-
-
-// app.post("/portfolio")
+// app.post("/portfolio")//
 function addPortfolio( req, res ) {
 
 	var auth = null;
@@ -238,14 +206,14 @@ function addPortfolio( req, res ) {
 
 	}
 
-	var portfolioTitle 	 = req.body.title;
-	var portfolioContent = req.body.content;
-	var postDate 		 = req.body.date;
-	var myPortfolio 	 = new portfolio (
+	var portfolioTitle		= req.body.title;
+	var portfolioContent	= req.body.content;
+	var postDate			= req.body.date;
+	var myPortfolio			= new portfolio (
 
 	{
 
-		title 	: portfolioTitle,
+		title	: portfolioTitle,
 		content : portfolioContent
 
 	});// ends var myPortfolio
@@ -259,9 +227,10 @@ function addPortfolio( req, res ) {
 
 		} else {
 
-			res.redirect("myPortfolio", 
+			res.redirect("myPortfolio",
+			
 			{
-				
+
 				loggedIn: auth
 
 			});
@@ -274,27 +243,28 @@ function addPortfolio( req, res ) {
 
 
 
+// app.put("/portfolio")
+function editMyPortfolio(req, res) {
+	
+	console.log("Inside editMyPortfolio");
+	if ( req.session.name ) {
 
-// app.post('/blog/newpost')
-function createPost( req, res ) {
+		var numId				= req.body.id;
+		var portfolioTitle		= req.body.title;
+		var portfolioContent	= req.body.content;
 
-	var auth = null;
+		portfolio.findOneAndUpdate({
 
-	if( req.session.name ) {
+			_id: numId
+		},
+		{
 
-		auth = true;
+			title	: portfolioTitle,
+			content : portfolioContent
 
-		var postTitle 	= req.body.title;
-		var postContent = req.body.content;
-		var postDate 	= req.body.date;
-		var myPost 		= new post({
+		},
 
-			title	: postTitle,
-			content : postContent
-
-		});// ends myPost
-
-		myPost.save( function( err ) {
+		function ( err, obj ) {
 
 			if ( err ) {
 
@@ -303,17 +273,12 @@ function createPost( req, res ) {
 
 			} else {
 
-				res.render("newPost", 
+				console.log('Portfolio Has Been Edited');
+				res.json(obj);
 
-				{
-
-				loggedIn: auth
-
-				});
-			
 			}
 
-		});// ends myPost.save
+		});// portfolio.findOneAndUpdate
 
 	} else {
 
@@ -321,72 +286,56 @@ function createPost( req, res ) {
 
 	}
 
-}// ends createPost
+}// ends editMyPortfolio
 
 
+// app.delete('/portfolio/:id') //
+function deletePortfolio(req, res) {
 
+	var auth = null;
 
-// app.post("/login")
-function verify( req, res ) {
+	if(req.session.name) {
 
-	var user	= req.body.username;
-	var pw		= req.body.password;
+		auth = true;
 
-	if( user === "reptar" ) {
+		var idNum = req.param('id');
 
-		if( pw === "k1ingt@kboob" ) {
+		portfolio.findOneAndRemove({
 
-			req.session.name = user;
-			res.send( { redirect : '/' } );
+			_id: idNum
 
-			return;
+		},
 
-		} else {
+		function(err) {
 
-			res.send( 'Wrong password' );
+			if(err) {
 
-			return;
-		}
+				console.log( "Error "+err );
+				res.send( 'Error '+err );
+
+			}
+
+			console.log("deleted portfolio");
+			res.send('Deleted Successfully');
+
+		});
 
 	} else {
 
-		res.send( "Wrong User Name" );
-
-		return;
+		res.redirect('/login');
 
 	}
 
-}// ends verify
+}// ends deletePortfolio
 
 
 
-// app.post("/")
-function mail( post_obj, cb ) {
-
-	var transport = nodemailer.createTransport("Sendmail");
-
-	var mailOptions = 
-
-	{
-		from	: "ahndere@gmail.com",
-		to	 	: "ahndere@gmail.com",
-		subject : "Contact submission from www.derekahn.com",
-		text	: "<p>name : " + post_obj.name + " </p><p>email : " + post_obj.email + "</p><p>message : " + post_obj.message + "</p>"
-
-	}
-
-	
-
-	transport.sendMail( mailOptions, cb);
+/************************************************
+				* archive.jade
+************************************************/
 
 
-}
-
-/*##############################  	GET EDIT	############################## */
-
-
-
-// app.get("/blog/archive")
+// app.get("/blog/archive") //
 function oldPosts(req, res) {
 
 	var auth = null;
@@ -423,11 +372,7 @@ function oldPosts(req, res) {
 } // ends oldPosts
 
 
-
-/*##############################  	PUT UPDATE	##############################*/
-
-
-// app.put("/blog/archive")
+// app.put("/blog/archive") //
 function editMyPost( req, res ) {
 
 	var auth = null;
@@ -436,16 +381,16 @@ function editMyPost( req, res ) {
 
 		auth = true;
 
-		var numId 		= req.body.id;
-		var postTitle 	= req.body.title;
+		var numId		= req.body.id;
+		var postTitle	= req.body.title;
 		var postContent = req.body.content;
 
 		post.findOneAndUpdate({
 
-			_id: numId	
-		}, 
+			_id: numId
+		},
 		{
-			title 	: postTitle,
+			title	: postTitle,
 			content : postContent
 		},
 
@@ -469,56 +414,7 @@ function editMyPost( req, res ) {
 
 	}
 
-}// ends editMyPost 
-
-
-// app.put("/portfolio")
-function editMyPortfolio(req, res) {
-	
-	console.log("Inside editMyPortfolio");
-	if ( req.session.name ) {
-
-		var numId			 = req.body.id;
-		var portfolioTitle	 = req.body.title;
-		var portfolioContent = req.body.content;
-
-		portfolio.findOneAndUpdate({ 
-
-			_id: numId
-		}, 
-		{ 
-			title	: portfolioTitle, 
-			content : portfolioContent 
-		},
-
-		function ( err, obj ) {
-
-			if ( err ) {
-
-				console.log('Error '+err);
-				res.send('Error '+err);
-
-			} else {
-
-				console.log('Portfolio Has Been Edited');
-				res.json(obj);
-
-			}
-
-		});// portfolio.findOneAndUpdate
-
-	} else {
-
-		res.redirect('/login');
-
-	}
-
-}// ends editMyPortfolio
-
-
-
-/* ############################## 	GET DELETE	##############################*/
-
+}// ends editMyPost
 
 
 // app.delete("/blog/:id")
@@ -536,7 +432,7 @@ function deletePost( req, res ) {
 
 			_id: idNum
 
-		}, 
+		},
 
 		function( err ) {
 
@@ -562,36 +458,58 @@ function deletePost( req, res ) {
 
 
 
-// app.delete('/portfolio/:id')
-function deletePortfolio(req, res) {
+/************************************************
+				* newPost.jade
+************************************************/
+
+
+// app.get("/blog/newPost")
+function newPost( req, res ) {
+
+	res.render('newPost');
+
+}// ends newPost
+
+
+// app.post('/blog/newpost') //
+function createPost( req, res ) {
 
 	var auth = null;
 
-	if(req.session.name) {
+	if( req.session.name ) {
 
 		auth = true;
 
-		var idNum = req.param('id');
+		var postTitle	= req.body.title;
+		var postContent = req.body.content;
+		var postDate	= req.body.date;
+		var myPost		= new post({
 
-		portfolio.findOneAndRemove({
+			title	: postTitle,
+			content : postContent
 
-			_id: idNum
+		});// ends myPost
 
-		}, 
+		myPost.save( function( err ) {
 
-		function(err) {
+			if ( err ) {
 
-			if(err) {
+				console.log('Error '+err);
+				res.send('Error '+err);
 
-				console.log( "Error "+err );
-				res.send( 'Error '+err );
+			} else {
 
-			} 
+				res.render("newPost",
 
-			console.log("deleted portfolio");
-			res.send('Deleted Successfully');
+				{
 
-		});
+					loggedIn: auth
+
+				});
+			
+			}
+
+		});// ends myPost.save
 
 	} else {
 
@@ -599,97 +517,174 @@ function deletePortfolio(req, res) {
 
 	}
 
-}// ends deletePortfolio
+}// ends createPost
 
 
 
-
-/*######################################## 		ROUTE HANDLERS		#########################################*/
-
-
-
-
-/*############################## 	GET SHOW	##############################*/
+/************************************************
+				* login.jade
+************************************************/
 
 
-// This is just for XHR to view blog post //
-app.get( "/blog/blogPost/:id", viewBlogPost );
+// app.get("/login") //
+function myLogin( req, res ) {
 
-// Calls the home page
+	var auth = null;
+
+	if ( req.session.name ) {
+
+		auth = true;
+
+	}
+
+	res.render( 'login',
+
+	{
+		loggedIn : auth
+	});
+
+}// ends myLogin
+
+
+// app.post("/login") //
+function verify( req, res ) {
+
+	var user	= req.body.username;
+	var pw		= req.body.password;
+
+	if( user === "reptar" ) {
+
+		if( pw === "deannad28" ) {
+
+			req.session.name = user;
+			res.send( { redirect : '/' } );
+
+			return;
+
+		} else {
+
+			res.send( 'Wrong password' );
+
+			return;
+		}
+
+	} else {
+
+		res.send( "Wrong User Name" );
+
+		return;
+
+	}
+
+}// ends verify
+
+
+
+/************************************************
+				* logout.jade
+************************************************/
+
+
+// app.get('/logout')
+function endSession( req, res ) {
+
+	req.session.destroy();
+
+	res.redirect('/login');
+
+}// ends endSession
+
+
+
+/*####################################################################
+						*	ROUTE HANDLERS	*
+####################################################################*/
+
+
+/****************************
+		* index.jade
+*****************************/
+
+// Calls the home page //
 app.get( "/", homePage );
 
-// Calls the login page
-app.get( "/login", myLogin );
 
-// Calls the portfolio
-app.get( "/portfolio", myPortfolio );
+/****************************
+		* about.jade
+*****************************/
 
-// Calls the about
+
+// Calls the about //
 app.get( "/about", aboutMe );
-
-// Calls hack the planet!
-app.get( "/hacktheplanet", myHackPlanet );
-
-// Calls the Logout page
-app.get( "/logout", endSession );
-
-
-
-/*############################## 	GET NEW		##############################*/
-
-
-// Calls the new post page
-app.get( "/blog/newPost", newPost );
-
-
-/*############################## 	POST CREATE		##############################*/
-
-
-// Calls the portfolio to Post new
-app.post( "/portfolio", addPortfolio );
-
-// Calls the new post page so that it may POST
-app.post( "/blog/newPost", createPost );
-
-// Verifies User Name and Password
-app.post( "/login", verify );
 
 // For the contact form
 app.post( "/", function(req, res) {
 
 	mail( req.body, function(err, result){
+
 		// only runs after mail is done async processing
-		// cause we want to know that email was sent successfully (err is null)
-		res.json({ success : (err==null) });
-	} );
+		res.json({ success : ( err == null ) });
+
+	});
 
 });
 
 
-/*############################## 	GET EDIT 	##############################*/
+/****************************
+		* portfolio.jade
+*****************************/
 
+// Calls the portfolio //
+app.get( "/portfolio", myPortfolio );
 
-// Calls the old posts
-app.get( "/blog/archive", oldPosts );
+// Create new Post to portfolio //
+app.post( "/portfolio", addPortfolio );
 
-
-
-
-/*############################## 	PUT UPDATE	##############################*/
-
-
-// Calls the edit function for blog posts
-app.put( "/blog/:id", editMyPost );
-
-// Calls the edit function for portfolio posts
+// Calls the edit function for portfolio posts //
 app.put( "/portfolio", editMyPortfolio );
 
+// Delete post on Portfolio //
+app.delete( '/portfolio/:id', deletePortfolio );
 
-/*############################## 	GET DELETE		##############################*/
 
+/****************************
+		* archive.jade
+*****************************/
 
-// On the old posts page it deletes the current post
+// XHR view modals //
+app.get( "/blog/blogPost/:id", viewBlogPost );
+
+// Calls Archive //
+app.get( "/blog/archive", oldPosts );
+
+// edit blog posts on Archive//
+app.put( "/blog/:id", editMyPost );
+
+// On the Archive deletes post //
 app.delete( '/blog/:id', deletePost );
 
-// On the portfolio page it deletes the current post
-app.delete( '/portfolio/:id', deletePortfolio );
+
+/****************************
+		* newPost.jade
+*****************************/
+
+// Calls the new post page //
+app.get( "/blog/newPost", newPost );
+
+// Calls the new post page so that it may POST //
+app.post( "/blog/newPost", createPost );
+
+
+/****************************
+		* login.jade
+*****************************/
+
+// Calls the login page //
+app.get( "/login", myLogin );
+
+// Verifies User Name and Password
+app.post( "/login", verify );
+
+// Calls the Logout page //
+app.get( "/logout", endSession );
+

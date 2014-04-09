@@ -242,7 +242,7 @@ a.list-group-item:hover {
 #footer .copy-right {
   line-height: 60px;
   font-size: 15px;
-  margin-left: 1%;
+  margin-left: 7%;
 }
 /* line 238, ../../sass/style.scss */
 #footer .connect2 {
@@ -299,8 +299,13 @@ a.list-group-item:hover {
   list-style: none;
 }
 
+/* line 289, ../../sass/style.scss */
+.portfolio-content.row {
+  margin-left: 8%;
+}
+
 /* ############# About Me  Page ############# */
-/* line 293, ../../sass/style.scss */
+/* line 295, ../../sass/style.scss */
 #home {
   background: url("../img/parallax1.jpg") 50% 0 no-repeat fixed;
   min-height: 1000px;
@@ -311,7 +316,7 @@ a.list-group-item:hover {
   position: relative;
 }
 
-/* line 301, ../../sass/style.scss */
+/* line 303, ../../sass/style.scss */
 article {
   height: 458px;
   position: absolute;
@@ -321,14 +326,14 @@ article {
   color: #222;
 }
 
-/* line 309, ../../sass/style.scss */
+/* line 311, ../../sass/style.scss */
 .aloha {
   font-family: 'Allura', cursive;
   text-shadow: 7px 7px white;
   font-size: 350px;
 }
 
-/* line 314, ../../sass/style.scss */
+/* line 316, ../../sass/style.scss */
 .im {
   margin-top: -3%;
   font-family: 'Montserrat', sans-serif;
@@ -336,14 +341,14 @@ article {
   font-size: 90px;
 }
 
-/* line 320, ../../sass/style.scss */
+/* line 322, ../../sass/style.scss */
 .name {
   font-family: 'Pathway Gothic One', sans-serif;
   text-shadow: 8px 8px white;
   font-size: 300px;
 }
 
-/* line 325, ../../sass/style.scss */
+/* line 327, ../../sass/style.scss */
 .developer {
   line-height: 1.5;
   font-family: 'Montserrat', sans-serif;
@@ -351,13 +356,13 @@ article {
   font-size: 50px;
 }
 
-/* line 331, ../../sass/style.scss */
+/* line 333, ../../sass/style.scss */
 #connect {
   background: url("../img/carbon_fibre.png") repeat fixed;
   height: 500px;
 }
 
-/* line 335, ../../sass/style.scss */
+/* line 337, ../../sass/style.scss */
 .connect-with-me {
   color: white;
   font-size: 70px;
@@ -365,7 +370,7 @@ article {
   margin-top: 4%;
 }
 
-/* line 343, ../../sass/style.scss */
+/* line 345, ../../sass/style.scss */
 ul.social-icons-large {
   list-style: none;
   background-repeat: no-repeat;
@@ -373,11 +378,11 @@ ul.social-icons-large {
   width: 250px;
   margin-top: 5%;
 }
-/* line 350, ../../sass/style.scss */
+/* line 352, ../../sass/style.scss */
 ul.social-icons-large .clearfix {
   display: block;
 }
-/* line 354, ../../sass/style.scss */
+/* line 356, ../../sass/style.scss */
 ul.social-icons-large li a span {
   background-image: url("../img/social-icons.png");
   background-color: white;
@@ -388,28 +393,28 @@ ul.social-icons-large li a span {
   float: left;
   margin: 1px;
 }
-/* line 364, ../../sass/style.scss */
+/* line 366, ../../sass/style.scss */
 ul.social-icons-large li a span:hover {
   background-color: orange;
 }
-/* line 369, ../../sass/style.scss */
+/* line 371, ../../sass/style.scss */
 ul.social-icons-large li.facebook span.social-icon {
   background-position: 0 0;
 }
-/* line 373, ../../sass/style.scss */
+/* line 375, ../../sass/style.scss */
 ul.social-icons-large li.twitter span.social-icon {
   background-position: 0 -85px;
 }
-/* line 376, ../../sass/style.scss */
+/* line 378, ../../sass/style.scss */
 ul.social-icons-large li.linkedin span.social-icon {
   background-position: 0 -170px;
 }
-/* line 379, ../../sass/style.scss */
+/* line 381, ../../sass/style.scss */
 ul.social-icons-large li.github span.social-icon {
   background-position: 0px -765px;
 }
 
-/* line 385, ../../sass/style.scss */
+/* line 387, ../../sass/style.scss */
 #about {
   background: url("../img/parallax2.jpg") 50% 0 no-repeat fixed;
   min-height: 800px;
@@ -422,7 +427,7 @@ ul.social-icons-large li.github span.social-icon {
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
 }
 
-/* line 395, ../../sass/style.scss */
+/* line 397, ../../sass/style.scss */
 .aboutMe {
   line-height: 1.1;
   margin: 17% 0 0 7%;
@@ -434,29 +439,29 @@ ul.social-icons-large li.github span.social-icon {
   font-family: 'LeagueGothicRegular', sans-serif;
 }
 
-/* line 405, ../../sass/style.scss */
+/* line 407, ../../sass/style.scss */
 #resume {
   background: url("../img/soft_circle_scales.png") repeat fixed;
   height: 1000px;
 }
 
-/* line 410, ../../sass/style.scss */
+/* line 412, ../../sass/style.scss */
 .myResume {
   margin-top: 5%;
 }
-/* line 412, ../../sass/style.scss */
+/* line 414, ../../sass/style.scss */
 .myResume h1 {
   font-family: 'Montserrat', sans-serif;
   font-size: 70px;
   margin-top: -1%;
 }
-/* line 417, ../../sass/style.scss */
+/* line 419, ../../sass/style.scss */
 .myResume h3 {
   font-family: 'Novecentosanswide-Normal', sans-serif;
   font-size: 40px;
 }
 
-/* line 422, ../../sass/style.scss */
+/* line 424, ../../sass/style.scss */
 .resume {
   width: 50%;
   float: right;
@@ -464,27 +469,27 @@ ul.social-icons-large li.github span.social-icon {
   margin-right: 20%;
   line-height: 1;
 }
-/* line 429, ../../sass/style.scss */
+/* line 431, ../../sass/style.scss */
 .resume h4 {
   text-align: left;
 }
-/* line 432, ../../sass/style.scss */
+/* line 434, ../../sass/style.scss */
 .resume p {
   font-family: ariel, sans-serif;
   text-align: left;
   line-height: 1.5;
 }
-/* line 437, ../../sass/style.scss */
+/* line 439, ../../sass/style.scss */
 .resume h5 {
   text-align: left;
   margin-top: 2%;
 }
-/* line 441, ../../sass/style.scss */
+/* line 443, ../../sass/style.scss */
 .resume li {
   text-align: left;
 }
 
-/* line 446, ../../sass/style.scss */
+/* line 448, ../../sass/style.scss */
 #wave {
   background: url("../img/parallax3.jpg") 50% 0 no-repeat fixed;
   min-height: 500px;
@@ -494,7 +499,7 @@ ul.social-icons-large li.github span.social-icon {
   position: relative;
 }
 
-/* line 454, ../../sass/style.scss */
+/* line 456, ../../sass/style.scss */
 #night {
   background: url("../img/parallax4.jpg") 50% 0 no-repeat fixed;
   min-height: 1000px;
@@ -504,31 +509,31 @@ ul.social-icons-large li.github span.social-icon {
   position: relative;
 }
 
-/* line 463, ../../sass/style.scss */
+/* line 465, ../../sass/style.scss */
 .contactMe {
   color: white;
   font-size: 90px;
   text-shadow: 4px 4px #222;
   margin-top: 6%;
 }
-/* line 468, ../../sass/style.scss */
+/* line 470, ../../sass/style.scss */
 .contactMe .contactContact {
   font-family: 'Novecentosanswide-Normal', sans-serif;
   font-size: 40px;
   font-weight: 300;
 }
-/* line 473, ../../sass/style.scss */
+/* line 475, ../../sass/style.scss */
 .contactMe .contactMe {
   font-family: 'LeagueGothicRegular';
   text-transform: uppercase;
   font-size: 100px;
 }
-/* line 478, ../../sass/style.scss */
+/* line 480, ../../sass/style.scss */
 .contactMe .contactPlease {
   font-family: 'Lobster', cursive;
   font-size: 50px;
 }
-/* line 482, ../../sass/style.scss */
+/* line 484, ../../sass/style.scss */
 .contactMe .contactRight {
   width: 400px;
   background-color: white;
@@ -536,7 +541,7 @@ ul.social-icons-large li.github span.social-icon {
   float: right;
   margin: -2.5% 13% 0 0;
 }
-/* line 489, ../../sass/style.scss */
+/* line 491, ../../sass/style.scss */
 .contactMe .contactLeft {
   width: 400px;
   background-color: white;
@@ -545,35 +550,35 @@ ul.social-icons-large li.github span.social-icon {
   margin: -2.5% 0 0 13%;
 }
 
-/* line 501, ../../sass/style.scss */
+/* line 503, ../../sass/style.scss */
 .connect-with-me2 ul.social-icons-large li a span:hover {
   background-color: #CE256E;
 }
 
-/* line 507, ../../sass/style.scss */
+/* line 509, ../../sass/style.scss */
 .contactForm {
   display: block;
   font-family: Ariel, sans-serif;
   font-size: 14px;
   margin: 5% 45% 0 0;
 }
-/* line 513, ../../sass/style.scss */
+/* line 515, ../../sass/style.scss */
 .contactForm #cust-name {
   width: 300px;
   height: 55px;
   margin-bottom: -15px;
 }
-/* line 518, ../../sass/style.scss */
+/* line 520, ../../sass/style.scss */
 .contactForm #cust-email {
   width: 300px;
   height: 55px;
   margin-bottom: -15px;
 }
-/* line 524, ../../sass/style.scss */
+/* line 526, ../../sass/style.scss */
 .contactForm #cust-message {
   width: 300px;
 }
-/* line 528, ../../sass/style.scss */
+/* line 530, ../../sass/style.scss */
 .contactForm button#cust-submit {
   margin-top: 10px;
   width: 100px;
@@ -586,13 +591,13 @@ ul.social-icons-large li.github span.social-icon {
   border-width: 1.5px;
   transition: .5s;
 }
-/* line 541, ../../sass/style.scss */
+/* line 543, ../../sass/style.scss */
 .contactForm button#cust-submit:hover {
   background-color: white;
   color: black;
 }
 
-/* line 548, ../../sass/style.scss */
+/* line 550, ../../sass/style.scss */
 .freelance {
   width: 30%;
   float: right;
@@ -601,7 +606,7 @@ ul.social-icons-large li.github span.social-icon {
   margin-top: 2%;
 }
 
-/* line 555, ../../sass/style.scss */
+/* line 557, ../../sass/style.scss */
 .alert-success {
   background-color: purple;
   border-color: white;
@@ -611,7 +616,7 @@ ul.social-icons-large li.github span.social-icon {
 }
 
 /* ############# oldPosts ############# */
-/* line 565, ../../sass/style.scss */
+/* line 567, ../../sass/style.scss */
 #oldPosts-title {
   text-align: center;
   color: white;
@@ -623,12 +628,12 @@ ul.social-icons-large li.github span.social-icon {
   font-family: Helvetica,Arial,sans-serif;
   font: 40px;
 }
-/* line 576, ../../sass/style.scss */
+/* line 578, ../../sass/style.scss */
 #oldPosts-title h1 {
   line-height: 5;
 }
 
-/* line 582, ../../sass/style.scss */
+/* line 584, ../../sass/style.scss */
 .oldPosts-content {
   background-color: white;
   width: 100%;
@@ -638,18 +643,18 @@ ul.social-icons-large li.github span.social-icon {
   border-radius: 20px;
   border: 2px solid white;
 }
-/* line 591, ../../sass/style.scss */
+/* line 593, ../../sass/style.scss */
 .oldPosts-content ul {
   list-style-type: none;
   height: 100%;
 }
-/* line 595, ../../sass/style.scss */
+/* line 597, ../../sass/style.scss */
 .oldPosts-content h2 {
   margin-left: 5%;
   width: 85%;
   border-bottom: 2px solid black;
 }
-/* line 600, ../../sass/style.scss */
+/* line 602, ../../sass/style.scss */
 .oldPosts-content h4 {
   margin: 5%;
   font-family: 'Oxygen', sans-serif;
@@ -658,13 +663,13 @@ ul.social-icons-large li.github span.social-icon {
   color: #555555;
   margin-bottom: 20%;
 }
-/* line 608, ../../sass/style.scss */
+/* line 610, ../../sass/style.scss */
 .oldPosts-content h6 {
   margin: 3% 0 -2% 5%;
   font-size: 15px;
 }
 
-/* line 614, ../../sass/style.scss */
+/* line 616, ../../sass/style.scss */
 .oldPosts-container {
   background: url("../img/cool_beach.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -677,101 +682,101 @@ ul.social-icons-large li.github span.social-icon {
 /* ############# Media Queries ############# */
 /* For Large desktops */
 @media (min-width: 1200px) {
-  /* line 628, ../../sass/style.scss */
+  /* line 630, ../../sass/style.scss */
   #main-container {
     margin-top: -8px;
   }
 
-  /* line 631, ../../sass/style.scss */
+  /* line 633, ../../sass/style.scss */
   .navbar-nav {
     float: right;
   }
 
-  /* line 634, ../../sass/style.scss */
+  /* line 636, ../../sass/style.scss */
   .index-blogs {
     width: 270px;
     height: 190px;
   }
 
-  /* line 640, ../../sass/style.scss */
+  /* line 642, ../../sass/style.scss */
   .jumbotron {
     margin-right: 1.5%;
   }
 
-  /* line 643, ../../sass/style.scss */
+  /* line 645, ../../sass/style.scss */
   .container {
     margin-bottom: 5%;
   }
 
-  /* line 646, ../../sass/style.scss */
+  /* line 648, ../../sass/style.scss */
   .oldPosts-content {
     width: 72%;
     margin-left: 14%;
   }
-  /* line 650, ../../sass/style.scss */
+  /* line 652, ../../sass/style.scss */
   .oldPosts-content h6 {
     margin-top: 4%;
     margin-bottom: 6%;
   }
-  /* line 655, ../../sass/style.scss */
+  /* line 657, ../../sass/style.scss */
   .oldPosts-content h4 {
     margin-left: 10%;
     width: 75%;
   }
 
   /* ############ About Me ############ */
-  /* line 663, ../../sass/style.scss */
+  /* line 665, ../../sass/style.scss */
   .contactMe .contactRight {
     margin: -2.5% 11% 0 0;
   }
-  /* line 666, ../../sass/style.scss */
+  /* line 668, ../../sass/style.scss */
   .contactMe .contactLeft {
     margin: -2.5% 0 0 11%;
   }
 }
 /* For desktops */
 @media (min-width: 992px) and (max-width: 1200px) {
-  /* line 675, ../../sass/style.scss */
+  /* line 677, ../../sass/style.scss */
   #main-container {
     margin-top: -8px;
   }
 
-  /* line 678, ../../sass/style.scss */
+  /* line 680, ../../sass/style.scss */
   .index-blogs {
     width: 340px;
     height: 190px;
   }
 
-  /* line 683, ../../sass/style.scss */
+  /* line 685, ../../sass/style.scss */
   .navbar-nav {
     float: right;
   }
 
-  /* line 688, ../../sass/style.scss */
+  /* line 690, ../../sass/style.scss */
   .jumbotron h1 {
     font-size: 70px;
   }
-  /* line 691, ../../sass/style.scss */
+  /* line 693, ../../sass/style.scss */
   .jumbotron p {
     font-size: 35px;
   }
 
-  /* line 695, ../../sass/style.scss */
+  /* line 697, ../../sass/style.scss */
   .col-xs-12.col-sm-9 {
     margin-bottom: 3%;
   }
 
-  /* line 698, ../../sass/style.scss */
+  /* line 700, ../../sass/style.scss */
   .oldPosts-content {
     width: 162%;
     margin-left: 23.5%;
   }
-  /* line 702, ../../sass/style.scss */
+  /* line 704, ../../sass/style.scss */
   .oldPosts-content h6 {
     margin-bottom: 6%;
     margin-top: 4%;
   }
-  /* line 707, ../../sass/style.scss */
+  /* line 709, ../../sass/style.scss */
   .oldPosts-content h4 {
     width: 75%;
     margin-left: 10%;
@@ -779,17 +784,17 @@ ul.social-icons-large li.github span.social-icon {
   }
 
   /* ########## About Me ######### */
-  /* line 714, ../../sass/style.scss */
+  /* line 716, ../../sass/style.scss */
   .aloha {
     margin-right: 5%;
   }
 
-  /* line 717, ../../sass/style.scss */
+  /* line 719, ../../sass/style.scss */
   .name {
     margin-left: 2%;
   }
 
-  /* line 720, ../../sass/style.scss */
+  /* line 722, ../../sass/style.scss */
   .developer {
     line-height: 1.5;
     font-family: 'Montserrat', sans-serif;
@@ -797,82 +802,82 @@ ul.social-icons-large li.github span.social-icon {
     font-size: 50px;
   }
 
-  /* line 726, ../../sass/style.scss */
+  /* line 728, ../../sass/style.scss */
   .connect-with-me {
     margin-top: 8%;
   }
 
-  /* line 730, ../../sass/style.scss */
+  /* line 732, ../../sass/style.scss */
   .contactMe .contactRight {
     margin: -3% 4% 0 0;
   }
-  /* line 733, ../../sass/style.scss */
+  /* line 735, ../../sass/style.scss */
   .contactMe .contactLeft {
     margin: -3% 0 0 4%;
   }
 }
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 748, ../../sass/style.scss */
+  /* line 750, ../../sass/style.scss */
   .navbar-nav {
     float: right;
   }
 
-  /* line 751, ../../sass/style.scss */
+  /* line 753, ../../sass/style.scss */
   #main-container {
     margin-top: -10px;
   }
 
-  /* line 754, ../../sass/style.scss */
+  /* line 756, ../../sass/style.scss */
   .index-blogs {
     width: 250px;
     height: 200px;
   }
 
-  /* line 759, ../../sass/style.scss */
+  /* line 761, ../../sass/style.scss */
   .jumbotron {
     margin-right: 4%;
   }
-  /* line 762, ../../sass/style.scss */
+  /* line 764, ../../sass/style.scss */
   .jumbotron h1 {
     font-size: 52px;
   }
-  /* line 765, ../../sass/style.scss */
+  /* line 767, ../../sass/style.scss */
   .jumbotron p {
     font-size: 35px;
   }
 
-  /* line 769, ../../sass/style.scss */
+  /* line 771, ../../sass/style.scss */
   .col-xs-12.col-sm-9 {
     margin-bottom: 12%;
   }
 
-  /* line 772, ../../sass/style.scss */
+  /* line 774, ../../sass/style.scss */
   .viewPostModal {
     margin-top: 4%;
   }
 
-  /* line 775, ../../sass/style.scss */
+  /* line 777, ../../sass/style.scss */
   #oldPosts-title {
     margin-left: -.4%;
     margin-top: -3.5%;
     margin-right: -.4%;
   }
 
-  /* line 780, ../../sass/style.scss */
+  /* line 782, ../../sass/style.scss */
   .oldPosts-content {
     width: 85%;
     margin-left: 9%;
   }
-  /* line 783, ../../sass/style.scss */
+  /* line 785, ../../sass/style.scss */
   .oldPosts-content h2 {
     margin-left: 4%;
   }
-  /* line 786, ../../sass/style.scss */
+  /* line 788, ../../sass/style.scss */
   .oldPosts-content h6 {
     margin: 6% 0 5% 4%;
   }
-  /* line 789, ../../sass/style.scss */
+  /* line 791, ../../sass/style.scss */
   .oldPosts-content h4 {
     width: 82%;
     margin-left: 7%;
@@ -880,7 +885,7 @@ ul.social-icons-large li.github span.social-icon {
   }
 
   /* ############# About Me  Page (RED) ############# */
-  /* line 798, ../../sass/style.scss */
+  /* line 800, ../../sass/style.scss */
   .aloha {
     text-shadow: 3px 3px white;
     font-size: 250px;
@@ -888,14 +893,14 @@ ul.social-icons-large li.github span.social-icon {
     margin-right: 4%;
   }
 
-  /* line 804, ../../sass/style.scss */
+  /* line 806, ../../sass/style.scss */
   .im {
     margin-top: -3%;
     text-shadow: 2px 2px white;
     font-size: 65px;
   }
 
-  /* line 809, ../../sass/style.scss */
+  /* line 811, ../../sass/style.scss */
   .name {
     text-shadow: 5px 5px white;
     font-size: 200px;
@@ -903,7 +908,7 @@ ul.social-icons-large li.github span.social-icon {
     margin-top: 4%;
   }
 
-  /* line 815, ../../sass/style.scss */
+  /* line 817, ../../sass/style.scss */
   .developer {
     line-height: 1.5;
     text-shadow: 2px 2px white;
@@ -911,7 +916,7 @@ ul.social-icons-large li.github span.social-icon {
     margin-top: 4%;
   }
 
-  /* line 821, ../../sass/style.scss */
+  /* line 823, ../../sass/style.scss */
   .connect-with-me {
     color: white;
     font-size: 70px;
@@ -919,7 +924,7 @@ ul.social-icons-large li.github span.social-icon {
     margin-left: 6%;
   }
 
-  /* line 830, ../../sass/style.scss */
+  /* line 832, ../../sass/style.scss */
   .resume {
     width: 60%;
     float: right;
@@ -927,37 +932,37 @@ ul.social-icons-large li.github span.social-icon {
     margin-right: 15%;
     line-height: 1;
   }
-  /* line 837, ../../sass/style.scss */
+  /* line 839, ../../sass/style.scss */
   .resume h4 {
     text-align: left;
   }
-  /* line 840, ../../sass/style.scss */
+  /* line 842, ../../sass/style.scss */
   .resume p {
     font-family: ariel, sans-serif;
     text-align: left;
     line-height: 1.5;
   }
-  /* line 845, ../../sass/style.scss */
+  /* line 847, ../../sass/style.scss */
   .resume li {
     margin-right: 80%;
     margin-top: 2%;
     width: 100%;
   }
 
-  /* line 853, ../../sass/style.scss */
+  /* line 855, ../../sass/style.scss */
   .contactMe {
     color: white;
     font-size: 90px;
     text-shadow: 4px 4px #222;
     margin-top: 6%;
   }
-  /* line 858, ../../sass/style.scss */
+  /* line 860, ../../sass/style.scss */
   .contactMe .contactMe {
     font-family: 'LeagueGothicRegular';
     text-transform: uppercase;
     font-size: 100px;
   }
-  /* line 863, ../../sass/style.scss */
+  /* line 865, ../../sass/style.scss */
   .contactMe .contactRight {
     width: 250px;
     background-color: white;
@@ -965,7 +970,7 @@ ul.social-icons-large li.github span.social-icon {
     float: right;
     margin: -3.4% 7.5% 0 0;
   }
-  /* line 870, ../../sass/style.scss */
+  /* line 872, ../../sass/style.scss */
   .contactMe .contactLeft {
     width: 250px;
     background-color: white;
@@ -974,30 +979,30 @@ ul.social-icons-large li.github span.social-icon {
     margin: -3.4% 0 0 7%;
   }
 
-  /* line 879, ../../sass/style.scss */
+  /* line 881, ../../sass/style.scss */
   .contactForm {
     display: block;
     font-family: Ariel, sans-serif;
     font-size: 14px;
     margin: 5% 45% 0 0;
   }
-  /* line 885, ../../sass/style.scss */
+  /* line 887, ../../sass/style.scss */
   .contactForm #cust-name {
     width: 300px;
     height: 55px;
     margin-bottom: -15px;
   }
-  /* line 890, ../../sass/style.scss */
+  /* line 892, ../../sass/style.scss */
   .contactForm #cust-email {
     width: 300px;
     height: 55px;
     margin-bottom: -15px;
   }
-  /* line 896, ../../sass/style.scss */
+  /* line 898, ../../sass/style.scss */
   .contactForm #cust-message {
     width: 300px;
   }
-  /* line 900, ../../sass/style.scss */
+  /* line 902, ../../sass/style.scss */
   .contactForm button#cust-submit {
     margin-top: 10px;
     width: 100px;
@@ -1010,13 +1015,13 @@ ul.social-icons-large li.github span.social-icon {
     border-width: 1.5px;
     transition: .5s;
   }
-  /* line 913, ../../sass/style.scss */
+  /* line 915, ../../sass/style.scss */
   .contactForm button#cust-submit:hover {
     background-color: white;
     color: black;
   }
 
-  /* line 920, ../../sass/style.scss */
+  /* line 922, ../../sass/style.scss */
   .freelance {
     width: 40%;
     margin-right: 6%;
@@ -1024,7 +1029,7 @@ ul.social-icons-large li.github span.social-icon {
   }
 
   /* ########## PORTFOLIO ############## */
-  /* line 926, ../../sass/style.scss */
+  /* line 928, ../../sass/style.scss */
   .portfolio-posts {
     margin-right: 8%;
     margin-left: 3%;
@@ -1032,115 +1037,115 @@ ul.social-icons-large li.github span.social-icon {
 }
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
-  /* line 937, ../../sass/style.scss */
+  /* line 939, ../../sass/style.scss */
   ul.nav.navbar-nav {
     margin-right: 0;
   }
 
-  /* line 940, ../../sass/style.scss */
+  /* line 942, ../../sass/style.scss */
   #main-container {
     margin-top: -12px;
   }
 
-  /* line 943, ../../sass/style.scss */
+  /* line 945, ../../sass/style.scss */
   .navbar-inverse .navbar-toggle {
     margin-top: 1.5%;
   }
 
-  /* line 948, ../../sass/style.scss */
+  /* line 950, ../../sass/style.scss */
   .jumbotron {
     margin: 2%;
   }
 
-  /* line 952, ../../sass/style.scss */
+  /* line 954, ../../sass/style.scss */
   .index-blogs {
     height: auto;
     margin: 2%;
   }
-  /* line 957, ../../sass/style.scss */
+  /* line 959, ../../sass/style.scss */
   .index-blogs h2 {
     overflow: none;
     height: auto;
   }
-  /* line 962, ../../sass/style.scss */
+  /* line 964, ../../sass/style.scss */
   .index-blogs p {
     height: auto;
   }
 
-  /* line 968, ../../sass/style.scss */
+  /* line 970, ../../sass/style.scss */
   .canvas-toggle {
     margin-top: 7%;
     margin-right: 1.5%;
   }
 
-  /* line 973, ../../sass/style.scss */
+  /* line 975, ../../sass/style.scss */
   .list-group {
     margin-top: 11%;
   }
 
-  /* line 977, ../../sass/style.scss */
+  /* line 979, ../../sass/style.scss */
   .jumbotron {
     margin-top: 5%;
   }
-  /* line 980, ../../sass/style.scss */
+  /* line 982, ../../sass/style.scss */
   .jumbotron h1 {
     font-size: 50px;
   }
-  /* line 983, ../../sass/style.scss */
+  /* line 985, ../../sass/style.scss */
   .jumbotron p {
     font-size: 35px;
   }
 
-  /* line 988, ../../sass/style.scss */
+  /* line 990, ../../sass/style.scss */
   .container {
     margin-bottom: 8%;
   }
 
-  /* line 991, ../../sass/style.scss */
+  /* line 993, ../../sass/style.scss */
   #oldPosts-title {
     margin-left: -.5%;
     margin-top: -6%;
     margin-right: -.4%;
   }
 
-  /* line 997, ../../sass/style.scss */
+  /* line 999, ../../sass/style.scss */
   .oldPosts-content {
     width: 95%;
     margin-left: 5%;
   }
-  /* line 1001, ../../sass/style.scss */
+  /* line 1003, ../../sass/style.scss */
   .oldPosts-content h2 {
     margin-left: 1%;
   }
-  /* line 1004, ../../sass/style.scss */
+  /* line 1006, ../../sass/style.scss */
   .oldPosts-content h6 {
     margin: 6% 0 7% 1%;
   }
-  /* line 1009, ../../sass/style.scss */
+  /* line 1011, ../../sass/style.scss */
   .oldPosts-content h4 {
     width: 85%;
     margin-left: 4%;
   }
 
   /* ############# About Me  Page YELLOW ############# */
-  /* line 1017, ../../sass/style.scss */
+  /* line 1019, ../../sass/style.scss */
   #home {
     background: url("../img/parallax1@2X.jpg") 50% 0 no-repeat fixed;
     min-height: 700px;
     height: 700px;
   }
 
-  /* line 1021, ../../sass/style.scss */
+  /* line 1023, ../../sass/style.scss */
   #wave {
     background-image: url("../img/parallax3@2X.jpg");
   }
 
-  /* line 1024, ../../sass/style.scss */
+  /* line 1026, ../../sass/style.scss */
   #night {
     background-image: url("../img/parallax4@2X.jpg");
   }
 
-  /* line 1028, ../../sass/style.scss */
+  /* line 1030, ../../sass/style.scss */
   .aloha {
     text-shadow: 2px 2px white;
     font-size: 150px;
@@ -1148,14 +1153,14 @@ ul.social-icons-large li.github span.social-icon {
     margin-right: 2%;
   }
 
-  /* line 1034, ../../sass/style.scss */
+  /* line 1036, ../../sass/style.scss */
   .im {
     margin-top: -3%;
     text-shadow: 3px 3px white;
     font-size: 55px;
   }
 
-  /* line 1039, ../../sass/style.scss */
+  /* line 1041, ../../sass/style.scss */
   .name {
     text-shadow: 5px 5px white;
     font-size: 190px;
@@ -1163,7 +1168,7 @@ ul.social-icons-large li.github span.social-icon {
     margin-top: 4%;
   }
 
-  /* line 1045, ../../sass/style.scss */
+  /* line 1047, ../../sass/style.scss */
   .developer {
     line-height: 1.5;
     text-shadow: 2px 2px white;
@@ -1171,14 +1176,14 @@ ul.social-icons-large li.github span.social-icon {
     margin-top: 10%;
   }
 
-  /* line 1051, ../../sass/style.scss */
+  /* line 1053, ../../sass/style.scss */
   .connect-with-me {
     font-size: 70px;
     margin-top: 20%;
     margin-left: 9%;
   }
 
-  /* line 1057, ../../sass/style.scss */
+  /* line 1059, ../../sass/style.scss */
   #about {
     background: url("../img/parallax2@2X.jpg") 50% 0 no-repeat fixed;
     min-height: 500px;
@@ -1191,7 +1196,7 @@ ul.social-icons-large li.github span.social-icon {
     box-shadow: 0 0 50px rba(0, 0, 0, 0.8);
   }
 
-  /* line 1067, ../../sass/style.scss */
+  /* line 1069, ../../sass/style.scss */
   .aboutMe {
     line-height: 1.3;
     margin: 17% 0 0 10%;
@@ -1200,7 +1205,7 @@ ul.social-icons-large li.github span.social-icon {
     font-size: 50px;
   }
 
-  /* line 1074, ../../sass/style.scss */
+  /* line 1076, ../../sass/style.scss */
   .resume {
     width: 70%;
     float: none;
@@ -1208,49 +1213,49 @@ ul.social-icons-large li.github span.social-icon {
     margin-left: 25%;
   }
 
-  /* line 1083, ../../sass/style.scss */
+  /* line 1085, ../../sass/style.scss */
   .contactMe .contactRight {
     width: 120px;
     margin: -7% 7.5% 0 0;
   }
-  /* line 1087, ../../sass/style.scss */
+  /* line 1089, ../../sass/style.scss */
   .contactMe .contactLeft {
     width: 120px;
     margin: -7% 0 0 7%;
   }
 
-  /* line 1092, ../../sass/style.scss */
+  /* line 1094, ../../sass/style.scss */
   .connect-with-me2 {
     float: left;
     margin-left: 15%;
     margin-bottom: 7%;
   }
 
-  /* line 1097, ../../sass/style.scss */
+  /* line 1099, ../../sass/style.scss */
   .contactForm {
     display: block;
     font-family: Ariel, sans-serif;
     font-size: 14px;
     margin-right: 2%;
   }
-  /* line 1103, ../../sass/style.scss */
+  /* line 1105, ../../sass/style.scss */
   .contactForm #cust-name {
     width: 200px;
     height: 35px;
     margin-bottom: -55px;
   }
-  /* line 1108, ../../sass/style.scss */
+  /* line 1110, ../../sass/style.scss */
   .contactForm #cust-email {
     width: 200px;
     height: 35px;
     margin-bottom: -55px;
   }
-  /* line 1114, ../../sass/style.scss */
+  /* line 1116, ../../sass/style.scss */
   .contactForm #cust-message {
     width: 200px;
     height: 200px;
   }
-  /* line 1119, ../../sass/style.scss */
+  /* line 1121, ../../sass/style.scss */
   .contactForm button#cust-submit {
     margin-top: 10px;
     width: 100px;
@@ -1264,13 +1269,13 @@ ul.social-icons-large li.github span.social-icon {
     transition: .5s;
     border: 1px solid #fff;
   }
-  /* line 1133, ../../sass/style.scss */
+  /* line 1135, ../../sass/style.scss */
   .contactForm button#cust-submit:hover {
     background-color: white;
     color: black;
   }
 
-  /* line 1140, ../../sass/style.scss */
+  /* line 1142, ../../sass/style.scss */
   .freelance {
     width: 55%;
     margin-right: 6%;
@@ -1281,91 +1286,91 @@ ul.social-icons-large li.github span.social-icon {
   }
 
   /* ########## PORTFOLIO ############## */
-  /* line 1150, ../../sass/style.scss */
+  /* line 1152, ../../sass/style.scss */
   .portfolio-posts {
     margin-right: 7%;
   }
 }
 /* Landscape phones and down */
 @media (max-width: 480px) {
-  /* line 1159, ../../sass/style.scss */
+  /* line 1161, ../../sass/style.scss */
   ul.nav.navbar-nav {
     margin-right: 0;
   }
 
-  /* line 1162, ../../sass/style.scss */
+  /* line 1164, ../../sass/style.scss */
   #main-container {
     margin-top: -17px;
   }
 
-  /* line 1165, ../../sass/style.scss */
+  /* line 1167, ../../sass/style.scss */
   .navbar-inverse .navbar-toggle {
     margin-top: 2.5%;
   }
 
-  /* line 1168, ../../sass/style.scss */
+  /* line 1170, ../../sass/style.scss */
   .index-blogs {
     height: auto;
     margin: 2%;
   }
-  /* line 1172, ../../sass/style.scss */
+  /* line 1174, ../../sass/style.scss */
   .index-blogs h2 {
     overflow: none;
     height: auto;
   }
-  /* line 1176, ../../sass/style.scss */
+  /* line 1178, ../../sass/style.scss */
   .index-blogs p {
     height: auto;
   }
 
-  /* line 1180, ../../sass/style.scss */
+  /* line 1182, ../../sass/style.scss */
   .list-group {
     margin-top: 12%;
     margin-right: 2%;
   }
 
-  /* line 1184, ../../sass/style.scss */
+  /* line 1186, ../../sass/style.scss */
   .jumbotron {
     margin-top: 5%;
     margin-bottom: 8%;
     margin-right: 1%;
   }
-  /* line 1189, ../../sass/style.scss */
+  /* line 1191, ../../sass/style.scss */
   .jumbotron h1 {
     font-size: 30px;
   }
-  /* line 1192, ../../sass/style.scss */
+  /* line 1194, ../../sass/style.scss */
   .jumbotron p {
     font-size: 25px;
   }
 
-  /* line 1197, ../../sass/style.scss */
+  /* line 1199, ../../sass/style.scss */
   .container {
     margin-bottom: 8%;
   }
 
-  /* line 1200, ../../sass/style.scss */
+  /* line 1202, ../../sass/style.scss */
   #oldPosts-title {
     margin-top: -8%;
     margin-right: -.8%;
     margin-left: -.6%;
   }
 
-  /* line 1206, ../../sass/style.scss */
+  /* line 1208, ../../sass/style.scss */
   .oldPosts-content {
     width: 85%;
     margin-left: 11%;
   }
-  /* line 1210, ../../sass/style.scss */
+  /* line 1212, ../../sass/style.scss */
   .oldPosts-content h2 {
     margin-left: -2%;
   }
-  /* line 1214, ../../sass/style.scss */
+  /* line 1216, ../../sass/style.scss */
   .oldPosts-content h4 {
     margin-left: 1.5%;
     width: 85%;
   }
-  /* line 1218, ../../sass/style.scss */
+  /* line 1220, ../../sass/style.scss */
   .oldPosts-content h6 {
     margin-left: -2%;
     margin-bottom: 8%;
@@ -1373,14 +1378,14 @@ ul.social-icons-large li.github span.social-icon {
   }
 
   /* ############# About Me  Page  GREEN ############# */
-  /* line 1226, ../../sass/style.scss */
+  /* line 1228, ../../sass/style.scss */
   #home {
     background: url("../img/parallax1@2X.jpg") 50% 0 no-repeat fixed;
     min-height: 700px;
     height: 700px;
   }
 
-  /* line 1230, ../../sass/style.scss */
+  /* line 1232, ../../sass/style.scss */
   .aloha {
     text-shadow: 2px 2px white;
     font-size: 110px;
@@ -1388,7 +1393,7 @@ ul.social-icons-large li.github span.social-icon {
     margin-left: 2.5%;
   }
 
-  /* line 1236, ../../sass/style.scss */
+  /* line 1238, ../../sass/style.scss */
   .im {
     margin-top: -3%;
     margin-left: 3%;
@@ -1396,7 +1401,7 @@ ul.social-icons-large li.github span.social-icon {
     font-size: 35px;
   }
 
-  /* line 1242, ../../sass/style.scss */
+  /* line 1244, ../../sass/style.scss */
   .name {
     text-shadow: 3px 3px white;
     font-size: 140px;
@@ -1404,7 +1409,7 @@ ul.social-icons-large li.github span.social-icon {
     margin-top: 4%;
   }
 
-  /* line 1248, ../../sass/style.scss */
+  /* line 1250, ../../sass/style.scss */
   .developer {
     line-height: 1.5;
     text-shadow: 2px 2px white;
@@ -1413,14 +1418,14 @@ ul.social-icons-large li.github span.social-icon {
     margin-left: 4%;
   }
 
-  /* line 1255, ../../sass/style.scss */
+  /* line 1257, ../../sass/style.scss */
   .connect-with-me {
     font-size: 50px;
     margin-top: 18%;
     margin-left: 9%;
   }
 
-  /* line 1261, ../../sass/style.scss */
+  /* line 1263, ../../sass/style.scss */
   #about {
     background: url("../img/parallax2@2X.jpg") 50% 0 no-repeat fixed;
     min-height: 500px;
@@ -1433,7 +1438,7 @@ ul.social-icons-large li.github span.social-icon {
     box-shadow: 0 0 50px rba(0, 0, 0, 0.8);
   }
 
-  /* line 1271, ../../sass/style.scss */
+  /* line 1273, ../../sass/style.scss */
   .aboutMe {
     line-height: 1.3;
     margin: 17% 0 0 10%;
@@ -1442,35 +1447,35 @@ ul.social-icons-large li.github span.social-icon {
     font-size: 50px;
   }
 
-  /* line 1278, ../../sass/style.scss */
+  /* line 1280, ../../sass/style.scss */
   #connect {
     height: 350px;
   }
 
-  /* line 1281, ../../sass/style.scss */
+  /* line 1283, ../../sass/style.scss */
   .connect-with-me {
     font-size: 50px;
     margin-top: 16%;
     margin-left: 9%;
   }
 
-  /* line 1286, ../../sass/style.scss */
+  /* line 1288, ../../sass/style.scss */
   .myResume {
     margin-top: 10%;
   }
-  /* line 1288, ../../sass/style.scss */
+  /* line 1290, ../../sass/style.scss */
   .myResume h1 {
     font-size: 70px;
     margin-top: -1%;
     margin-left: 6%;
   }
-  /* line 1293, ../../sass/style.scss */
+  /* line 1295, ../../sass/style.scss */
   .myResume h3 {
     font-size: 40px;
     margin-left: 10%;
   }
 
-  /* line 1298, ../../sass/style.scss */
+  /* line 1300, ../../sass/style.scss */
   .resume {
     width: 75%;
     float: none;
@@ -1478,56 +1483,56 @@ ul.social-icons-large li.github span.social-icon {
     margin-left: 20%;
   }
 
-  /* line 1304, ../../sass/style.scss */
+  /* line 1306, ../../sass/style.scss */
   #wave {
     background-image: url("../img/parallax3@2X.jpg");
   }
 
-  /* line 1307, ../../sass/style.scss */
+  /* line 1309, ../../sass/style.scss */
   #night {
     background-image: url("../img/parallax4@2X.jpg");
   }
 
-  /* line 1312, ../../sass/style.scss */
+  /* line 1314, ../../sass/style.scss */
   .contactMe .contactRight {
     width: 60px;
     margin: -9% 12% 0 0;
   }
-  /* line 1316, ../../sass/style.scss */
+  /* line 1318, ../../sass/style.scss */
   .contactMe .contactLeft {
     width: 60px;
     margin: -9% 0 0 9%;
   }
 
-  /* line 1325, ../../sass/style.scss */
+  /* line 1327, ../../sass/style.scss */
   .connect-with-me2 ul.social-icons-large li a span:hover {
     background-color: #CE256E;
   }
 
-  /* line 1332, ../../sass/style.scss */
+  /* line 1334, ../../sass/style.scss */
   .contactForm {
     display: block;
     font-family: Ariel, sans-serif;
     font-size: 14px;
   }
-  /* line 1337, ../../sass/style.scss */
+  /* line 1339, ../../sass/style.scss */
   .contactForm #cust-name {
     width: 200px;
     height: 35px;
     margin-bottom: -65px;
   }
-  /* line 1342, ../../sass/style.scss */
+  /* line 1344, ../../sass/style.scss */
   .contactForm #cust-email {
     width: 200px;
     height: 35px;
     margin-bottom: -65px;
   }
-  /* line 1348, ../../sass/style.scss */
+  /* line 1350, ../../sass/style.scss */
   .contactForm #cust-message {
     width: 200px;
     height: 200px;
   }
-  /* line 1354, ../../sass/style.scss */
+  /* line 1356, ../../sass/style.scss */
   .contactForm button#cust-submit {
     margin-top: 10px;
     width: 100px;
@@ -1540,20 +1545,20 @@ ul.social-icons-large li.github span.social-icon {
     border-width: 1.5px;
     transition: .5s;
   }
-  /* line 1367, ../../sass/style.scss */
+  /* line 1369, ../../sass/style.scss */
   .contactForm button#cust-submit:hover {
     background-color: white;
     color: black;
   }
 
-  /* line 1374, ../../sass/style.scss */
+  /* line 1376, ../../sass/style.scss */
   .freelance {
     width: 100%;
     margin: 1% auto 5%;
   }
 
   /* ################ PORTFOLIO ################### */
-  /* line 1380, ../../sass/style.scss */
+  /* line 1382, ../../sass/style.scss */
   .portfolio-posts {
     margin-right: 9%;
   }
