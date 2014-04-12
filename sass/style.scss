@@ -15,7 +15,12 @@ body {
 #main-container {
 	background-color: white;
 }
-
+.modal-body {
+	white-space: pre-wrap;
+}
+.oldPosts-content h4 {
+white-space: pre-wrap;
+}
 /* ############# login ############# */
 
 .login-container {
@@ -559,7 +564,7 @@ ul.social-icons-large {
 	border-color: white;
 	color: white;
 	width: 230px;
-	margin-left: 10%;
+	margin-left: 35%;
 }
 
 /* ############# oldPosts ############# */
@@ -1100,7 +1105,7 @@ ul.social-icons-large {
 		display: block;
 		font-family: Ariel, sans-serif;
 		font-size: 14px;
-		margin-right: 2%;
+		margin-left: 33.3%;
 
 		#cust-name {
 			width: 200px;
@@ -1138,6 +1143,10 @@ ul.social-icons-large {
 
 			} 
 		}
+	}
+	.alert-success {
+		margin-left: 31%;
+		margin-top: 50%;
 	}
 	.freelance {
 		width: 55%;
@@ -1256,7 +1265,7 @@ ul.social-icons-large {
 	}
 	.connect-with-me {
 		font-size: 50px;
-		margin-top: 18%;
+		margin-top: 11%;
 		margin-left: 9%;
 	}
 
@@ -1322,7 +1331,7 @@ ul.social-icons-large {
 	}
 	.connect-with-me2 {
 		ul.social-icons-large {
-
+			margin-left: 10%;
 			li a span {
 				&:hover {
 					background-color: #CE256E;
@@ -1335,6 +1344,8 @@ ul.social-icons-large {
 		display: block;
 		font-family: Ariel, sans-serif;
 		font-size: 14px;
+		margin-left: 26%;
+
 
 		#cust-name {
 			width: 200px;

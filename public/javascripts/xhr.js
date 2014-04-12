@@ -129,7 +129,7 @@ $(document).ready(function() {
 			success : function(data) {
 
 				$('#myPostModalTitle').html(title);
-				$('#myPostModalBody').val(button.id).html(data.content);
+				$('#myPostModalBody').val(button.id).append(data.content);
 
 			}
 

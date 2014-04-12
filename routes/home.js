@@ -32,13 +32,60 @@ var post		= mongoose.model('post', schema);
 var portfolio	= mongoose.model('portfolio', schema);
 
 
-
 /************************************************
 				* index.jade
 ************************************************/
 
 
-// app.get("/")
+// app.get("/about") //
+function aboutMe( req, res ) {
+
+	var auth = null;
+
+	if( req.session.name ) {
+
+		auth = true;
+
+	}
+
+	res.render( 'index',
+
+	{
+		loggedIn : auth
+	});
+
+} // ends about
+
+
+/* This is for the contact form */
+
+// app.post("/") //
+function mail( post_obj, cb ) {
+
+	var transport = nodemailer.createTransport("Sendmail");
+
+	var mailOptions =
+
+	{
+
+		from	: "ahndere@gmail.com",
+		to		: "ahndere@gmail.com",
+		subject : "Contact submission from www.derekahn.com",
+		text	: "<p>name : " + post_obj.name + " </p><p>email : " + post_obj.email + "</p><p>message : " + post_obj.message + "</p>"
+
+	};
+
+	transport.sendMail( mailOptions, cb);
+
+}// mail
+
+
+/************************************************
+				* Blog.jade
+************************************************/
+
+
+// app.get("/blog")
 function homePage( req, res ) {
 
 	var auth = null;
@@ -62,7 +109,7 @@ function homePage( req, res ) {
 
 		}
 
-		res.render('index',
+		res.render('blog',
 
 		{
 			loggedIn	: auth,
@@ -101,56 +148,6 @@ function viewBlogPost(req, res) {
 	});
 
 } // ends viewBlogPost
-
-
-
-
-/************************************************
-				* about.jade
-************************************************/
-
-
-// app.get("/about") //
-function aboutMe( req, res ) {
-
-	var auth = null;
-
-	if( req.session.name ) {
-
-		auth = true;
-
-	}
-
-	res.render( 'about',
-
-	{
-		loggedIn : auth
-	});
-
-} // ends about
-
-
-/* This is for the contact form */
-
-// app.post("/") //
-function mail( post_obj, cb ) {
-
-	var transport = nodemailer.createTransport("Sendmail");
-
-	var mailOptions =
-
-	{
-
-		from	: "ahndere@gmail.com",
-		to		: "ahndere@gmail.com",
-		subject : "Contact submission from www.derekahn.com",
-		text	: "<p>name : " + post_obj.name + " </p><p>email : " + post_obj.email + "</p><p>message : " + post_obj.message + "</p>"
-
-	};
-
-	transport.sendMail( mailOptions, cb);
-
-}// mail
 
 
 
@@ -600,22 +597,13 @@ function endSession( req, res ) {
 						*	ROUTE HANDLERS	*
 ####################################################################*/
 
-
 /****************************
 		* index.jade
 *****************************/
 
-// Calls the home page //
-app.get( "/", homePage );
 
-
-/****************************
-		* about.jade
-*****************************/
-
-
-// Calls the about //
-app.get( "/about", aboutMe );
+// Calls the Home Page //
+app.get( "/", aboutMe );
 
 // For the contact form
 app.post( "/", function(req, res) {
@@ -628,6 +616,13 @@ app.post( "/", function(req, res) {
 	});
 
 });
+
+/****************************
+		* blog.jade
+*****************************/
+
+// Calls the home page //
+app.get( "/blog", homePage );
 
 
 /****************************

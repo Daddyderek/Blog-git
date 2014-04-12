@@ -1,43 +1,116 @@
 extends layout
-
 block content
-    body
-      .content
-        .container
-          .row.row-offcanvas.row-offcanvas-right
-            .col-xs-12.col-sm-9
-              .canvas-toggle
-                p.pull-right.visible-xs
-                  button.btn.btn-primary.btn-xs(type='button', data-toggle='offcanvas') Toggle
-              .jumbotron
-                h1 console.Blog( );
-                p
-                  | My life in code.
-              .row2
-                - for post in posts
-                  .index-blogs.col-6.col-sm-6.col-lg-6.row1
-                    h2.modalBlogPostTitle #{post.title}
-                    p.modalBlogPostBody 
-                      - if (post.content.length > 100) 
-                        =post.content.substring(0, 100)
-                        &hellip;
-                      - else 
-                        =post.content
-                    a.btn.btn-default(class='viewPostModal', data-toggle='modal', data-target='#readModal', data-id='#{post._id}', role='button') View details »
-                #readModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='readModalLabel', aria-hidden='true')
-                  .modal-dialog
-                    .modal-content
-                      .modal-header
-                        button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
-                        h4#myPostModalTitle.modal-title 
-                        #myPostModalBody.modal-body
-                        .modal-footer
-                          button.btn.btn-default(type='button', data-dismiss='modal') Close
-            #sidebar.col-xs-6.col-sm-3.sidebar-offcanvas(role='navigation')
-              .list-group
-                a.list-group-item.active(href='/blog/archive') Archive
-                - for post in posts
-                  a.list-group-item(href='/blog/archive/##{ post.id }') #{post.title}
-        #footer
-          .copy-right
-            © DaddyDerek 2014
+	include head
+	section#home(data-type='background', data-speed='10')
+		.row
+			article
+				.aloha
+					p Aloha!
+				.im
+					p I'M
+				.name
+					p DEREK AHN
+				.developer
+					p A 
+					p WEB DEVELOPER
+	section#connect
+		article
+			.connect-with-me 
+				p CONNECT WITH ME!
+				ul.social-icons-large.clearfix
+					li.facebook 
+						a(href='http://www.facebook.com/DerekAhn')
+							span.social-icon 
+					li.twitter
+						a(href='http://www.twitter.com/dataderek')
+							span.social-icon
+					li.github
+						a(href='http://www.github.com/daddyderek')
+							span.social-icon
+					li.linkedin
+						a(href='https://www.linkedin.com/pub/derek-ahn/78/473/2a0')
+							span.social-icon
+			.mediaIcons
+	section#about(data-type='background', data-speed='10')
+		article 
+			.aboutMe 
+				p I AM A JAVASCRIPT JUNKIE WHO LOVES TO BUILD!
+	section#resume
+		article
+			.myResume
+				h3 My
+				h1 RESUME
+				.resume
+					h4 Summary
+					p I am a full-stack developer who strives to build effcient web applications with clean code. I aim for modern designs with UX always in mind.
+					h4 Education
+					p 
+						| DevLeague	
+						b 2014
+					p 
+						| University of Hawaii at Manoa 
+						b 2012
+						ul 
+							li Communications
+							li Political Science
+					h4 Technical Qualifications
+					p HTML5, CSS3, Javascript
+					p Node.js, Sails.js, Express.js, Angular.js, Meteor.js, Mongoose.js, Underscore.js
+					p Jasmine, jQuery, jQueryUI, 
+					p MongoDB, MySQL, PosgreSQL
+					p SASS, Github, Nginx
+
+					h4 Experience
+					h5 Natsunoya Tea House 2014
+					li
+						p ( Server )
+					h5 Verizon Wireless 2012-2013 
+					li
+						p ( Sales Representative ) 
+					h5 Chris Leben's Fight School 2009-2012 
+					li
+						p ( Manager )	 
+					h5 D.O.D. DECA 2007-2012 
+					li
+						p ( Butchers Apprentice )
+					li
+						p ( Laborer )
+	section#wave(data-type='background', data-speed='10')
+	section#night(data-type='background', data-speed='10')
+		article
+			.contactMe
+				span.contactContact
+					p CONTACT
+				span.contactMe
+					p ME,
+				span.contactPlease
+					p Please?
+						div.contactRight
+						div.contactLeft
+			.freelance
+				h2 Please contact me for any freelance work.
+				.connect-with-me2 
+					ul.social-icons-large.clearfix
+						li.facebook 
+							a(href='http://www.facebook.com/DerekAhn')
+								span.social-icon 
+						li.twitter
+							a(href='http://www.twitter.com/dataderek')
+								span.social-icon
+						li.github
+							a(href='http://www.github.com/daddyderek')
+								span.social-icon
+						li.linkedin
+							a(href='https://www.linkedin.com/pub/derek-ahn/78/473/2a0')
+								span.social-icon
+			.contactForm
+				#contactAlert.alert.alert-success.hidden Thank You For Your Message!
+				form(id='contact-form', action='/', method='post', role='form')
+					.form-group
+						input(id='cust-name', type='text', placeholder='   NAME', name='name', required='required')
+					.form-group
+						input(id='cust-email', type='email', placeholder='   EMAIL', name='email', required='required')
+					.form-group
+						textarea(id='cust-message', class='form control', type='text', placeholder='   MESSAGE', rows='20', cols='50', name='message', required='required')
+					button(id="cust-submit", type='sumbit') SEND
+				#contactFail.alert.alert-danger.hidden Uh Oh Something Went Wrong, Please Try Again!
