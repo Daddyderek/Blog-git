@@ -6,12 +6,12 @@
   font-style: normal;
 }
 
-/* line 12, ../../sass/style.scss */
+/* line 11, ../../sass/style.scss */
 body {
   background-color: #222222;
 }
 
-/* line 15, ../../sass/style.scss */
+/* line 14, ../../sass/style.scss */
 #main-container {
   background-color: white;
 }
@@ -1143,19 +1143,15 @@ ul.social-icons-large li.github span.social-icon {
     background: url("../img/parallax1@2X.jpg") 50% 0 no-repeat fixed;
     min-height: 700px;
     height: 700px;
+    overflow: hidden;
   }
 
-  /* line 1028, ../../sass/style.scss */
-  #wave {
-    background-image: url("../img/parallax3@2X.jpg");
-  }
-
-  /* line 1031, ../../sass/style.scss */
+  /* line 1029, ../../sass/style.scss */
   #night {
     background-image: url("../img/parallax4@2X.jpg");
   }
 
-  /* line 1035, ../../sass/style.scss */
+  /* line 1033, ../../sass/style.scss */
   .aloha {
     text-shadow: 2px 2px white;
     font-size: 150px;
@@ -1163,14 +1159,14 @@ ul.social-icons-large li.github span.social-icon {
     margin-right: 2%;
   }
 
-  /* line 1041, ../../sass/style.scss */
+  /* line 1039, ../../sass/style.scss */
   .im {
     margin-top: -3%;
     text-shadow: 3px 3px white;
     font-size: 55px;
   }
 
-  /* line 1046, ../../sass/style.scss */
+  /* line 1044, ../../sass/style.scss */
   .name {
     text-shadow: 5px 5px white;
     font-size: 190px;
@@ -1178,7 +1174,7 @@ ul.social-icons-large li.github span.social-icon {
     margin-top: 4%;
   }
 
-  /* line 1052, ../../sass/style.scss */
+  /* line 1050, ../../sass/style.scss */
   .developer {
     line-height: 1.5;
     text-shadow: 2px 2px white;
@@ -1186,14 +1182,14 @@ ul.social-icons-large li.github span.social-icon {
     margin-top: 10%;
   }
 
-  /* line 1058, ../../sass/style.scss */
+  /* line 1056, ../../sass/style.scss */
   .connect-with-me {
     font-size: 70px;
     margin-top: 20%;
     margin-left: 9%;
   }
 
-  /* line 1064, ../../sass/style.scss */
+  /* line 1062, ../../sass/style.scss */
   #about {
     background: url("../img/parallax2@2X.jpg") 50% 0 no-repeat fixed;
     min-height: 500px;
@@ -1206,7 +1202,7 @@ ul.social-icons-large li.github span.social-icon {
     box-shadow: 0 0 50px rba(0, 0, 0, 0.8);
   }
 
-  /* line 1074, ../../sass/style.scss */
+  /* line 1073, ../../sass/style.scss */
   .aboutMe {
     line-height: 1.3;
     margin: 17% 0 0 10%;
@@ -1215,7 +1211,7 @@ ul.social-icons-large li.github span.social-icon {
     font-size: 50px;
   }
 
-  /* line 1081, ../../sass/style.scss */
+  /* line 1080, ../../sass/style.scss */
   .resume {
     width: 70%;
     float: none;
@@ -1223,49 +1219,49 @@ ul.social-icons-large li.github span.social-icon {
     margin-left: 25%;
   }
 
-  /* line 1090, ../../sass/style.scss */
+  /* line 1089, ../../sass/style.scss */
   .contactMe .contactRight {
     width: 120px;
     margin: -7% 7.5% 0 0;
   }
-  /* line 1094, ../../sass/style.scss */
+  /* line 1093, ../../sass/style.scss */
   .contactMe .contactLeft {
     width: 120px;
     margin: -7% 0 0 7%;
   }
 
-  /* line 1099, ../../sass/style.scss */
+  /* line 1098, ../../sass/style.scss */
   .connect-with-me2 {
     float: left;
     margin-left: 15%;
     margin-bottom: 7%;
   }
 
-  /* line 1104, ../../sass/style.scss */
+  /* line 1103, ../../sass/style.scss */
   .contactForm {
     display: block;
     font-family: Ariel, sans-serif;
     font-size: 14px;
     margin-left: 33.3%;
   }
-  /* line 1110, ../../sass/style.scss */
+  /* line 1109, ../../sass/style.scss */
   .contactForm #cust-name {
     width: 200px;
     height: 35px;
     margin-bottom: -55px;
   }
-  /* line 1115, ../../sass/style.scss */
+  /* line 1114, ../../sass/style.scss */
   .contactForm #cust-email {
     width: 200px;
     height: 35px;
     margin-bottom: -55px;
   }
-  /* line 1121, ../../sass/style.scss */
+  /* line 1120, ../../sass/style.scss */
   .contactForm #cust-message {
     width: 200px;
     height: 200px;
   }
-  /* line 1126, ../../sass/style.scss */
+  /* line 1125, ../../sass/style.scss */
   .contactForm button#cust-submit {
     margin-top: 10px;
     width: 100px;
@@ -1278,6 +1274,8 @@ ul.social-icons-large li.github span.social-icon {
     border-width: 1.5px;
     transition: .5s;
     border: 1px solid #fff;
+    margin-left: 45%;
+    text-align: center;
   }
   /* line 1140, ../../sass/style.scss */
   .contactForm button#cust-submit:hover {
@@ -1302,91 +1300,91 @@ ul.social-icons-large li.github span.social-icon {
   }
 
   /* ########## PORTFOLIO ############## */
-  /* line 1161, ../../sass/style.scss */
+  /* line 1163, ../../sass/style.scss */
   .portfolio-posts {
     margin-right: 7%;
   }
 }
 /* Landscape phones and down */
 @media (max-width: 480px) {
-  /* line 1170, ../../sass/style.scss */
+  /* line 1172, ../../sass/style.scss */
   ul.nav.navbar-nav {
     margin-right: 0;
   }
 
-  /* line 1173, ../../sass/style.scss */
+  /* line 1175, ../../sass/style.scss */
   #main-container {
     margin-top: -17px;
   }
 
-  /* line 1176, ../../sass/style.scss */
+  /* line 1178, ../../sass/style.scss */
   .navbar-inverse .navbar-toggle {
     margin-top: 2.5%;
   }
 
-  /* line 1179, ../../sass/style.scss */
+  /* line 1181, ../../sass/style.scss */
   .index-blogs {
     height: auto;
     margin: 2%;
   }
-  /* line 1183, ../../sass/style.scss */
+  /* line 1185, ../../sass/style.scss */
   .index-blogs h2 {
     overflow: none;
     height: auto;
   }
-  /* line 1187, ../../sass/style.scss */
+  /* line 1189, ../../sass/style.scss */
   .index-blogs p {
     height: auto;
   }
 
-  /* line 1191, ../../sass/style.scss */
+  /* line 1193, ../../sass/style.scss */
   .list-group {
     margin-top: 12%;
     margin-right: 2%;
   }
 
-  /* line 1195, ../../sass/style.scss */
+  /* line 1197, ../../sass/style.scss */
   .jumbotron {
     margin-top: 5%;
     margin-bottom: 8%;
     margin-right: 1%;
   }
-  /* line 1200, ../../sass/style.scss */
+  /* line 1202, ../../sass/style.scss */
   .jumbotron h1 {
     font-size: 30px;
   }
-  /* line 1203, ../../sass/style.scss */
+  /* line 1205, ../../sass/style.scss */
   .jumbotron p {
     font-size: 25px;
   }
 
-  /* line 1208, ../../sass/style.scss */
+  /* line 1210, ../../sass/style.scss */
   .container {
     margin-bottom: 8%;
   }
 
-  /* line 1211, ../../sass/style.scss */
+  /* line 1213, ../../sass/style.scss */
   #oldPosts-title {
     margin-top: -8%;
     margin-right: -.8%;
     margin-left: -.6%;
   }
 
-  /* line 1217, ../../sass/style.scss */
+  /* line 1219, ../../sass/style.scss */
   .oldPosts-content {
     width: 85%;
     margin-left: 11%;
   }
-  /* line 1221, ../../sass/style.scss */
+  /* line 1223, ../../sass/style.scss */
   .oldPosts-content h2 {
     margin-left: -2%;
   }
-  /* line 1225, ../../sass/style.scss */
+  /* line 1227, ../../sass/style.scss */
   .oldPosts-content h4 {
     margin-left: 1.5%;
     width: 85%;
   }
-  /* line 1229, ../../sass/style.scss */
+  /* line 1231, ../../sass/style.scss */
   .oldPosts-content h6 {
     margin-left: -2%;
     margin-bottom: 8%;
@@ -1394,14 +1392,16 @@ ul.social-icons-large li.github span.social-icon {
   }
 
   /* ############# About Me  Page  GREEN ############# */
-  /* line 1237, ../../sass/style.scss */
+  /* line 1240, ../../sass/style.scss */
   #home {
-    background: url("../img/parallax1@2X.jpg") 50% 0 no-repeat fixed;
+    background: url("../img/parallax1@2X.jpg") no-repeat center center fixed;
     min-height: 700px;
-    height: 700px;
+    width: auto;
+    height: auto;
+    min-width: 100%;
   }
 
-  /* line 1241, ../../sass/style.scss */
+  /* line 1248, ../../sass/style.scss */
   .aloha {
     text-shadow: 2px 2px white;
     font-size: 110px;
@@ -1409,7 +1409,7 @@ ul.social-icons-large li.github span.social-icon {
     margin-left: 2.5%;
   }
 
-  /* line 1247, ../../sass/style.scss */
+  /* line 1254, ../../sass/style.scss */
   .im {
     margin-top: -3%;
     margin-left: 3%;
@@ -1417,7 +1417,7 @@ ul.social-icons-large li.github span.social-icon {
     font-size: 35px;
   }
 
-  /* line 1253, ../../sass/style.scss */
+  /* line 1260, ../../sass/style.scss */
   .name {
     text-shadow: 3px 3px white;
     font-size: 140px;
@@ -1425,7 +1425,7 @@ ul.social-icons-large li.github span.social-icon {
     margin-top: 4%;
   }
 
-  /* line 1259, ../../sass/style.scss */
+  /* line 1266, ../../sass/style.scss */
   .developer {
     line-height: 1.5;
     text-shadow: 2px 2px white;
@@ -1434,14 +1434,14 @@ ul.social-icons-large li.github span.social-icon {
     margin-left: 4%;
   }
 
-  /* line 1266, ../../sass/style.scss */
+  /* line 1273, ../../sass/style.scss */
   .connect-with-me {
     font-size: 50px;
     margin-top: 11%;
     margin-left: 9%;
   }
 
-  /* line 1272, ../../sass/style.scss */
+  /* line 1279, ../../sass/style.scss */
   #about {
     background: url("../img/parallax2@2X.jpg") 50% 0 no-repeat fixed;
     min-height: 500px;
@@ -1454,7 +1454,7 @@ ul.social-icons-large li.github span.social-icon {
     box-shadow: 0 0 50px rba(0, 0, 0, 0.8);
   }
 
-  /* line 1282, ../../sass/style.scss */
+  /* line 1289, ../../sass/style.scss */
   .aboutMe {
     line-height: 1.3;
     margin: 17% 0 0 10%;
@@ -1463,35 +1463,35 @@ ul.social-icons-large li.github span.social-icon {
     font-size: 50px;
   }
 
-  /* line 1289, ../../sass/style.scss */
+  /* line 1296, ../../sass/style.scss */
   #connect {
     height: 350px;
   }
 
-  /* line 1292, ../../sass/style.scss */
+  /* line 1299, ../../sass/style.scss */
   .connect-with-me {
     font-size: 50px;
     margin-top: 16%;
     margin-left: 9%;
   }
 
-  /* line 1297, ../../sass/style.scss */
+  /* line 1304, ../../sass/style.scss */
   .myResume {
     margin-top: 10%;
   }
-  /* line 1299, ../../sass/style.scss */
+  /* line 1306, ../../sass/style.scss */
   .myResume h1 {
     font-size: 70px;
     margin-top: -1%;
     margin-left: 6%;
   }
-  /* line 1304, ../../sass/style.scss */
+  /* line 1311, ../../sass/style.scss */
   .myResume h3 {
     font-size: 40px;
     margin-left: 10%;
   }
 
-  /* line 1309, ../../sass/style.scss */
+  /* line 1316, ../../sass/style.scss */
   .resume {
     width: 75%;
     float: none;
@@ -1499,61 +1499,58 @@ ul.social-icons-large li.github span.social-icon {
     margin-left: 20%;
   }
 
-  /* line 1315, ../../sass/style.scss */
+  /* line 1322, ../../sass/style.scss */
   #wave {
     background-image: url("../img/parallax3@2X.jpg");
   }
 
-  /* line 1318, ../../sass/style.scss */
+  /* line 1325, ../../sass/style.scss */
   #night {
     background-image: url("../img/parallax4@2X.jpg");
+    background-size: 100%;
   }
 
-  /* line 1323, ../../sass/style.scss */
+  /* line 1331, ../../sass/style.scss */
   .contactMe .contactRight {
     width: 60px;
     margin: -9% 12% 0 0;
   }
-  /* line 1327, ../../sass/style.scss */
+  /* line 1335, ../../sass/style.scss */
   .contactMe .contactLeft {
     width: 60px;
     margin: -9% 0 0 9%;
   }
 
-  /* line 1333, ../../sass/style.scss */
-  .connect-with-me2 ul.social-icons-large {
-    margin-left: 10%;
-  }
-  /* line 1336, ../../sass/style.scss */
+  /* line 1344, ../../sass/style.scss */
   .connect-with-me2 ul.social-icons-large li a span:hover {
     background-color: #CE256E;
   }
 
-  /* line 1343, ../../sass/style.scss */
+  /* line 1351, ../../sass/style.scss */
   .contactForm {
     display: block;
     font-family: Ariel, sans-serif;
     font-size: 14px;
-    margin-left: 26%;
+    margin-left: 22%;
   }
-  /* line 1350, ../../sass/style.scss */
+  /* line 1357, ../../sass/style.scss */
   .contactForm #cust-name {
     width: 200px;
     height: 35px;
     margin-bottom: -65px;
   }
-  /* line 1355, ../../sass/style.scss */
+  /* line 1362, ../../sass/style.scss */
   .contactForm #cust-email {
     width: 200px;
     height: 35px;
     margin-bottom: -65px;
   }
-  /* line 1361, ../../sass/style.scss */
+  /* line 1368, ../../sass/style.scss */
   .contactForm #cust-message {
     width: 200px;
     height: 200px;
   }
-  /* line 1367, ../../sass/style.scss */
+  /* line 1374, ../../sass/style.scss */
   .contactForm button#cust-submit {
     margin-top: 10px;
     width: 100px;
@@ -1565,22 +1562,30 @@ ul.social-icons-large li.github span.social-icon {
     font-size: 30px;
     border-width: 1.5px;
     transition: .5s;
+    text-indent: -5px;
   }
-  /* line 1380, ../../sass/style.scss */
+  /* line 1387, ../../sass/style.scss */
   .contactForm button#cust-submit:hover {
     background-color: white;
     color: black;
   }
 
-  /* line 1387, ../../sass/style.scss */
+  /* line 1394, ../../sass/style.scss */
   .freelance {
     width: 100%;
     margin: 1% auto 5%;
   }
 
   /* ################ PORTFOLIO ################### */
-  /* line 1393, ../../sass/style.scss */
+  /* line 1400, ../../sass/style.scss */
   .portfolio-posts {
     margin-right: 9%;
+  }
+
+  /* line 1403, ../../sass/style.scss */
+  #oldPosts-title {
+    margin-right: -1%;
+    margin-left: -1%;
+    margin-top: -8.5%;
   }
 }

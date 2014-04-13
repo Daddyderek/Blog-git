@@ -8,12 +8,12 @@
     font-weight: normal;
     font-style: normal;
 }
-
 body {
 	background-color: #222222;
 }
 #main-container {
 	background-color: white;
+
 }
 .modal-body {
 	white-space: pre-wrap;
@@ -1024,9 +1024,7 @@ ul.social-icons-large {
 	#home {
 		background: url("../img/parallax1@2X.jpg") 50% 0 no-repeat fixed; min-height: 700px;
 		height: 700px;
-	}
-	#wave {
-		background-image: url("../img/parallax3@2X.jpg");
+		overflow: hidden;
 	}
 	#night {
 		background-image: url("../img/parallax4@2X.jpg");
@@ -1062,7 +1060,8 @@ ul.social-icons-large {
 	}
 
 	#about {
-		background: url("../img/parallax2@2X.jpg") 50% 0 no-repeat fixed; min-height: 500px;
+		background: url("../img/parallax2@2X.jpg") 50% 0 no-repeat fixed; 
+		min-height: 500px;
 		height: 500px;
 		margin: 0 auto;
 		width: 100%;
@@ -1135,7 +1134,8 @@ ul.social-icons-large {
 			border-width: 1.5px;
 			transition: .5s;
 			border: 1px solid #fff;
-
+			margin-left: 45%;
+			text-align: center;
 
 			&:hover {
 				background-color: white;
@@ -1158,6 +1158,8 @@ ul.social-icons-large {
 	}	
 
 /* ########## PORTFOLIO ############## */
+
+
 	.portfolio-posts {
 		margin-right: 7%;
 	}
@@ -1234,9 +1236,14 @@ ul.social-icons-large {
 
 	}
 /* ############# About Me  Page  GREEN ############# */
+
 	#home {
-		background: url("../img/parallax1@2X.jpg") 50% 0 no-repeat fixed; min-height: 700px;
-		height: 700px;
+		background: url("../img/parallax1@2X.jpg") no-repeat center center fixed; 
+		min-height: 700px;
+		width: auto;
+		height: auto;
+		min-width: 100%;
+
 	}
 	.aloha {
 		text-shadow: 2px 2px white;
@@ -1317,6 +1324,7 @@ ul.social-icons-large {
 	}
 	#night {
 	background-image: url("../img/parallax4@2X.jpg");
+	background-size: 100%;
 	}
 
 	.contactMe {
@@ -1331,7 +1339,7 @@ ul.social-icons-large {
 	}
 	.connect-with-me2 {
 		ul.social-icons-large {
-			margin-left: 10%;
+
 			li a span {
 				&:hover {
 					background-color: #CE256E;
@@ -1344,8 +1352,7 @@ ul.social-icons-large {
 		display: block;
 		font-family: Ariel, sans-serif;
 		font-size: 14px;
-		margin-left: 26%;
-
+		margin-left: 22%;
 
 		#cust-name {
 			width: 200px;
@@ -1375,7 +1382,7 @@ ul.social-icons-large {
 			font-size: 30px;
 			border-width: 1.5px;
 			transition: .5s;
-
+			text-indent: -5px;
 
 			&:hover {
 				background-color: white;
@@ -1392,6 +1399,12 @@ ul.social-icons-large {
 /* ################ PORTFOLIO ################### */
 .portfolio-posts {
 	margin-right: 9%;
+}
+#oldPosts-title {
+	margin-right: -1%;
+	margin-left: -1%;
+	margin-top: -8.5%;
+
 }
 
 }// ends small
