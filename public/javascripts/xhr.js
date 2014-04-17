@@ -2,7 +2,6 @@ $(document).ready(function() {
 
 	console.log("JavaScript is working!");
 
-
 	// Parallax for About //
 	$('section[data-type="background"]').each( function() {
 		
