@@ -20,7 +20,7 @@ block content
                     p.modalBlogPostBody 
                       - if (post.content.length > 100) 
                         =post.content.substring(0, 100)
-                        &hellip;
+                          &hellip;
                       - else 
                         =post.content
                     a.btn.btn-default(class='viewPostModal', data-toggle='modal', data-target='#readModal', data-id='#{post._id}', role='button') View details »

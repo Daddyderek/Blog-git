@@ -113,7 +113,7 @@ $(document).ready(function() {
 
 
 
-	// Displays a blog post in a modal on "/" //
+	// Displays a blog post in a modal on "/blog" //
 	$('.viewPostModal').on('click', function(e) {
 
 		e.preventDefault();
@@ -128,7 +128,7 @@ $(document).ready(function() {
 			success : function(data) {
 
 				$('#myPostModalTitle').html(title);
-				$('#myPostModalBody').val(button.id).append(data.content);
+				$('#myPostModalBody').val(button.id).empty().append(data.content);
 
 			}
 
