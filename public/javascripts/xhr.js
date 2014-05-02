@@ -63,10 +63,6 @@ $(document).ready(function() {
 	});// $("button#cust-submit")
 
 
-
-
-
-
 	// Validation flags for failed password/username attempts in "/login"//
 	$('button.login').on('click', function(e) {
 
@@ -76,11 +72,11 @@ $(document).ready(function() {
 
 		$.ajax( button.attr('href'), {
 
-			url		 : '/login',
-			method	 : "POST",
-			data	 : $("#login").serialize(),
-			dataType : 'json',
-			success  : function(data) {
+			url				: '/login',
+			method	 	: "POST",
+			data 			: $("#login").serialize(),
+			dataType	: 'json',
+			success 	: function(data) {
 
 				if (typeof data.redirect == 'string') {
 					

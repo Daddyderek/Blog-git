@@ -378,8 +378,8 @@ function editMyPost( req, res ) {
 
 		auth = true;
 
-		var numId		= req.body.id;
-		var postTitle	= req.body.title;
+		var numId				= req.body.id;
+		var postTitle		= req.body.title;
 		var postContent = req.body.content;
 
 		post.findOneAndUpdate({
